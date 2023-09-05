@@ -20,7 +20,7 @@ Luego de haber abordado los desafíos de desarrollar un sitio web con HTML, CSS 
 
 # Wiki
 Visite nuestra Wiki para acceder a la información detallada y actualizada.
-(Enlace a la wiki)
+(Enlace a la wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki)
 
 # Demo del producto
 Conoce la Demo de nuestra aplicación móvil en formato de video:
