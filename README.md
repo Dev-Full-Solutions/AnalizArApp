@@ -9,6 +9,7 @@ AnalizAr es un proyecto de desarrollo de software cuyo objetivo es brindar a la 
 Luego de haber abordado los desafíos de desarrollar un sitio web con HTML, CSS y JavaScript, al cual le siguió el desarrollo una aplicación de página única o SPA, nos encontramos en el nuevo desafío de complementar los productos anteriores con el desarrollo de una aplicación móvil que complete la propuesta de AnalizAr como solución digital integral para nuestros usuarios.
 
 # Funcionalidades
+Las principales funcionalidades a agregar en la versión móvil son:
 - Login con validación de 2 factores
 - Módulo de Consumos
 - Módulo de Alertas
