@@ -32,7 +32,7 @@ Las principales funcionalidades a agregar en la versión móvil son:
 Visite nuestra Wiki para acceder a la información detallada y actualizada.
 (Enlace a la wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki)
 
-# IEE830
+# IEEE830
 (Enlace al documento: https://docs.google.com/document/d/1sZKVNIKE5dYe3QRtJX3Nwi3_sy9f2rOg/edit?usp=drive_link&ouid=111066166545247340736&rtpof=true&sd=true)
 
 # Demo del producto
