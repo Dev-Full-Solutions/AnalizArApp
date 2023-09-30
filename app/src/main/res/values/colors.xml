@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="negro">#000000</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="verde_opaco">#84A894</color>
+    <color name="verde">#4D8E40</color>
+    <color name="gris">#F3F8F5</color>
+    <color name="gris_oscuro">#B5B1B1</color>
+    <color name="rojo">#EB5757</color>
+    <color name="verde_formulario">#8084A894</color>
 </resources>
