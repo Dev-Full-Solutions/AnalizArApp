@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Analizarapp</string>
+    <!-- Strings Alarmas Configuracion-->
+    <string name="alarmas_titulo">Mis alarmas</string>
+    <string name="alarmas_nombre">Alarma Casa</string>
+    <string name="alarmas_resumen">Diaria 30Kw</string>
+    <string name="alarmas_frecuencia">Frecuencia</string>
+    <string name="alarmas_diaria">Diaria</string>
+    <string name="alarmas_semanal">Semanal</string>
+    <string name="alarmas_mensual">Mensual</string>
+    <string name="alarmas_limite">Limite</string>
+    <string name="alarmas_placeholder">Ingrese limite de consumo</string>
+    <string name="alarmas_unidad">Kw</string>
+    <string name="alarmas_inicio">Inicio</string>
+    <string name="alarmas_ph_fecha">DD MM AA</string>
+    <string name="alarmas_ph_hora">HH MM</string>
+    <string name="alarmas_btn_salir">Salir</string>
+    <string name="alarmas_btn_guardar">Guardar</string>
 </resources>
