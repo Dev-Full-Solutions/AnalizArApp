@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Analizador de Consumos Eléctricos</string>
+    <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
+    <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Con nuestro asesoramiento comercial te ayudamos a tomar decisiones estratégicas que impulsan tu negocio. Además, nuestro equipo de soporte está disponible para solucionar cualquier inconveniente o duda que tengas.</string>
+    <string name="btn_contactanos">Contáctanos</string>
+    <string name="copyright_contacto">By Dev Full Solutions</string>
+    <string name="btn_soporte">Soporte</string>
+    <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="btn_volver_inicio">Inicio</string>
+    <string name="titulo_activity_contacto">Contacto</string>
+</resources>
