@@ -19,6 +19,16 @@
             android:name=".Onboarding3"
             android:exported="false" />
         <activity
+            android:name=".olvidaste_contrasena"
+            android:parentActivityName=".login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".login" />
+        </activity>
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
