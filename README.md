@@ -43,6 +43,9 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 ## IEEE830
 (Enlace al documento: https://docs.google.com/document/d/1sZKVNIKE5dYe3QRtJX3Nwi3_sy9f2rOg/edit?usp=drive_link&ouid=111066166545247340736&rtpof=true&sd=true)
 
+## Testing
+(Enlace al documento: https://drive.google.com/drive/folders/1vkY30t91L3-yfaAnKMkedFlQ7h3FICS8?usp=sharing)
+
 ## Demo del producto
 Conoce la Demo de nuestra aplicación móvil en formato de video:
 (Enlace a la demo)
