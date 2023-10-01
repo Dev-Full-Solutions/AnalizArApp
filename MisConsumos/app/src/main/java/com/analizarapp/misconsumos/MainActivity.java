@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         entries2.add(new BarEntry(2f, 40f));
         entries2.add(new BarEntry(3f, 40f));
         entries2.add(new BarEntry(4f, 79f));
-        entries1.add(new BarEntry(5f, 95f));
-        entries1.add(new BarEntry(6f, 105f));
-        entries1.add(new BarEntry(7f, 84f));
+        entries2.add(new BarEntry(5f, 95f));
+        entries2.add(new BarEntry(6f, 105f));
+        entries2.add(new BarEntry(7f, 84f));
 
         entries3.add(new BarEntry(1f, 100f));
         entries3.add(new BarEntry(2f, 50f));
@@ -74,6 +74,21 @@ public class MainActivity extends AppCompatActivity {
         entries3.add(new BarEntry(14f, 70f));
         entries3.add(new BarEntry(15f, 149f));
         entries3.add(new BarEntry(16f, 23f));
+        entries3.add(new BarEntry(17f, 100f));
+        entries3.add(new BarEntry(18f, 50f));
+        entries3.add(new BarEntry(19f, 78f));
+        entries3.add(new BarEntry(20f, 58f));
+        entries3.add(new BarEntry(21f, 56f));
+        entries3.add(new BarEntry(22f, 55f));
+        entries3.add(new BarEntry(23f, 88f));
+        entries3.add(new BarEntry(24f, 90f));
+        entries3.add(new BarEntry(25f, 394f));
+        entries3.add(new BarEntry(26f, 200f));
+        entries3.add(new BarEntry(27f, 134f));
+        entries3.add(new BarEntry(28f, 30f));
+        entries3.add(new BarEntry(29f, 50f));
+        entries3.add(new BarEntry(30f, 70f));
+
 
 
         BarDataSet dataSet1 = new BarDataSet(entries1, "DataSet 1");
