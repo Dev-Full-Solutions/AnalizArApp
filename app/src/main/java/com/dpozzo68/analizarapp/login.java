@@ -14,6 +14,10 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
+    public void login (View view){
+        Intent intent = new Intent(this, MisConsumos.class);
+        startActivity(intent);
+    }
     public void olvideContrasena(View view){
         Intent intent = new Intent(this, olvidaste_contrasena.class);
         startActivity(intent);
