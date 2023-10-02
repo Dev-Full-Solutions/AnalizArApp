@@ -1,4 +1,4 @@
-package com.dpozzo68.analizarapp;
+package com.analizarapp.misconsumos;
 
 import org.junit.Test;
 
