@@ -27,4 +27,6 @@
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
     <string name="titulo_activity_contacto">Contacto</string>
+    <string name="onboarding3_btn_seguir">Seguir</string>
+    <string name="onboarding3_btn_atras">Atrás</string>
 </resources>
