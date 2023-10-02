@@ -20,7 +20,7 @@ public class ContactoActivity extends AppCompatActivity {
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ContactoActivity.this, MainActivity.class);
+                Intent intent = new Intent(ContactoActivity.this, MisConsumos.class);
                 startActivity(intent);
             }
         });
