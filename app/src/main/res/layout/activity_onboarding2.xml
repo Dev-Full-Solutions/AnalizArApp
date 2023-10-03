@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".Onboarding2">
 
     <Button
@@ -11,14 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/verde_oscuro"
         android:fontFamily="@font/robotobold"
         android:onClick="seguir"
         android:text="SEGUIR"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.749"
-        app:layout_constraintStart_toStartOf="parent"  />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/atras"
@@ -29,6 +34,8 @@
         android:fontFamily="@font/robotobold"
         android:onClick="atras"
         android:text="ATRÁS"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +52,8 @@
         android:scaleX="1"
         android:scaleY="1"
         android:text="Te ayudamos a manejar tu consumo \nmediante gráficos, alertas, consejos \ny mucho más."
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
@@ -60,6 +69,8 @@
         android:fontFamily="@font/roboto"
         android:text="Controlar tu consumo es fundamental"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
