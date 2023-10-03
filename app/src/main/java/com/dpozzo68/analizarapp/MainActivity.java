@@ -25,32 +25,32 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void testeo(View view){
-        BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
-        navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                String id = String.valueOf(item.getItemId());
-                if(R.id.home == item.getItemId()){
-                    Intent intent = new Intent(String.valueOf(MisConsumos.class));
-                    startActivity(intent);
-                    return true;
-                } else if (R.id.perfil == item.getItemId()) {
-                    Intent intent = new Intent(String.valueOf(Mi_Cuenta.class));
-                    startActivity(intent);
-                    return true;
-                } else if (R.id.alerta == item.getItemId()) {
-                    Intent intent = new Intent(String.valueOf(MisAlarmas1.class));
-                    startActivity(intent);
-                    return true;
-                } else if (R.id.contacto == item.getItemId()) {
-                    Intent intent = new Intent(String.valueOf(ContactoActivity.class));
-                    startActivity(intent);
-                    return true;
-                }else {
-                    return false;
-                }
-            }
-        });
-    }
+//    public void testeo(View view){
+//        BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
+//        navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                String id = String.valueOf(item.getItemId());
+//                if(R.id.home == item.getItemId()){
+//                    Intent intent = new Intent(String.valueOf(MisConsumos.class));
+//                    startActivity(intent);
+//                    return true;
+//                } else if (R.id.perfil == item.getItemId()) {
+//                    Intent intent = new Intent(String.valueOf(Mi_Cuenta.class));
+//                    startActivity(intent);
+//                    return true;
+//                } else if (R.id.alerta == item.getItemId()) {
+//                    Intent intent = new Intent(String.valueOf(MisAlarmas1.class));
+//                    startActivity(intent);
+//                    return true;
+//                } else if (R.id.contacto == item.getItemId()) {
+//                    Intent intent = new Intent(String.valueOf(ContactoActivity.class));
+//                    startActivity(intent);
+//                    return true;
+//                }else {
+//                    return false;
+//                }
+//            }
+//        });
+//    }
 }
