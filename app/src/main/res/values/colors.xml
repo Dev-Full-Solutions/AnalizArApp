@@ -2,10 +2,4 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="verde_oscuro">#4D8E40</color>
-    <color name="verde_intermedio">#84A894</color>
-    <color name="gris">#F3F8F5</color>
-    <color name="rojo">#EB5757</color>
-    <color name="gris_claro">#B5B1B1</color>
-    <color name="verde_formulario">#8084A894</color>
 </resources>
