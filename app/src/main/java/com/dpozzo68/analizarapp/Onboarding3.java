@@ -37,4 +37,14 @@ public class Onboarding3 extends AppCompatActivity {
         });
     }
     // Código para volver a la activity Onboarding2 o seguir a la activity Login.
+
+    public void atras (View view){
+        Intent intent = new Intent(this, Onboarding2.class);
+        startActivity(intent);
+    }
+
+    public void seguir (View view){
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
 }

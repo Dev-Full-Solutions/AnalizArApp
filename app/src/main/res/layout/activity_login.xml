@@ -115,7 +115,7 @@
         android:background="@drawable/boton_principal"
         android:backgroundTint="@null"
         android:fontFamily="@font/roboto_bold"
-        android:onClick="olvideContrasena"
+        android:onClick="login"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:paddingRight="15dp"
