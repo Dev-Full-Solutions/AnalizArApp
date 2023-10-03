@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:ignore="MissingDefaultResource">
 
     <TextView
@@ -70,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <TextView
             android:id="@+id/textView4"
@@ -98,7 +100,7 @@
             android:paddingTop="43dp"
             android:text=""
             android:thumbTint="#84A894" />
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
@@ -111,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <TextView
             android:id="@+id/textView6"
@@ -139,7 +141,7 @@
             android:paddingTop="43dp"
             android:text=""
             android:thumbTint="#84A894" />
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/button"
