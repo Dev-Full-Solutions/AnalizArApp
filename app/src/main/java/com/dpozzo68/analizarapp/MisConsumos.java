@@ -1,8 +1,11 @@
 package com.dpozzo68.analizarapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -170,4 +174,31 @@ public class MisConsumos extends AppCompatActivity {
     }
 
 
+    public void irConsumos(View view) {
+        ImageView imagen = findViewById(R.id.imagen_home);
+        imagen.setClickable(true);
+        Intent intent = new Intent(this, MisConsumos.class);
+        startActivity(intent);
+    }
+
+    public void irAlarmas(View view) {
+        ImageView imagen = findViewById(R.id.imagen_alerta);
+        imagen.setClickable(true);
+        Intent intent = new Intent(this, MisAlarmas1.class);
+        startActivity(intent);
+    }
+
+    public void irPerfil(View view) {
+        ImageView imagen = findViewById(R.id.imagen_perfil);
+        imagen.setClickable(true);
+        Intent intent = new Intent(this, Mi_Cuenta.class);
+        startActivity(intent);
+    }
+
+    public void irContacto(View view) {
+        ImageView imagen = findViewById(R.id.imagen_contacto);
+        imagen.setClickable(true);
+        Intent intent = new Intent(this, ContactoActivity.class);
+        startActivity(intent);
+    }
 }
