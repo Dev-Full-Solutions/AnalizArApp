@@ -175,9 +175,9 @@
             android:id="@+id/linearLayout"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
             android:onClick="irConsumos"
             android:orientation="vertical"
@@ -199,16 +199,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Home"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
             android:onClick="irAlarmas"
             android:orientation="vertical"
@@ -230,16 +231,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Alertas"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
             android:onClick="irPerfil"
             android:orientation="vertical"
@@ -261,16 +263,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Perfil"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="20dp"
             android:onClick="irContacto"
             android:orientation="vertical"
@@ -292,7 +295,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Contacto"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="12sp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
