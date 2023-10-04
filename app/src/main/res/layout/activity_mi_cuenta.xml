@@ -7,311 +7,330 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Mi_Cuenta">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/miCuenta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/miCuenta"
-            android:textColor="@color/verde_oscuro"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/nombreUsuario"
-            android:layout_width="100dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="137dp"
-            android:fontFamily="@font/roboto"
-            android:text="John Doe"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/mailUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="152dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/roboto"
-            android:text="Jdoe@gmail.com"
-            android:textSize="13sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="320dp"
-            android:layout_height="85dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/card"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/miCuenta" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="52dp"
-            android:layout_height="53dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:contentDescription="TODO"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/tituloDatosPersonales"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:fontFamily="@font/roboto"
-            android:text="Datos Personales"
-            android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.166"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/nombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:layout_marginBottom="9dp"
-            android:fontFamily="@font/roboto"
-            android:text="Nombre"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
-            app:layout_constraintTop_toTopOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.583"
-            tools:layout_editor_absoluteX="53dp" />
-
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="282dp"
-            android:layout_height="32dp"
-
-            android:layout_marginStart="13dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_edittext"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/nombre1"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-        <TextView
-            android:id="@+id/nombre1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-            android:layout_marginEnd="258dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/roboto"
-            android:text="Apellido"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber1"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.166"
-            app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-        <EditText
-            android:id="@+id/editTextNumber1"
-            android:layout_width="279dp"
-            android:layout_height="29dp"
-
-            android:layout_marginStart="11dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="14dp"
-            android:background="@drawable/rounded_edittext"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/nombre2"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-        <TextView
-            android:id="@+id/nombre2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="Celular"
-            android:textSize="12dp"
-            tools:layout_editor_absoluteX="53dp"
-            tools:layout_editor_absoluteY="359dp" />
-
-        <EditText
-            android:id="@+id/editTextNumber2"
-            android:layout_width="276dp"
-            android:layout_height="29dp"
-
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/rounded_edittext"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/nombre2" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="325dp"
-            android:layout_height="213dp"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/card"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.465"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="GUARDAR"
-            android:backgroundTint="@color/verde_oscuro"
-            tools:layout_editor_absoluteX="151dp"
-            tools:layout_editor_absoluteY="436dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Mi_Cuenta">
 
 
-        <TextView
-            android:id="@+id/tituloDatosPersonales1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="71dp"
-            android:fontFamily="@font/roboto"
-            android:text="Datos de cuenta"
-            android:textSize="15dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:layout_editor_absoluteX="34dp" />
+            <TextView
+                android:id="@+id/miCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/miCuenta"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/email2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:fontFamily="@font/roboto"
-            android:text="Email"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber02"
-            tools:layout_editor_absoluteX="49dp" />
+            <TextView
+                android:id="@+id/nombreUsuario"
+                android:layout_width="100dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="137dp"
+                android:fontFamily="@font/roboto"
+                android:text="John Doe"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
 
-        <EditText
-            android:id="@+id/editTextNumber01"
-            android:layout_width="282dp"
-            android:layout_height="32dp"
+            <TextView
+                android:id="@+id/mailUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="152dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto"
+                android:text="Jdoe@gmail.com"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
 
-            android:background="@drawable/rounded_edittext"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:textSize="12dp"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="634dp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="320dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/miCuenta" />
 
-        <TextView
-            android:id="@+id/nombre01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="11dp"
-            android:fontFamily="@font/roboto"
-            android:text="Contraseña"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber01"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber02"
-            tools:layout_editor_absoluteX="48dp" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="52dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars" />
 
-        <EditText
-            android:id="@+id/editTextNumber02"
-            android:layout_width="279dp"
-            android:layout_height="29dp"
+            <TextView
+                android:id="@+id/tituloDatosPersonales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/roboto"
+                android:text="Datos Personales"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            android:layout_marginBottom="37dp"
-            android:background="@drawable/rounded_edittext"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber01"
-            tools:layout_editor_absoluteX="47dp" />
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:fontFamily="@font/roboto"
+                android:text="Nombre"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.583"
+                tools:layout_editor_absoluteX="53dp" />
 
-        <TextView
-            android:id="@+id/nombre03"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="Cambiar contraseña"
-            android:textSize="12dp"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="676dp" />
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="282dp"
+                android:layout_height="32dp"
 
-        <TextView
-            android:id="@+id/textView04"
-            android:layout_width="330dp"
-            android:layout_height="228dp"
-            android:background="@drawable/card"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="528dp" />
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/nombre1"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView4" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:backgroundTint="@color/verde_oscuro"
-            android:text="GUARDAR"
-            tools:layout_editor_absoluteX="151dp"
-            tools:layout_editor_absoluteY="769dp" />
+            <TextView
+                android:id="@+id/nombre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="258dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="Apellido"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNumber1"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="@+id/textView4" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="346dp"
-            android:layout_height="41dp"
-            android:fontFamily="@font/roboto"
-            android:text="Modo Nocturno"
-            android:textSize="16sp"
-            android:background="@color/gris_claro"
-            android:textAlignment="center"
-            android:ems="10"
-            tools:layout_editor_absoluteX="36dp"
-            tools:layout_editor_absoluteY="835dp" />
+            <EditText
+                android:id="@+id/editTextNumber1"
+                android:layout_width="279dp"
+                android:layout_height="29dp"
+
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="131dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/nombre2"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/nombre2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Celular"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_editor_absoluteY="360dp" />
+
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="276dp"
+                android:layout_height="29dp"
+
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="131dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/nombre2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="325dp"
+                android:layout_height="213dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.465"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde_oscuro"
+                android:fontFamily="@font/roboto"
+                android:text="GUARDAR"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="436dp" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tituloDatosPersonales1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="71dp"
+                android:fontFamily="@font/roboto"
+                android:text="Datos de cuenta"
+                android:textSize="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:layout_editor_absoluteX="34dp" />
+
+            <TextView
+                android:id="@+id/email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/roboto"
+                android:text="Email"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNumber02"
+                tools:layout_editor_absoluteX="49dp" />
+
+            <EditText
+                android:id="@+id/editTextNumber01"
+                android:layout_width="282dp"
+                android:layout_height="32dp"
+
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="47dp"
+                tools:layout_editor_absoluteY="634dp" />
+
+            <TextView
+                android:id="@+id/nombre01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp"
+                android:fontFamily="@font/roboto"
+                android:text="Contraseña"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNumber01"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber02"
+                tools:layout_editor_absoluteX="48dp" />
+
+            <EditText
+                android:id="@+id/editTextNumber02"
+                android:layout_width="279dp"
+                android:layout_height="29dp"
+
+                android:layout_marginBottom="37dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNumber01"
+                tools:layout_editor_absoluteX="47dp" />
+
+            <TextView
+                android:id="@+id/nombre03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Cambiar contraseña"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="47dp"
+                tools:layout_editor_absoluteY="676dp" />
+
+            <EditText
+                android:id="@+id/editTextNumber03"
+                android:layout_width="279dp"
+                android:layout_height="29dp"
+
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="701dp" />
+
+            <TextView
+                android:id="@+id/textView04"
+                android:layout_width="330dp"
+                android:layout_height="228dp"
+                android:background="@drawable/card"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="528dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde_oscuro"
+                android:fontFamily="@font/roboto"
+                android:text="GUARDAR"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="769dp" />
+
+            <TextView
+                android:id="@+id/nombre04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Modo Nocturno"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="113dp"
+                tools:layout_editor_absoluteY="1007dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
 
 </ScrollView>
