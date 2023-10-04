@@ -18,23 +18,23 @@ public class Onboarding3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding3);
 
-        btnAtras = findViewById(R.id.button6);
-        btnAtras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Onboarding3.this, Onboarding2.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSeguir = findViewById(R.id.button5);
-        btnSeguir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Onboarding3.this, login.class);
-                startActivity(intent);
-            }
-        });
+//        btnAtras = findViewById(R.id.button6);
+//        btnAtras.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Onboarding3.this, Onboarding2.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        btnSeguir = findViewById(R.id.button5);
+//        btnSeguir.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Onboarding3.this, login.class);
+//                startActivity(intent);
+//            }
+//        });
     }
     // Código para volver a la activity Onboarding2 o seguir a la activity Login.
 
