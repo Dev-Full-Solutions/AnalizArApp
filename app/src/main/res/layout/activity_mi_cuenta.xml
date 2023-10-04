@@ -166,9 +166,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPersonName"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nombre" />
@@ -197,9 +200,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPersonName"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
@@ -227,9 +233,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="phone"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/celular" />
 
@@ -302,12 +311,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
-
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textEmailAddress"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     tools:layout_editor_absoluteX="47dp"
                     tools:layout_editor_absoluteY="634dp" />
 
@@ -333,13 +344,15 @@
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPassword"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editEmail"
                     tools:layout_editor_absoluteX="47dp" />
 
@@ -366,12 +379,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
-
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPassword"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
                     tools:layout_editor_absoluteX="48dp" />
 
