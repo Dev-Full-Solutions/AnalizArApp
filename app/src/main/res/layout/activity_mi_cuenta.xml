@@ -117,6 +117,8 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto"
                 android:text="Datos Personales"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="@+id/cardView5"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
@@ -148,6 +150,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editNombre"
                     android:text="Nombre"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -162,9 +166,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPersonName"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nombre" />
@@ -178,6 +185,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editApellido"
                     android:text="Apellido"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editNombre" />
@@ -191,9 +200,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPersonName"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
@@ -206,6 +218,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editNumero"
                     android:text="Celular"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editApellido" />
@@ -219,9 +233,12 @@
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="phone"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/celular" />
 
@@ -236,6 +253,8 @@
                 android:backgroundTint="@color/verde_oscuro"
                 android:fontFamily="@font/roboto"
                 android:text="GUARDAR"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5" />
@@ -247,6 +266,8 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto"
                 android:text="Datos de cuenta"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="@+id/cardView6"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -277,6 +298,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editEmail"
                     android:text="Email"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
                     tools:layout_editor_absoluteX="49dp" />
@@ -288,12 +311,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
-
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textEmailAddress"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     tools:layout_editor_absoluteX="47dp"
                     tools:layout_editor_absoluteY="634dp" />
 
@@ -306,6 +331,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editContrasena"
                     android:text="Contraseña"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editEmail"
                     app:layout_constraintTop_toBottomOf="@+id/editContrasena"
@@ -317,13 +344,15 @@
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-
                     android:background="@drawable/rounded_edittext"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPassword"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editEmail"
                     tools:layout_editor_absoluteX="47dp" />
 
@@ -336,6 +365,8 @@
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editCambiarContrasena"
                     android:text="Cambiar contraseña"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
                     app:layout_constraintTop_toBottomOf="@+id/editCambiarContrasena"
@@ -348,12 +379,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
-
                     android:ems="10"
                     android:fontFamily="@font/roboto"
+                    android:inputType="text|textPassword"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="12dp"
+                    android:textColor="@color/verde_intermedio"
+                    android:textColorHint="@color/gris_claro"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
                     tools:layout_editor_absoluteX="48dp" />
 
@@ -368,6 +401,8 @@
                 android:backgroundTint="@color/verde_oscuro"
                 android:fontFamily="@font/roboto"
                 android:text="GUARDAR"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView6" />
@@ -383,6 +418,8 @@
                 android:fontFamily="@font/roboto"
                 android:onClick="cerrarSesion"
                 android:text="CERRAR SESIÓN"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2" />
