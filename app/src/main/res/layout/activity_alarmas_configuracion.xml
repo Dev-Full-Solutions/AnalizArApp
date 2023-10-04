@@ -81,7 +81,7 @@
         android:text="@string/alarmas_unidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintStart_toEndOf="@+id/editApellido"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Switch
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editApellido"
         android:layout_width="173dp"
         android:layout_height="42dp"
         android:layout_marginStart="112dp"
@@ -166,7 +166,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editApellido" />
 
     <EditText
         android:id="@+id/editTextDate"

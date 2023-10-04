@@ -107,35 +107,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="160dp"-->
+<!--        android:layout_marginEnd="161dp"-->
+<!--        android:layout_marginBottom="150dp"-->
+<!--        android:background="@drawable/boton_principal"-->
+<!--        android:backgroundTint="@null"-->
+<!--        android:fontFamily="@font/roboto_bold"-->
+<!--        android:onClick="login"-->
+<!--        android:paddingLeft="15dp"-->
+<!--        android:paddingTop="15dp"-->
+<!--        android:paddingRight="15dp"-->
+<!--        android:paddingBottom="15dp"-->
+<!--        android:text="ACCEDER"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="161dp"
         android:layout_marginBottom="150dp"
-        android:background="@drawable/boton_principal"
-        android:backgroundTint="@null"
+        android:backgroundTint="@color/verde_oscuro"
         android:fontFamily="@font/roboto_bold"
         android:onClick="login"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="15dp"
         android:text="ACCEDER"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/white"
         android:backgroundTint="@null"
         android:fontFamily="@font/roboto_bold"
@@ -148,6 +163,7 @@
         android:text="Olvidaste tu contraseña?"
         android:textColor="@color/verde_intermedio"
         android:textColorLink="@color/verde_oscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
