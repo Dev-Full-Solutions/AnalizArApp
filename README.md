@@ -48,4 +48,4 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 
 ## Demo del producto
 Conoce la Demo de nuestra aplicación móvil en formato de video:
-(Enlace a la demo)
+https://www.youtube.com/watch?v=yKNvl9248SM
