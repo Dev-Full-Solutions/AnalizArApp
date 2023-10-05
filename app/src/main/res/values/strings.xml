@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Analizarapp</string>
+    <string name="miCuenta">Mi Cuenta</string>
+    <!-- Strings Alarmas Configuracion-->
+    <string name="alarmas_titulo">Mis alarmas</string>
+    <string name="alarmas_nombre">Alarma Casa</string>
+    <string name="alarmas_resumen">Diaria 30Kw</string>
+    <string name="alarmas_frecuencia">Frecuencia</string>
+    <string name="alarmas_diaria">Diaria</string>
+    <string name="alarmas_semanal">Semanal</string>
+    <string name="alarmas_mensual">Mensual</string>
+    <string name="alarmas_limite">Limite</string>
+    <string name="alarmas_placeholder">Ingrese limite de consumo</string>
+    <string name="alarmas_unidad">Kw</string>
+    <string name="alarmas_inicio">Inicio</string>
+    <string name="alarmas_ph_fecha">DD MM AA</string>
+    <string name="alarmas_ph_hora">HH MM</string>
+    <string name="alarmas_btn_salir">Salir</string>
+    <string name="alarmas_btn_guardar">Guardar</string>
+    <!-- Strings Onboarding-->
+    <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>
+    <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
+    <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Con nuestro asesoramiento comercial te ayudamos a tomar decisiones estratégicas que impulsan tu negocio. Además, nuestro equipo de soporte está disponible para solucionar cualquier inconveniente o duda que tengas.</string>
+    <string name="btn_contactanos">Contáctanos</string>
+    <string name="copyright_contacto">By Dev Full Solutions</string>
+    <string name="btn_soporte">Soporte</string>
+    <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="btn_volver_inicio">Inicio</string>
+    <string name="titulo_activity_contacto">Contacto</string>
 </resources>
