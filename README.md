@@ -34,7 +34,7 @@ Las principales funcionalidades a agregar en la versión móvil son:
 (Enlace de acceso: https://drive.google.com/drive/folders/1qDxGJOKFCKnK49Cq2XGRKjKftwRQnV2z?usp=drive_link)
 
 ## Trello
-(Enlace de acceso: (https://trello.com/b/OUviu7sq/analizar-app-m%C3%B3vil)
+(Enlace de acceso: (https://trello.com/b/OUviu7sq/analizar-app-m%C3%B3vil) - Este recurso fue desestimado a partir del Sprint 1 porque no nos brindaba la funcionalidad deseada. A partir de este sprint implementamos la utilización de la bitácora en la Wiki.
 
 ## Wiki
 Visite nuestra Wiki para acceder a la información detallada y actualizada.
