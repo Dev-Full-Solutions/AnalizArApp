@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ContactoActivity extends AppCompatActivity {
     Button btnInicio;
@@ -16,6 +18,8 @@ public class ContactoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+        TextView textView = findViewById(R.id.textView);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
 
 //        btnInicio = findViewById(R.id.button4);
 //        btnInicio.setOnClickListener(new View.OnClickListener() {
