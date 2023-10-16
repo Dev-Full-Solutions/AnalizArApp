@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Mi_Cuenta extends AppCompatActivity {
 
     @Override
@@ -16,6 +18,7 @@ public class Mi_Cuenta extends AppCompatActivity {
     }
 
     public void cerrarSesion(View view){
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, login.class);
         startActivity(intent);
     }
