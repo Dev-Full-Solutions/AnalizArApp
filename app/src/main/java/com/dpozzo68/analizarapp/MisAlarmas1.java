@@ -41,4 +41,11 @@ public class MisAlarmas1 extends AppCompatActivity{
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MisConsumos.class);
+        startActivity(intent);
+        finish();
+    }
 }

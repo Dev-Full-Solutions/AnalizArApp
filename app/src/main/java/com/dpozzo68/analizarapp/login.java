@@ -98,4 +98,11 @@ public class login extends AppCompatActivity {
         Intent intent = new Intent(this, olvidaste_contrasena.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Onboarding3.class);
+        startActivity(intent);
+        finish();
+    }
 }

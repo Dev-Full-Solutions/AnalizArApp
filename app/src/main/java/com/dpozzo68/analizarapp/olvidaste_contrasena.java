@@ -59,4 +59,11 @@ public class olvidaste_contrasena extends AppCompatActivity {
         Intent intent = new Intent(this, login.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+        finish();
+    }
 }
