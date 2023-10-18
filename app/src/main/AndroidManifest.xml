@@ -13,7 +13,45 @@
         android:theme="@style/Theme.MisConsumos"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".misconsumos"
+=======
+            android:name=".Onboarding1"
+            android:exported="false" />
+        <activity
+            android:name=".Onboarding2"
+            android:exported="false" />
+        <activity
+            android:name=".MisConsumos"
+            android:exported="false" />
+        <activity
+            android:name=".Mi_Cuenta"
+            android:exported="false" />
+        <activity
+            android:name=".MisAlarmas1"
+            android:exported="false" />
+        <activity
+            android:name=".ContactoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Onboarding3"
+            android:exported="false" />
+        <activity
+            android:name=".olvidaste_contrasena"
+            android:parentActivityName=".login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".login" />
+        </activity>
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmasConfiguracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+>>>>>>> main
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -33,8 +33,10 @@ Las principales funcionalidades a agregar en la versión móvil son:
 ## Drive de Google
 (Enlace de acceso: https://drive.google.com/drive/folders/1qDxGJOKFCKnK49Cq2XGRKjKftwRQnV2z?usp=drive_link)
 
-## Trello
-(Enlace de acceso: (https://trello.com/b/OUviu7sq/analizar-app-m%C3%B3vil)
+## ~~Trello~~ Tablero de Kanban
+(Enlace de acceso: https://github.com/orgs/Dev-Full-Solutions/projects/1/views/1)
+
+~~(Enlace de acceso: (https://trello.com/b/OUviu7sq/analizar-app-m%C3%B3vil)~~ - Este recurso fue desestimado a partir del Sprint 1 porque no nos brindaba la funcionalidad deseada. A partir de este sprint implementamos la utilización de la bitácora en la Wiki.
 
 ## Wiki
 Visite nuestra Wiki para acceder a la información detallada y actualizada.
@@ -43,6 +45,9 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 ## IEEE830
 (Enlace al documento: https://docs.google.com/document/d/1sZKVNIKE5dYe3QRtJX3Nwi3_sy9f2rOg/edit?usp=drive_link&ouid=111066166545247340736&rtpof=true&sd=true)
 
+## Testing
+(Enlace al documento: https://drive.google.com/drive/folders/1vkY30t91L3-yfaAnKMkedFlQ7h3FICS8?usp=sharing)
+
 ## Demo del producto
 Conoce la Demo de nuestra aplicación móvil en formato de video:
-(Enlace a la demo)
+https://www.youtube.com/watch?v=yKNvl9248SM

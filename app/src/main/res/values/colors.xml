@@ -7,6 +7,10 @@
     <color name="gris">#F3F8F5</color>
     <color name="rojo">#EB5757</color>
     <color name="gris_claro">#B5B1B1</color>
+<<<<<<< HEAD
     <color name="naranja">#ffa500</color>
 
+=======
+    <color name="verde_formulario">#2784A894</color>
+>>>>>>> main
 </resources>
