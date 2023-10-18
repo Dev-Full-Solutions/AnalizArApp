@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Analizarapp</string>
     <string name="miCuenta">Mi Cuenta</string>
-    
+
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
     <string name="alarmas_nombre">Alarma Casa</string>
@@ -24,7 +24,7 @@
     <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
-    <string name="titulo_activity_contacto">Contacto</string>
+    <string name="titulo_activity_contacto">CONTACTO</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
