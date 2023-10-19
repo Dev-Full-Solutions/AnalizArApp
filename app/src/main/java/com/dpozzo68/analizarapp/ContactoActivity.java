@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,6 +29,7 @@ public class ContactoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+
         // Código añadido el 18-10 Inicio
         TextView textView = findViewById(R.id.textView10);
         String linkText = getResources().getString(R.string.link);
@@ -38,8 +42,18 @@ public class ContactoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
+        // Código añadido el 18-10 Fin
 
-        //Código añadido el 18-10 Fin
+        // Código añadido el 19-10 Inicio
+        int startIndex = linkText.indexOf("DevFullSolutions");
+        int endIndex = startIndex + 16;
+
+        spannableString.setSpan(new ForegroundColorSpan(Color.BLUE), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        textView.setText(spannableString);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        // Código añadido el 19-10 Fin
 
         /*
         Bloque comentado el 18-10 Inicio
