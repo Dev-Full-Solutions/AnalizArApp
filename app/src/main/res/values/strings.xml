@@ -30,9 +30,7 @@
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
     <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Por asistencia técnica pulsa en el botón "SOPORTE".</string>
     <string name="btn_contactanos">Contáctanos</string>
-    <string name="btn_soporte">Soporte</string>
-    <string name="link">
-        By <a href = "https://wordpress.analizar.tk/presentacion/">DevFullSolutions</a>.
-    </string>
-    <!-- <string name="copyright_contacto">By Dev Full Solutions</string> -->
+    <string name="btn_soporte">SOPORTE</string>
+    <string name="link">By <u><font color="#0000FF">DevFullSolutions</font></u></string>
+
 </resources>
