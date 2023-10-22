@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 public class ConsumosSQLiteHelper extends SQLiteOpenHelper {
     //Sentencia SQL para crear la tabla de Consumos
-    String sqlCreate = "CREATE TABLE Consumos (id_consumo INTEGER PRIMARY KEY,  id_usuario INTEGER, fecha_medicion TEXT, lectura_medidor INTEGER)";
+    String sqlCreate = "CREATE TABLE Consumos (id_consumo INTEGER PRIMARY KEY,  id_usuario INTEGER, fecha_medicion TEXT, consumo INTEGER)";
 
     public ConsumosSQLiteHelper(Context contexto, String nombre,
                                  CursorFactory factory, int version) {
@@ -23,7 +23,7 @@ public class ConsumosSQLiteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int versionAnterior,
                           int versionNueva) {
 
-        db.execSQL("DROP TABLE IF EXISTS Medidores");
+        db.execSQL("DROP TABLE IF EXISTS Consumos");
 
         db.execSQL(sqlCreate);
 
