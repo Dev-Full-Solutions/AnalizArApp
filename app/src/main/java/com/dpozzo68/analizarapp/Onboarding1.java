@@ -23,11 +23,4 @@ public class Onboarding1 extends AppCompatActivity {
         Intent intent = new Intent(this, Onboarding2.class);
         startActivity(intent);
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }
