@@ -16,6 +16,9 @@
             android:name=".Video"
             android:exported="false" />
         <activity
+            android:name=".SoporteActivity"
+            android:exported="false" />
+        <activity
             android:name=".Onboarding1"
             android:exported="false" />
         <activity
