@@ -1,16 +1,15 @@
-package com.dpozzo68.analizarapp;
+package com.dpozzo68.analizarapp.helpers;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+public class MedidoresSQLiteHelper extends SQLiteOpenHelper {
+    //Sentencia SQL para crear la tabla de Medidores
+    String sqlCreate = "CREATE TABLE Medidores (id_medidor INTEGER PRIMARY KEY,  id_usuario INTEGER, nombre TEXT, detalle TEXT )";
 
-public class AlertasSQLiteHelper extends SQLiteOpenHelper {
-    //Sentencia SQL para crear la tabla de Alertas
-    String sqlCreate = "CREATE TABLE Alertas (id_alerta INTEGER PRIMARY KEY,  id_medidor INTEGER, fecha_alta TEXT, valor_alerta INTEGER, estado_alerta INTEGER)";
-
-    public AlertasSQLiteHelper(Context contexto, String nombre,
-                                CursorFactory factory, int version) {
+    public MedidoresSQLiteHelper(Context contexto, String nombre,
+                                 CursorFactory factory, int version) {
         super(contexto, nombre, factory, version);
     }
 
@@ -30,4 +29,3 @@ public class AlertasSQLiteHelper extends SQLiteOpenHelper {
 
     }
 }
-

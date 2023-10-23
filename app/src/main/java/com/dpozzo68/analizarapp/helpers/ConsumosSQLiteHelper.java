@@ -1,4 +1,4 @@
-package com.dpozzo68.analizarapp;
+package com.dpozzo68.analizarapp.helpers;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

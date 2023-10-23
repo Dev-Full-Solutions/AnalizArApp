@@ -6,17 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
+import com.dpozzo68.analizarapp.entidades.Usuario;
 
 public class Mi_Cuenta extends AppCompatActivity {
+
+    public Usuario usuario = GlobalUsuario.getInstanciaUsuario().getUsuario();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mi_cuenta);
+        TextView textoEmailUsuario = findViewById(R.id.mailUsuario3);
+        TextView textoNombreYApellido = findViewById(R.id.nombreUsuario);
+        textoEmailUsuario.setText(usuario.getEmail());
+        textoNombreYApellido.setText(usuario.getNombre() + " " + usuario.getApellido());
     }
 
     public void cerrarSesion(View view){
         Intent intent = new Intent(this, login.class);
+
         startActivity(intent);
     }
 
@@ -47,4 +58,6 @@ public class Mi_Cuenta extends AppCompatActivity {
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
     }
+
+
 }
