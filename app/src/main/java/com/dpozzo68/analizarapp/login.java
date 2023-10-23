@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
+import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
+import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -46,6 +50,15 @@ public class login extends AppCompatActivity {
     public void singIn(){
         String email = usuarioText.getText().toString();
         String password = passwordText.getText().toString();
+
+        //aqui inserto codigo para instanciar bd usuarios y para completar la bd.
+        UsuariosSQLiteHelper us = new UsuariosSQLiteHelper(this, "Usuarios", null, 1);
+        SQLiteDatabase db = us.getWritableDatabase();
+        UsuarioServicio uServ = new UsuarioServicio();
+        uServ.llenarTablaUsuarios(db);
+
+        // aqui inserto codigo para crear Global User
+        GlobalUsuario.getInstanciaUsuario().setUsuario(uServ.getUsuariofromDB(db, email));
 
         if(!email.isEmpty() && !password.isEmpty()){
             if(email.contains("@") && email.contains(".") && password.length() > 5){
