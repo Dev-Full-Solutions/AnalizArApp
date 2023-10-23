@@ -1,13 +1,9 @@
 package com.dpozzo68.analizarapp;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.DialogPreference;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.database.Cursor;
@@ -22,9 +18,6 @@ import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -65,7 +58,7 @@ public class MisConsumos extends AppCompatActivity {
         BarData barData1 = new BarData(dataSet1);
         barChart1.setData(barData1);
         cursor1.close();
-
+        
 
 
     //CONSUMOS SEMANALES barchart2 - consumos agrupados por dia o sea por fecha, sin contar la fecha actual
@@ -251,36 +244,6 @@ public class MisConsumos extends AppCompatActivity {
         barChart.invalidate();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == event.KEYCODE_BACK){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("¿Desea salir de AnalizArApp?")
-                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            FirebaseAuth.getInstance().signOut();
-                            Intent intent = new Intent(Intent.ACTION_MAIN);
-                            intent.addCategory(Intent.CATEGORY_HOME);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }
-                    })
-                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    });
-            builder.show();
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 
 
    public void irConsumos(View view) {

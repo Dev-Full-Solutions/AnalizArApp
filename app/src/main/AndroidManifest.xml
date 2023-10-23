@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Analizarapp"
         tools:targetApi="31">
         <activity
-            android:name=".SoporteActivity"
-            android:exported="false" />
-        <activity
             android:name=".Onboarding1"
             android:exported="false" />
         <activity
