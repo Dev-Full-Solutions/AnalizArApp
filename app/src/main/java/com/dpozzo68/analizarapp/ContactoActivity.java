@@ -18,19 +18,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ContactoActivity extends AppCompatActivity {
-    /*
-    Bloque comentado el 18-10 Inicio
-    Código a reutilizar en la funcionalidad del botón SOPORTE
-    Button btnInicio;
-    Bloque comentado el 18-10 Fin
-    */
+
+    Button btnSoporte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
 
-        // Código añadido el 18-10 Inicio
+        btnSoporte = findViewById(R.id.btn_soporte);
+        btnSoporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ContactoActivity.this, SoporteActivity.class);
+                startActivity(intent);
+            }
+        });
+
         TextView textView = findViewById(R.id.textView10);
         String linkText = getResources().getString(R.string.link);
         SpannableString spannableString = new SpannableString(linkText);
@@ -42,9 +46,7 @@ public class ContactoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-        // Código añadido el 18-10 Fin
 
-        // Código añadido el 19-10 Inicio
         int startIndex = linkText.indexOf("DevFullSolutions");
         int endIndex = startIndex + 16;
 
@@ -53,23 +55,6 @@ public class ContactoActivity extends AppCompatActivity {
 
         textView.setText(spannableString);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
-        // Código añadido el 19-10 Fin
-
-        /*
-        Bloque comentado el 18-10 Inicio
-         Código a reutilizar para la navegación entre el botón SOPORTE y la activity con el formulario con la consulta del usuario (Funcionalidad)
-         TextView textView = findViewById(R.id.textView);
-         textView.setMovementMethod(LinkMovementMethod.getInstance());
-         btnInicio = findViewById(R.id.button4);
-         btnInicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ContactoActivity.this, MisConsumos.class);
-                startActivity(intent);
-            }
-         });
-        Bloque comentado el 18-10 Fin
-        */
     }
 
     public void irConsumos(View view) {
