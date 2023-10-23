@@ -33,4 +33,14 @@
     <string name="btn_soporte">SOPORTE</string>
     <string name="link">By <u><font color="#0000FF">DevFullSolutions</font></u></string>
 
+    <!-- Strings Soporte -->
+    <string name="titulo_soporte">SOPORTE</string>
+    <string name="text_nombre_apellido">Nombre y Apellido</string>
+    <string name="campo_nombre_apellido">Ingrese su Nombre y Apellido</string>
+    <string name="text_correo_electronico">Correo Electronico</string>
+    <string name="campo_correo_electronico">Ingrese su Correo Electrónico</string>
+    <string name="text_mensaje">Mensaje</string>
+    <string name="campo_mensaje">Detalle su consulta para el área SOPORTE de AnalizArApp</string>
+    <string name="btn_enviar">ENVIAR</string>
+
 </resources>

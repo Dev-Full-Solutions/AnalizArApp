@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanco"
-    tools:context=".ContactoActivity">
+    tools:context=".SoporteActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/robotobold"
-        android:text="@string/titulo_activity_contacto"
+        android:text="@string/titulo_soporte"
         android:textColor="@color/verde"
         android:textSize="24sp"
         android:contentDescription="Titulo de la Activity"
@@ -22,79 +22,102 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="370dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/imagen_contacto_1"
-        android:contentDescription="Imagen del Equipo de Desarrollo que brinda Soporte a los Usuarios de AnalizArApp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="350dp"
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/robotoregular"
-        android:text="@string/titulo_publicitario_contacto"
-        android:textAlignment="center"
+        android:text="@string/text_nombre_apellido"
+        android:textColor="@color/negro"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/negro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <EditText
+        android:id="@+id/editTextNombreApellido"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/campo_nombre_apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="@string/texto_publicitario_contacto"
-        android:textAlignment="center"
-        android:textColor="@color/negro"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btn_soporte"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/btn_soporte"
+        android:text="@string/text_correo_electronico"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreApellido" />
+
+    <EditText
+        android:id="@+id/editTextCorreoElectronico"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/campo_correo_electronico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_mensaje"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCorreoElectronico" />
+
+    <EditText
+        android:id="@+id/editTextMensaje"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:hint="@string/campo_mensaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_enviar"
         android:backgroundTint="@color/verde"
         android:fontFamily="@font/robotobold"
         android:textColor="@color/blanco"
         android:textSize="20sp"
-        android:contentDescription="Botón para contactar al area de Soporte de AnalizArApp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <!-- android:text="@string/copyright_contacto" -->
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:contentDescription="Enlace a la página Presentación de DevFullSolutions en su sitio web de WordPress"
-        android:fontFamily="@font/robotoregular"
-        android:text="@string/link"
-        android:textColor="@color/verde"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_soporte" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextMensaje" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"
