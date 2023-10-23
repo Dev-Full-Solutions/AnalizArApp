@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Analizarapp</string>
-    <string name="miCuenta">Mi Cuenta</string>
-    
+    <string name="miCuenta">MI CUENTA</string>
+
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
     <string name="alarmas_nombre">Alarma Casa</string>
@@ -24,15 +24,21 @@
     <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
-    <string name="titulo_activity_contacto">Contacto</string>
+    <string name="titulo_activity_contacto">CONTACTO</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
     <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Por asistencia técnica pulsa en el botón "SOPORTE".</string>
     <string name="btn_contactanos">Contáctanos</string>
-    <string name="btn_soporte">Soporte</string>
-    <string name="link">
-        By <a href = "https://wordpress.analizar.tk/presentacion/">DevFullSolutions</a>.
-    </string>
-    <!-- <string name="copyright_contacto">By Dev Full Solutions</string> -->
+    <string name="btn_soporte">SOPORTE</string>
+    <string name="link">By <u><font color="#0000FF">DevFullSolutions</font></u></string>
+    <string name="email">Email</string>
+    <string name="datos_de_cuenta">Datos de cuenta</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="mi_plan">Mi plan</string>
+    <string name="mi_medidor">Mi medidor</string>
+    <string name="notificaciones">Notificaciones</string>
+
 </resources>
