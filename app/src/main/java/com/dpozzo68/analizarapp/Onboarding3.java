@@ -1,11 +1,11 @@
 package com.dpozzo68.analizarapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Onboarding3 extends AppCompatActivity {
 
@@ -46,12 +46,5 @@ public class Onboarding3 extends AppCompatActivity {
     public void seguir (View view){
         Intent intent = new Intent(this, login.class);
         startActivity(intent);
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, Onboarding2.class);
-        startActivity(intent);
-        finish();
     }
 }

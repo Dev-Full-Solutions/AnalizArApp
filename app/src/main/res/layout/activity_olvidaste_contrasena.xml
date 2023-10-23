@@ -9,7 +9,7 @@
     tools:context=".olvidaste_contrasena">
 
     <Button
-        android:id="@+id/olvidasteContrasenaButton"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
@@ -45,7 +45,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/editTextText3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -107,8 +107,8 @@
         android:layout_width="41dp"
         android:layout_height="34dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
-        app:layout_constraintTop_toTopOf="@+id/inputEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintTop_toTopOf="@+id/editTextText3"
         app:srcCompat="@drawable/email" />
 </androidx.constraintlayout.widget.ConstraintLayout>
