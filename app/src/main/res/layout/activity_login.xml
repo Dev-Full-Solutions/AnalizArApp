@@ -19,12 +19,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/black"
         android:textColorLink="@color/verde_oscuro"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -40,10 +40,10 @@
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/negro"
         android:textColorHint="@color/verde_intermedio"
         android:textColorLink="@color/verde_oscuro"
-        android:textSize="16sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:textColorLink="@color/verde_oscuro"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputUsuario" />
 
     <TextView
         android:id="@+id/textView2"
@@ -74,7 +74,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="INGRESAR"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/verde"
         android:textColorLink="@color/verde_oscuro"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/inputUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -98,10 +98,10 @@
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/negro"
         android:textColorHint="@color/gris_claro"
         android:textColorLink="@color/verde_oscuro"
-        android:textSize="16sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,16 +130,17 @@
 <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
-        android:backgroundTint="@color/verde_oscuro"
+        android:backgroundTint="@color/verde"
+        android:contentDescription="Boton de Login"
         android:fontFamily="@font/roboto_bold"
-        android:onClick="login"
         android:text="ACCEDER"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
@@ -153,6 +154,7 @@
         android:layout_marginBottom="32dp"
         android:background="@color/white"
         android:backgroundTint="@null"
+        android:contentDescription="Boton de Olvidaste tu Contraseña"
         android:fontFamily="@font/roboto_bold"
         android:onClick="olvideContrasena"
         android:paddingLeft="15dp"
@@ -161,21 +163,23 @@
         android:paddingBottom="15dp"
         android:shadowColor="@null"
         android:text="Olvidaste tu contraseña?"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/azul"
         android:textColorLink="@color/verde_oscuro"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="41dp"
         android:layout_height="34dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
-        app:layout_constraintTop_toTopOf="@+id/editTextText2"
+        android:contentDescription="Icono representante de usuario"
+        app:layout_constraintBottom_toBottomOf="@+id/inputUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/inputUsuario"
+        app:layout_constraintTop_toTopOf="@+id/inputUsuario"
         app:srcCompat="@drawable/perfil" />
 
     <ImageView
@@ -183,8 +187,9 @@
         android:layout_width="41dp"
         android:layout_height="34dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        android:contentDescription="Icono representante de contraseña"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintTop_toTopOf="@+id/inputPassword"
         app:srcCompat="@drawable/contrase_a" />
 </androidx.constraintlayout.widget.ConstraintLayout>
