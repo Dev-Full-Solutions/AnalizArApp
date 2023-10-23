@@ -1,32 +1,29 @@
 package com.dpozzo68.analizarapp;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
 import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
 import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
+import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
+import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
+
 
 public class login extends AppCompatActivity {
-    private static final String TAG = "EmailPassword";
-    EditText usuarioText;
-    EditText passwordText;
-    private FirebaseAuth mAuth;
-    Button buttonLogin;
+    public String mailUsuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,19 +100,17 @@ public class login extends AppCompatActivity {
     }
 
     private void showHome(String email) {
-        Intent homeIntent = new Intent(this,MisConsumos.class);
+        Intent homeIntent = new Intent(this, Video.class);
         homeIntent.putExtra("email",email);
         startActivity(homeIntent);
+    }
+    public void login (View view){
+        Intent intent = new Intent(this, MisConsumos.class);
+        startActivity(intent);
+
     }
     public void olvideContrasena(View view){
         Intent intent = new Intent(this, olvidaste_contrasena.class);
         startActivity(intent);
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, Onboarding3.class);
-        startActivity(intent);
-        finish();
     }
 }

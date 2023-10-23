@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blanco"
+    android:background="@color/white"
     tools:context=".ContactoActivity">
 
     <TextView
@@ -14,9 +14,8 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/robotobold"
         android:text="@string/titulo_activity_contacto"
-        android:textColor="@color/verde"
-        android:textSize="24sp"
-        android:contentDescription="Titulo de la Activity"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +27,6 @@
         android:layout_height="250dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/imagen_contacto_1"
-        android:contentDescription="Imagen del Equipo de Desarrollo que brinda Soporte a los Usuarios de AnalizArApp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +40,9 @@
         android:fontFamily="@font/robotoregular"
         android:text="@string/titulo_publicitario_contacto"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/negro"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,47 +52,45 @@
         android:id="@+id/textView2"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/robotoregular"
         android:text="@string/texto_publicitario_contacto"
         android:textAlignment="center"
-        android:textColor="@color/negro"
-        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btn_soporte"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/btn_soporte"
-        android:backgroundTint="@color/verde"
+        android:backgroundTint="@color/verde_oscuro"
         android:fontFamily="@font/robotobold"
-        android:textColor="@color/blanco"
-        android:textSize="20sp"
-        android:contentDescription="Botón para contactar al area de Soporte de AnalizArApp"
+        android:text="@string/btn_soporte"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <!-- android:text="@string/copyright_contacto" -->
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:contentDescription="Enlace a la página Presentación de DevFullSolutions en su sitio web de WordPress"
-        android:fontFamily="@font/robotoregular"
+        android:layout_marginBottom="10dp"
         android:text="@string/link"
-        android:textColor="@color/verde"
+        android:fontFamily="@font/robotoregular"
         android:textSize="14sp"
+        android:textColor="@color/verde_intermedio"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_soporte" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+        <!-- android:text="@string/copyright_contacto" -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"

@@ -1,20 +1,19 @@
 package com.dpozzo68.analizarapp;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
 import com.dpozzo68.analizarapp.entidades.Usuario;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class Mi_Cuenta extends AppCompatActivity {
     //creo una variable Usuario que reciba el usuario alamcenado de forma global
     public Usuario usuario = GlobalUsuario.getInstanciaUsuario().getUsuario();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +23,12 @@ public class Mi_Cuenta extends AppCompatActivity {
         TextView nombreUsuario = findViewById(R.id.nombreUsuario);
         mailUsuario.setText(this.usuario.getEmail());
         nombreUsuario.setText(this.usuario.getNombre() + " " + this.usuario.getApellido());
+
     }
 
     public void cerrarSesion(View view){
-        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, login.class);
+
         startActivity(intent);
     }
 
@@ -60,10 +60,5 @@ public class Mi_Cuenta extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MisConsumos.class);
-        startActivity(intent);
-        finish();
-    }
+
 }
