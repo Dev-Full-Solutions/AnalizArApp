@@ -26,6 +26,9 @@
     <string name="btn_volver_inicio">Inicio</string>
     <string name="titulo_activity_contacto">CONTACTO</string>
     <string name="titleOnboarding3">ACOMPAÑANOS A CUIDAR EL MEDIO AMBIENTE</string>
+    <string name="subtitleTextOnboarding3">Te brindamos los mejores consejos \npara cuidar tu bolsillo, ahorrar energía \ny cuidar el medio ambiente.</string>
+    <string name="back">ATRÁS</string>
+    <string name="continueButton">SEGUIR</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
