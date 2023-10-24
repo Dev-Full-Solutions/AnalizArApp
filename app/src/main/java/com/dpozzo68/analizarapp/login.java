@@ -2,6 +2,7 @@ package com.dpozzo68.analizarapp;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
+import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
+import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -45,7 +49,11 @@ public class login extends AppCompatActivity {
     public void singIn(){
         String email = usuarioText.getText().toString();
         String password = passwordText.getText().toString();
-
+        UsuariosSQLiteHelper us = new UsuariosSQLiteHelper(this, "Usuarios", null, 1);
+        SQLiteDatabase db = us.getWritableDatabase();
+        UsuarioServicio uServ = new UsuarioServicio();
+        uServ.llenarTablaUsuarios(db);
+        GlobalUsuario.getInstanciaUsuario().setUsuario(uServ.getUsuariofromDB(db, email));
         if(!email.isEmpty() && !password.isEmpty()){
             if(email.contains("@") && email.contains(".") && password.length() > 5){
                 mAuth.signInWithEmailAndPassword(email, password)

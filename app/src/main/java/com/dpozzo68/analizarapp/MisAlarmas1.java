@@ -27,6 +27,12 @@ public class MisAlarmas1 extends AppCompatActivity {
         switch03 = (Switch) findViewById(R.id.switch3);
         button = (Button) findViewById(R.id.button);
 
+        button.setOnClickListener(v -> irAlarmasConfiguracion());
+
+    }
+    public void irAlarmasConfiguracion(){
+        Intent intent = new Intent(this, AlarmasConfiguracionActivity.class);
+        startActivity(intent);
     }
 
     public void irConsumos(View view) {
