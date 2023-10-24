@@ -25,6 +25,15 @@
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
     <string name="titulo_activity_contacto">CONTACTO</string>
+    <string name="titleOnboarding3">ACOMPAÑANOS A CUIDAR EL MEDIO AMBIENTE</string>
+    <string name="subtitleTextOnboarding3">Te brindamos los mejores consejos \npara cuidar tu bolsillo, ahorrar energía \ny cuidar el medio ambiente.</string>
+    <string name="back">ATRÁS</string>
+    <string name="continueButton">SEGUIR</string>
+    <string name="imgOnb3ContentDescription">Arte conceptual de una lámpara, de la cual salen dos cables: uno es una ficha eléctrica y otro es una planta</string>
+    <string name="imgOnb2ContentDescription">Dibujo de una mano presionando con el dedo en la pantalla de un teléfono celular</string>
+    <string name="titleOnboarding2">CONTROLAR TU CONSUMO ES FUNDAMENTAL</string>
+    <string name="subtitleTextOnboarding2">Te ayudamos a manejar tu consumo \nmediante gráficos, alertas, consejos \ny mucho más.</string>
+    <string name="skip">SALTEAR</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
