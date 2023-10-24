@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Mis Alarmas"
-        android:textColor="#84A894"
-        android:textSize="30sp"
+        android:text="MIS ALARMAS"
+        android:textColor="@color/verde_oscuro"
+        android:textSize="24sp"
+        android:fontFamily="@font/roboto_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,8 +40,9 @@
             android:layout_height="wrap_content"
             android:padding="25sp"
             android:text="Alarma Casa"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -49,7 +51,9 @@
             android:paddingLeft="25sp"
             android:paddingTop="54sp"
             android:text="Diaria 30 Kw"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="17sp" />
 
         <Switch
             android:id="@+id/switch1"
@@ -58,7 +62,9 @@
             android:paddingLeft="300dp"
             android:paddingTop="43dp"
             android:text=""
-            android:thumbTint="#84A894" />
+            android:thumbTint="@null"
+            android:trackTint="#84A894"
+            android:onClick="onclick"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -80,8 +86,9 @@
             android:layout_height="wrap_content"
             android:padding="25sp"
             android:text="Alarma Casa"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -90,7 +97,9 @@
             android:paddingLeft="25sp"
             android:paddingTop="54sp"
             android:text="Semanal 210 Kw"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="17sp" />
 
         <Switch
             android:id="@+id/switch2"
@@ -99,7 +108,9 @@
             android:paddingLeft="300dp"
             android:paddingTop="43dp"
             android:text=""
-            android:thumbTint="#84A894" />
+            android:thumbTint="@null"
+            android:trackTint="#84A894"
+            android:onClick="onclick2"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -121,8 +132,9 @@
             android:layout_height="wrap_content"
             android:padding="25sp"
             android:text="Alarma Casa"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -131,7 +143,9 @@
             android:paddingLeft="25sp"
             android:paddingTop="54sp"
             android:text="Mensual 800 Kw"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textSize="17sp" />
 
         <Switch
             android:id="@+id/switch3"
@@ -140,7 +154,9 @@
             android:paddingLeft="300dp"
             android:paddingTop="43dp"
             android:text=""
-            android:thumbTint="#84A894" />
+            android:thumbTint="@null"
+            android:trackTint="#84A894"
+            android:onClick="onclick3"/>
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -148,9 +164,10 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#84A894"
+        android:backgroundTint="@color/verde_intermedio"
         android:text="+"
         android:textSize="30dp"
+        android:onClick="onclick4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
