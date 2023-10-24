@@ -7,13 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-<<<<<<< HEAD
-import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
-import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
-import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
-=======
-
->>>>>>> parent of 7e1219d (Merge branch 'FeatureMisConsumosMisAlarmas' into develop)
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
