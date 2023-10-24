@@ -1,8 +1,5 @@
 package com.dpozzo68.analizarapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -90,7 +89,7 @@ public class login extends AppCompatActivity {
     }
 
     private void showHome(String email) {
-        Intent homeIntent = new Intent(this,MisConsumos.class);
+        Intent homeIntent = new Intent(this, Video.class);
         homeIntent.putExtra("email",email);
         startActivity(homeIntent);
     }
