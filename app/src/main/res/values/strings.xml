@@ -31,7 +31,8 @@
     <string name="continueButton">SEGUIR</string>
     <string name="imgOnb3ContentDescription">Arte conceptual de una lámpara, de la cual salen dos cables: uno es una ficha eléctrica y otro es una planta</string>
     <string name="imgOnb2ContentDescription">Dibujo de una mano presionando con el dedo en la pantalla de un teléfono celular</string>
-
+    <string name="titleOnboarding2">CONTROLAR TU CONSUMO ES FUNDAMENTAL</string>
+    <string name="subtitleTextOnboarding2">Te ayudamos a manejar tu consumo \nmediante gráficos, alertas, consejos \ny mucho más.</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
