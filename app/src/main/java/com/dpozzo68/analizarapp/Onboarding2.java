@@ -30,4 +30,8 @@ public class Onboarding2 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void skip(View view) {
+        startActivity(new Intent(this, login.class));
+    }
 }
