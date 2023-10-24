@@ -23,4 +23,11 @@ public class Onboarding2 extends AppCompatActivity {
         Intent intent = new Intent(this, Onboarding3.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Onboarding1.class);
+        startActivity(intent);
+        finish();
+    }
 }

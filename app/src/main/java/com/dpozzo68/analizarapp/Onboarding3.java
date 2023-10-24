@@ -47,4 +47,11 @@ public class Onboarding3 extends AppCompatActivity {
         Intent intent = new Intent(this, login.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Onboarding2.class);
+        startActivity(intent);
+        finish();
+    }
 }

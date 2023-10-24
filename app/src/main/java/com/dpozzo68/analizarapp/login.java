@@ -1,29 +1,34 @@
 package com.dpozzo68.analizarapp;
+
 import android.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+<<<<<<< HEAD
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
 import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
 import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
+=======
+
+>>>>>>> parent of 7e1219d (Merge branch 'FeatureMisConsumosMisAlarmas' into develop)
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
-import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
-import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
-
 
 public class login extends AppCompatActivity {
-    public String mailUsuario;
+    private static final String TAG = "EmailPassword";
+    EditText usuarioText;
+    EditText passwordText;
+    private FirebaseAuth mAuth;
+    Button buttonLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,15 +52,6 @@ public class login extends AppCompatActivity {
     public void singIn(){
         String email = usuarioText.getText().toString();
         String password = passwordText.getText().toString();
-
-        //aqui inserto codigo para instanciar bd usuarios y para completar la bd.
-        UsuariosSQLiteHelper us = new UsuariosSQLiteHelper(this, "Usuarios", null, 1);
-        SQLiteDatabase db = us.getWritableDatabase();
-        UsuarioServicio uServ = new UsuarioServicio();
-        uServ.llenarTablaUsuarios(db);
-
-        // aqui inserto codigo para crear Global User
-        GlobalUsuario.getInstanciaUsuario().setUsuario(uServ.getUsuariofromDB(db, email));
 
         if(!email.isEmpty() && !password.isEmpty()){
             if(email.contains("@") && email.contains(".") && password.length() > 5){
@@ -104,13 +100,15 @@ public class login extends AppCompatActivity {
         homeIntent.putExtra("email",email);
         startActivity(homeIntent);
     }
-    public void login (View view){
-        Intent intent = new Intent(this, MisConsumos.class);
-        startActivity(intent);
-
-    }
     public void olvideContrasena(View view){
         Intent intent = new Intent(this, olvidaste_contrasena.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Onboarding3.class);
+        startActivity(intent);
+        finish();
     }
 }
