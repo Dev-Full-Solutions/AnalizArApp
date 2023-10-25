@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,6 +39,7 @@
                 android:layout_marginStart="142dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="141dp"
+                android:contentDescription="@string/titulo_mi_cuenta"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/miCuenta"
                 android:textColor="@color/verde_oscuro"
@@ -91,6 +92,7 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
+                        android:contentDescription="Mail de usuario"
                         android:fontFamily="@font/roboto"
                         android:gravity="bottom|center_horizontal|center_vertical"
                         android:text="Jdoe@gmail.com"
@@ -109,6 +111,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="2dp"
                         android:layout_weight="1"
+                        android:contentDescription="Nombre de Usuario"
                         android:fontFamily="@font/roboto"
                         android:text="John Doe"
                         android:textColor="@color/black"
@@ -122,6 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:contentDescription="Titulo datos Personales"
                 android:fontFamily="@font/roboto"
                 android:text="Datos Personales"
                 android:textColor="@color/black"
@@ -137,16 +141,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginBottom="8dp"
                 android:background="@drawable/card"
+                android:contentDescription="Campo Completar Apellido"
                 android:foregroundGravity="center_vertical"
                 android:orientation="vertical"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tituloDatosPersonales"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintTop_toBottomOf="@+id/tituloDatosPersonales">
 
                 <TextView
                     android:id="@+id/nombre"
@@ -154,6 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:contentDescription="Subtitulo nombre"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editNombre"
                     android:text="Nombre"
@@ -171,6 +175,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Campo Nombre"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPersonName"
@@ -189,6 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:contentDescription="Subtitulo Apellido"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editApellido"
                     android:text="Apellido"
@@ -205,6 +211,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Campo Apellido"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPersonName"
@@ -222,6 +229,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="Subtitulo Celular"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editNumero"
                     android:text="Celular"
@@ -238,6 +246,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Campo Celular"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="phone"
@@ -272,6 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:contentDescription="Titulo Datos personales"
                 android:fontFamily="@font/roboto"
                 android:text="@string/datos_de_cuenta"
                 android:textColor="@color/black"
@@ -303,6 +313,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="subtitulo email"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editEmail"
                     android:text="@string/email"
@@ -319,6 +330,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="campo email"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textEmailAddress"
@@ -336,6 +348,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="subtitulo contraseña"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editContrasena"
                     android:text="Contraseña"
@@ -353,6 +366,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="campo contraseña"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPassword"
@@ -370,6 +384,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="subtitulo cambiar contraseña"
                     android:fontFamily="@font/roboto"
                     android:labelFor="@id/editCambiarContrasena"
                     android:text="Cambiar contraseña"
@@ -387,6 +402,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="campo cambiar contraseña"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPassword"
@@ -423,6 +439,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:contentDescription="Titulo Configuracion"
                 android:fontFamily="@font/roboto"
                 android:text="@string/configuracion"
                 android:textColor="@color/black"
@@ -433,7 +450,7 @@
                 app:layout_constraintHorizontal_bias="0.145"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2"
-                app:layout_constraintVertical_bias="0.525" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <LinearLayout
                 android:id="@+id/cardConfiguracion"
@@ -450,23 +467,25 @@
                 app:layout_constraintTop_toBottomOf="@+id/button2">
 
                 <TextView
-                    android:id="@+id/emailConfig"
+                    android:id="@+id/miPlanConfig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="subtitulo Mi Plan"
                     android:fontFamily="@font/roboto"
                     android:text="@string/mi_plan"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/editEmailConfig"
+                    android:id="@+id/editMiPlanConfig"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Subtitulo mi plan"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPassword"
@@ -479,23 +498,25 @@
                     tools:layout_editor_absoluteX="48dp" />
 
                 <TextView
-                    android:id="@+id/contraseñaConfig"
+                    android:id="@+id/miMedidorConfig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="Subtitulo Mi Medidor"
                     android:fontFamily="@font/roboto"
                     android:text="@string/mi_medidor"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/editContraseñaConfig"
+                    android:id="@+id/editMiMedidorConfig"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Campo Mi medidor"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPassword"
@@ -508,23 +529,25 @@
                     tools:layout_editor_absoluteX="48dp" />
 
                 <TextView
-                    android:id="@+id/CambiarcontrasenaConfig"
+                    android:id="@+id/notificacionesConfig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="subtitulo notificaciones"
                     android:fontFamily="@font/roboto"
                     android:text="@string/notificaciones"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/editCambiarContrasenaConfig"
+                    android:id="@+id/editNotificacionesConfig"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/rounded_edittext"
+                    android:contentDescription="Campo Notificaciones"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
                     android:inputType="text|textPassword"
@@ -628,7 +651,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Alarmas"
+                android:contentDescription="Boton Alarmas"
                 app:srcCompat="@drawable/alerta" />
 
             <TextView
