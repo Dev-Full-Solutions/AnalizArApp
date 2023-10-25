@@ -7,7 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class AlarmasSQLiteHelper extends SQLiteOpenHelper {
     //Sentencia SQL para crear la tabla de Alertas
-    String sqlCreate = "CREATE TABLE Alertas (id_alerta INTEGER PRIMARY KEY,  id_medidor INTEGER, fecha_alta TEXT, valor_alerta INTEGER, estado_alerta INTEGER)";
+    private static final String sqlCreate = "CREATE TABLE IF NOT EXISTS Alarmas (\n" +
+            "    id_alarma INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+            "    id_medidor INTEGER,\n" +
+            "    nombre_alarma TEXT,\n" +
+            "    tipo TEXT,\n" +
+            "    fecha_alta TEXT,\n" +
+            "    valor_alerta INTEGER,\n" +
+            "    activo INTEGER\n" +
+            ");\n";
 
     public AlarmasSQLiteHelper(Context contexto, String nombre,
                                CursorFactory factory, int version) {
@@ -16,7 +24,6 @@ public class AlarmasSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//Se ejecuta la sentencia SQL de creación de la tabla
         db.execSQL(sqlCreate);
     }
 

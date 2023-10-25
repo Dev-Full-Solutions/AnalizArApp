@@ -53,6 +53,7 @@ public class UsuarioServicio {
                 usuario = new Usuario();
 
                 // Retrieve data from the cursor
+                usuario.setEmail(email);
                 usuario.setNombre(cursor.getString(cursor.getColumnIndex("nombre")));
                 usuario.setApellido(cursor.getString(cursor.getColumnIndex("apellido")));
                 usuario.setCelular(cursor.getString(cursor.getColumnIndex("celular")));

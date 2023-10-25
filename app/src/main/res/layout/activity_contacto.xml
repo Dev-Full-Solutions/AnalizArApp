@@ -8,7 +8,7 @@
     tools:context=".ContactoActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/nombre_alarma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_alarma" />
 
     <TextView
         android:id="@+id/textView"
@@ -69,13 +69,13 @@
         android:id="@+id/btn_soporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/btn_soporte"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/verde"
+        android:contentDescription="Botón para contactar al area de Soporte de AnalizArApp"
         android:fontFamily="@font/robotobold"
+        android:text="@string/btn_soporte"
         android:textColor="@color/blanco"
         android:textSize="20sp"
-        android:contentDescription="Botón para contactar al area de Soporte de AnalizArApp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -90,7 +90,6 @@
         android:contentDescription="Enlace a la página Presentación de DevFullSolutions en su sitio web de WordPress"
         android:fontFamily="@font/robotoregular"
         android:text="@string/link"
-        android:textColor="@color/verde"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +108,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
-        <!--        app:menu="@menu/bottom_nav_menu" -->
 
         <LinearLayout
             android:id="@+id/linearLayout"

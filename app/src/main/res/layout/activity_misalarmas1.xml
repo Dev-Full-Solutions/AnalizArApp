@@ -91,7 +91,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/nombre_alarma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="25sp"
@@ -127,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/resumen_alarma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="25sp"
