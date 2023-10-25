@@ -60,5 +60,9 @@
     <string name="text_mensaje">Mensaje</string>
     <string name="campo_mensaje">Detalle su consulta para el área SOPORTE de AnalizArApp</string>
     <string name="btn_enviar">ENVIAR</string>
+    <string name="titulo_video">INSTITUCIONAL</string>
+    <string name="texto_valores1">Ecológico</string>
+    <string name="texto_valores2">Sustentable</string>
+    <string name="texto_valores3">Inteligente</string>
 
 </resources>
