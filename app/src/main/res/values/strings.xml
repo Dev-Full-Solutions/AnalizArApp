@@ -18,6 +18,7 @@
     <string name="alarmas_ph_hora">HH MM</string>
     <string name="alarmas_btn_salir">Salir</string>
     <string name="alarmas_btn_guardar">Guardar</string>
+    <string name="alarmas_btn_eliminar">Eliminar</string>
 
     <!-- Strings Onboarding-->
     <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>
