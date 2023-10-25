@@ -64,5 +64,6 @@
     <string name="texto_valores1">Ecológico</string>
     <string name="texto_valores2">Sustentable</string>
     <string name="texto_valores3">Inteligente</string>
+    <string name="titulo_mi_cuenta">Titulo Mi cuenta</string>
 
 </resources>
