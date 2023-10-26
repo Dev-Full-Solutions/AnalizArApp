@@ -3,11 +3,19 @@ package com.dpozzo68.analizarapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.dpozzo68.analizarapp.entidades.Alarma;
+import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
+import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
+
+import java.util.ArrayList;
 
 
 public class MisAlarmas1 extends AppCompatActivity {
@@ -16,11 +24,42 @@ public class MisAlarmas1 extends AppCompatActivity {
     Switch switch02;
     Switch switch03;
     Button button;
+    public ArrayList<Alarma> alarmas = new ArrayList<Alarma>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misalarmas1);
+
+
+/*        //creo alarmas helper singleton y db
+        AlarmasSQLiteHelper as = new AlarmasSQLiteHelper(this, "Alarmas", null, 1);
+        SQLiteDatabase db = as.getWritableDatabase();
+        //Creo alarmaServicio, sumo datos a la db y los guardo en ArrayList de alarmas
+        AlarmaServicio alServ = new AlarmaServicio();
+        alServ.llenarAlarmasDB(db);
+        alarmas = alServ.getAlarmasFromDB(db);*/
+
+/*
+        Intent configIntent = getIntent()
+        if (configIntent.hasExtra("accion")){
+            Alarma alarma = (Alarma)configIntent.getSerializableExtra("Alarma");
+            if(configIntent.getStringExtra("accion") == "guardar"){
+                alServ.guardarAlarma(db, alarma);
+                Toast.makeText(this, "guardado", Toast.LENGTH_SHORT).show();
+            }
+            if(configIntent.getStringExtra("accion") == "editar"){
+                alServ.guardarAlarma(db, alarma);
+                Toast.makeText(this, "editado", Toast.LENGTH_SHORT).show();
+            }
+            if(configIntent.getStringExtra("accion") == "eliminar"){
+                alServ.guardarAlarma(db, alarma);
+                Toast.makeText(this, "eliminado", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+*/
+
 
         switch01 = (Switch) findViewById(R.id.switch1);
         switch02 = (Switch) findViewById(R.id.switch2);
@@ -71,7 +110,7 @@ public class MisAlarmas1 extends AppCompatActivity {
     }
 
     public void onclick(View view) {
-        if (view.getId() == R.id.switch1) ;
+        if (view.getId() == R.id.swAlarmaActivo) ;
         {
             if (switch01.isChecked()) {
 

@@ -1,6 +1,8 @@
 package com.dpozzo68.analizarapp.entidades;
 
-public class Alarma {
+import java.io.Serializable;
+
+public class Alarma implements Serializable {
     private int idAlarma;
     private int idMedidor;
     private String nombreAlarma;

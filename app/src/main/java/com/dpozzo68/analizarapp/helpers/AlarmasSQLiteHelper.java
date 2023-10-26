@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class AlarmasSQLiteHelper extends SQLiteOpenHelper {
+
     //Sentencia SQL para crear la tabla de Alertas
     private static final String sqlCreate = "CREATE TABLE IF NOT EXISTS Alarmas (\n" +
             "    id_alarma INTEGER PRIMARY KEY AUTOINCREMENT,\n" +

@@ -4,8 +4,7 @@
 
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
-    <string name="alarmas_nombre">Alarma Casa</string>
-    <string name="alarmas_resumen">Diaria 30Kw</string>
+    <string name="alarmas_nombre">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
     <string name="alarmas_semanal">Semanal</string>
@@ -19,6 +18,7 @@
     <string name="alarmas_btn_salir">Salir</string>
     <string name="alarmas_btn_guardar">Guardar</string>
     <string name="alarmas_btn_eliminar">Eliminar</string>
+
 
     <!-- Strings Onboarding-->
     <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>

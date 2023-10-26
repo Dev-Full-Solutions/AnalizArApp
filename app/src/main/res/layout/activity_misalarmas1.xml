@@ -91,7 +91,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/nombre_alarma"
+            android:id="@+id/edit_nombre_alarma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="25sp"

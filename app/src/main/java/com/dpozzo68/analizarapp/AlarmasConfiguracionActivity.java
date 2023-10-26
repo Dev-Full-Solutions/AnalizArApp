@@ -6,25 +6,46 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 import java.util.Locale;
 import android.widget.Toast;
+
+import com.dpozzo68.analizarapp.entidades.Alarma;
+import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
+import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
+
 public class AlarmasConfiguracionActivity extends AppCompatActivity {
-    // Obtener referencia al EditText
+    private boolean nuevaAlarma = false;
     private EditText etFecha;
     private EditText etHora;
+    private EditText etValorAlarma;
+    private EditText etNombreAlarma;
+    private Switch swActivo;
+    private RadioGroup rdTipo;
     private Button salir;
     private Button guardar;
+    private Button eliminar;
+    private int idMedidor = 1;
 
+    private int estadoAlerta = 1;
+    private Alarma alarma;
     private int ultimoDiaDelMes, ultimoMes, ultimoAnio, ultimoHora, ultimoMinuto;
+
+
+
 
     // Crear un listener del datepicker;
     private DatePickerDialog.OnDateSetListener listenerDeDatePicker = new DatePickerDialog.OnDateSetListener() {
@@ -33,10 +54,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             ultimoAnio = anio;
             ultimoMes = mes;
             ultimoDiaDelMes = diaDelMes;
-            refrescarFechaEnEditText();
+            refrescarFecha();
         }
     };
-    public void refrescarFechaEnEditText() {
+    public void refrescarFecha() {
 
         String fecha = String.format(Locale.getDefault(), "%02d/%02d/%04d", ultimoDiaDelMes, ultimoMes+1, ultimoAnio);
 
@@ -49,10 +70,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         public void onTimeSet(TimePicker timePicker, int hora, int minuto) {
             ultimoHora = hora;
             ultimoMinuto = minuto;
-            refrescarHoraEnEditText();
+            refrescarHora();
         }
     };
-    public void refrescarHoraEnEditText() {
+    public void refrescarHora() {
 
         String hora = String.format(Locale.getDefault(), "%02d:%02d", ultimoHora, ultimoMinuto);
         etHora.setText(hora);
@@ -63,8 +84,26 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarmas_configuracion);
+
+
         etFecha = findViewById(R.id.editTextDate);
         etHora = findViewById(R.id.editTextTime);
+        etValorAlarma = findViewById(R.id.editLimite);
+        etNombreAlarma = findViewById(R.id.edit_nombre_alarma);
+        swActivo = findViewById(R.id.swAlarmaActivo);
+        rdTipo = findViewById(R.id.rdGroupAlarma);
+        salir = findViewById(R.id.salir);
+        guardar = findViewById(R.id.guardar);
+        eliminar = findViewById(R.id.eliminar);
+/*
+        if (!getIntent().hasExtra("Alarma")){
+            alarma = new Alarma();
+            nuevaAlarma = true;
+            eliminar.setVisibility(View.GONE);
+        } else {
+            alarma = (Alarma) getIntent().getSerializableExtra("Alarma");
+        }
+        */
 
         final Calendar calendario = Calendar.getInstance();
         ultimoAnio = calendario.get(Calendar.YEAR);
@@ -73,9 +112,19 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         ultimoHora = 12;
         ultimoMinuto = 0;
 
-        refrescarFechaEnEditText();
-        refrescarHoraEnEditText();
+        refrescarFecha();
+        refrescarHora();
 
+        swActivo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    estadoAlerta = 1;
+                } else {
+                    estadoAlerta = 0;
+                }
+            }
+        });
 
         etFecha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,15 +141,52 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             }
         });
 
-        salir = (Button) findViewById(R.id.salir);
+        rdTipo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton selectedRadioButton = findViewById(i);
+                tipo = selectedRadioButton.getText().toString();
+            }
+        });
+
         salir.setOnClickListener(v -> irAlarmas());
-        guardar = (Button) findViewById(R.id.guardar);
         guardar.setOnClickListener(v -> guardarAlarma());
+        eliminar.setOnClickListener(v -> eliminarAlarma());
+
     }
 
     public void guardarAlarma(){
-        Toast.makeText(this, etFecha.getText() + " " + etHora.getText(),Toast.LENGTH_SHORT).show();
-        irAlarmas();
+        if(!etValorAlarma.getText().toString().isEmpty()){
+            construirAlarma();
+            if(nuevaAlarma){
+                Intent intent = new Intent(this, MisAlarmas1.class);
+                intent.putExtra("acccion", "guardar");
+                intent.putExtra("Alarma", alarma);
+                startActivity(intent);
+            }else{
+                Intent intent = new Intent(this, MisAlarmas1.class);
+                intent.putExtra("acccion", "editar");
+                intent.putExtra("Alarma", alarma);
+                startActivity(intent);
+            }
+        } else {
+            Toast.makeText(this, "completar campo valor", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void eliminarAlarma(){
+        construirAlarma();
+        Intent intent = new Intent(this, MisAlarmas1.class);
+        intent.putExtra("acccion", "eliminar");
+        intent.putExtra("Alarma", alarma);
+        startActivity(intent);
+    }
+
+    public void construirAlarma(){
+        alarma.setIdMedidor(1);
+        alarma.setNombreAlarma(etNombreAlarma.getText().toString());
+        alarma.setFechaAlta(etFecha.getText().toString() + " " + etHora.getText().toString());
+        alarma.setValorAlerta(Integer.parseInt(etValorAlarma.getText().toString()));
+        alarma.setEstadoAlerta(estadoAlerta);
     }
     public void irConsumos(View view) {
         ImageView imagen = findViewById(R.id.imagen_home);
