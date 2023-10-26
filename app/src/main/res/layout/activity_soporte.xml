@@ -44,6 +44,7 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/campo_nombre_apellido"
+        android:contentDescription="@string/campo_nombre_y_apellido_accesibilidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +72,7 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/campo_correo_electronico"
+        android:contentDescription="@string/campo_correo_electronico_accesibilidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,6 +102,7 @@
         android:inputType="textMultiLine"
         android:lines="5"
         android:hint="@string/campo_mensaje"
+        android:contentDescription="@string/campo_mensaje_accesibilidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,158 +113,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/btn_enviar"
         android:backgroundTint="@color/verde"
         android:fontFamily="@font/robotobold"
+        android:text="@string/btn_enviar"
         android:textColor="@color/blanco"
         android:textSize="20sp"
+        android:contentDescription="@string/btn_enviar_formulario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMensaje" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bottom_navigation"
-        style="@style/MyBottomNavigation"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:padding="10dp"
-        app:itemActiveIndicatorStyle="@color/verde_intermedio"
-        app:labelVisibilityMode="selected"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/verde_alternativo"
+        android:text="@string/btn_volver"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:contentDescription="@string/btn_volver_a_contacto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
-        <!--        app:menu="@menu/bottom_nav_menu" -->
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="irConsumos"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5">
-
-            <ImageView
-                android:id="@+id/imagen_home"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/home" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Home"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="irAlarmas"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5">
-
-            <ImageView
-                android:id="@+id/imagen_alerta"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/alerta" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Alertas"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="irPerfil"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5">
-
-            <ImageView
-                android:id="@+id/imagen_perfil"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/perfil" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Perfil"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="irContacto"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5">
-
-            <ImageView
-                android:id="@+id/imagen_contacto"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/contacto" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Contacto"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
