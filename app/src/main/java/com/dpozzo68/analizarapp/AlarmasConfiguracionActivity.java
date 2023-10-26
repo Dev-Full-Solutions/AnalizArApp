@@ -24,6 +24,7 @@ import java.util.Locale;
 import android.widget.Toast;
 
 import com.dpozzo68.analizarapp.entidades.Alarma;
+import com.dpozzo68.analizarapp.entidades.GlobalAlarma;
 import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
 import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
 
@@ -35,6 +36,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
     private EditText etNombreAlarma;
     private Switch swActivo;
     private RadioGroup rdTipo;
+    private String tipoAlarma;
     private Button salir;
     private Button guardar;
     private Button eliminar;
@@ -95,7 +97,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         salir = findViewById(R.id.salir);
         guardar = findViewById(R.id.guardar);
         eliminar = findViewById(R.id.eliminar);
-/*
+
         if (!getIntent().hasExtra("Alarma")){
             alarma = new Alarma();
             nuevaAlarma = true;
@@ -103,7 +105,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         } else {
             alarma = (Alarma) getIntent().getSerializableExtra("Alarma");
         }
-        */
+
 
         final Calendar calendario = Calendar.getInstance();
         ultimoAnio = calendario.get(Calendar.YEAR);
@@ -145,7 +147,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton selectedRadioButton = findViewById(i);
-                tipo = selectedRadioButton.getText().toString();
+                tipoAlarma = selectedRadioButton.getText().toString();
             }
         });
 
@@ -161,12 +163,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             if(nuevaAlarma){
                 Intent intent = new Intent(this, MisAlarmas1.class);
                 intent.putExtra("acccion", "guardar");
-                intent.putExtra("Alarma", alarma);
                 startActivity(intent);
             }else{
                 Intent intent = new Intent(this, MisAlarmas1.class);
                 intent.putExtra("acccion", "editar");
-                intent.putExtra("Alarma", alarma);
                 startActivity(intent);
             }
         } else {
@@ -177,16 +177,17 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         construirAlarma();
         Intent intent = new Intent(this, MisAlarmas1.class);
         intent.putExtra("acccion", "eliminar");
-        intent.putExtra("Alarma", alarma);
         startActivity(intent);
     }
 
     public void construirAlarma(){
         alarma.setIdMedidor(1);
+        alarma.setTipo(tipoAlarma);
         alarma.setNombreAlarma(etNombreAlarma.getText().toString());
         alarma.setFechaAlta(etFecha.getText().toString() + " " + etHora.getText().toString());
         alarma.setValorAlerta(Integer.parseInt(etValorAlarma.getText().toString()));
         alarma.setEstadoAlerta(estadoAlerta);
+        GlobalAlarma.getinstanciaAlarma().setAlarma(this.alarma);
     }
     public void irConsumos(View view) {
         ImageView imagen = findViewById(R.id.imagen_home);
