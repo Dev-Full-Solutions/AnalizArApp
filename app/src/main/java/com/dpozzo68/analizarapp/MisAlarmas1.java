@@ -52,7 +52,7 @@ public class MisAlarmas1 extends AppCompatActivity {
         //Creo alarmaServicio, sumo datos a la db y los guardo en ArrayList de alarmas
         AlarmaServicio alServ = new AlarmaServicio();
         alServ.llenarAlarmasDB(db);
-        //alarmas = alServ.getAlarmasFromDB(db);
+        alarmas = alServ.getAlarmasFromDB(db);
 
 
 
@@ -60,17 +60,17 @@ public class MisAlarmas1 extends AppCompatActivity {
 
         Intent configIntent = getIntent();
         if (configIntent.hasExtra("accion")){
-           // Alarma alarma = GlobalAlarma.getinstanciaAlarma().getAlarma();
+            Alarma alarma = GlobalAlarma.getinstanciaAlarma().getAlarma();
             if(configIntent.getStringExtra("accion") == "guardar"){
-               // alServ.guardarAlarma(db, alarma);
+                alServ.guardarAlarma(db, alarma);
                 Toast.makeText(this, "guardado", Toast.LENGTH_SHORT).show();
             }
             if(configIntent.getStringExtra("accion") == "editar"){
-               // alServ.editarAlarma(db, alarma);
+                alServ.editarAlarma(db, alarma);
                 Toast.makeText(this, "editado", Toast.LENGTH_SHORT).show();
             }
             if(configIntent.getStringExtra("accion") == "eliminar"){
-                //alServ.eliminarAlarma(db, alarma);
+                alServ.eliminarAlarma(db, alarma);
                 Toast.makeText(this, "eliminado", Toast.LENGTH_SHORT).show();
             }
         }
