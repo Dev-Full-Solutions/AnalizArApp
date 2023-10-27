@@ -20,9 +20,18 @@
     <string name="alarmas_btn_guardar">Guardar</string>
     <string name="alarmas_btn_eliminar">Eliminar</string>
 
+    <!-- Strings Main-->
+
+    <string name="titulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
+    <string name="texto_btn_ingresar">INGRESAR</string>
+    <string name="texto_btn_iniciar_tour">INICIAR TOUR</string>
+    <string name="descripcion_btn_ingresar">Presionar para iniciar sesión en la aplicación</string>
+    <string name="descripcion_btn_iniciar_tour">Presionar para iniciar el recorrido de características de la aplicación</string>
+    <string name="descripcion_logotipo">Logotipo de la aplicación AnalizAr App</string>
+
+
     <!-- Strings Onboarding-->
     <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>
-    <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
     <string name="titulo_activity_contacto">CONTACTO</string>

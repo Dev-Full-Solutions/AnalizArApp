@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void ingresar(View view) {
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
+
+    public void iniciarTour(View view) {
         Intent intent = new Intent(this, Onboarding1.class);
         startActivity(intent);
     }
