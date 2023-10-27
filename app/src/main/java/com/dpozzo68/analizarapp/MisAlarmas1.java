@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dpozzo68.analizarapp.entidades.Alarma;
@@ -22,7 +23,7 @@ import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
 import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
 import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
 
-import java.text.BreakIterator;
+
 import java.util.ArrayList;
 
 
@@ -30,7 +31,7 @@ public class MisAlarmas1 extends AppCompatActivity {
 
     Switch switch01;
     Button button;
-    RecyclerView recyclerView = findViewById(R.id.recyclerView);
+    RecyclerView recyclerView;
 
     public ArrayList<Alarma> alarmas = new ArrayList<Alarma>();
 
@@ -51,7 +52,7 @@ public class MisAlarmas1 extends AppCompatActivity {
         //Creo alarmaServicio, sumo datos a la db y los guardo en ArrayList de alarmas
         AlarmaServicio alServ = new AlarmaServicio();
         alServ.llenarAlarmasDB(db);
-        alarmas = alServ.getAlarmasFromDB(db);
+        //alarmas = alServ.getAlarmasFromDB(db);
 
 
 
@@ -59,17 +60,17 @@ public class MisAlarmas1 extends AppCompatActivity {
 
         Intent configIntent = getIntent();
         if (configIntent.hasExtra("accion")){
-            Alarma alarma = GlobalAlarma.getinstanciaAlarma().getAlarma();
+           // Alarma alarma = GlobalAlarma.getinstanciaAlarma().getAlarma();
             if(configIntent.getStringExtra("accion") == "guardar"){
-                alServ.guardarAlarma(db, alarma);
+               // alServ.guardarAlarma(db, alarma);
                 Toast.makeText(this, "guardado", Toast.LENGTH_SHORT).show();
             }
             if(configIntent.getStringExtra("accion") == "editar"){
-                alServ.editarAlarma(db, alarma);
+               // alServ.editarAlarma(db, alarma);
                 Toast.makeText(this, "editado", Toast.LENGTH_SHORT).show();
             }
             if(configIntent.getStringExtra("accion") == "eliminar"){
-                alServ.eliminarAlarma(db, alarma);
+                //alServ.eliminarAlarma(db, alarma);
                 Toast.makeText(this, "eliminado", Toast.LENGTH_SHORT).show();
             }
         }
@@ -83,6 +84,12 @@ public class MisAlarmas1 extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(v -> irAlarmasConfiguracion());
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        AlarmaAdapter adapter = new AlarmaAdapter(alarmas);
+        recyclerView.setAdapter(adapter);
+
     }
 
 
@@ -161,7 +168,7 @@ public class MisAlarmas1 extends AppCompatActivity {
 
     public class AlarmaAdapter extends RecyclerView.Adapter<AlarmaAdapter.AlarmaViewHolder> {
 
-        public ArrayList<Alarma> alarmas = new ArrayList<Alarma>();
+        private ArrayList<Alarma> alarmas;
 
         public AlarmaAdapter(ArrayList<Alarma> alarmas) {
             this.alarmas = alarmas;
@@ -176,23 +183,26 @@ public class MisAlarmas1 extends AppCompatActivity {
         public void onBindViewHolder(AlarmaViewHolder holder, int position) {
             // Aquí debes realizar la asignación de datos a las vistas dentro de la tarjeta
             Alarma alarma = alarmas.get(position);
-            // Por ejemplo:
             holder.textView2.setText(alarma.getTextView2());
             holder.textView3.setText(alarma.getTextView3());
+            holder.switch1.setChecked(alarma.isSwitchState());
             // Aquí puedes manejar la lógica para mostrar u ocultar vistas según la alarma
         }
 
         @Override
         public int getItemCount() {
-            return 0;
+            return alarmas.size()   ;
         }
 
         public class AlarmaViewHolder extends RecyclerView.ViewHolder{
-            public BreakIterator textView2;
-            public BreakIterator textView3;
-
+            public TextView textView2;
+            public TextView textView3;
+            public Switch switch1;
             public AlarmaViewHolder(View itemView) {
                 super(itemView);
+                textView2 = itemView.findViewById(R.id.textView2);
+                textView3 = itemView.findViewById(R.id.textView3);
+                switch1 = itemView.findViewById(R.id.switch1);
             }
         }
     }
