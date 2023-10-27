@@ -9,15 +9,17 @@
     tools:context=".olvidaste_contrasena">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/olvidasteContrasenaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
-        android:backgroundTint="@color/verde_oscuro"
+        android:backgroundTint="@color/verde"
+        android:contentDescription="Boton para enviar email de olvide contraseña"
         android:fontFamily="@font/roboto_bold"
         android:text="ENVIAR"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,7 +47,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/inputEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -61,10 +63,10 @@
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/negro"
         android:textColorHint="@color/gris_claro"
         android:textColorLink="@color/verde_oscuro"
-        android:textSize="16sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,10 +85,10 @@
         android:textColorLink="@color/verde_oscuro"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_alarma" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/nombre_alarma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="172dp"
@@ -95,7 +97,7 @@
         android:fontFamily="@font/roboto_bold"
         android:text="OLVIDÉ CONTRASEÑA"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/verde_intermedio"
+        android:textColor="@color/verde"
         android:textColorLink="@color/verde_oscuro"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,8 +109,9 @@
         android:layout_width="41dp"
         android:layout_height="34dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
-        app:layout_constraintTop_toTopOf="@+id/editTextText3"
+        android:contentDescription="Icono representante de email"
+        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="@+id/inputEmail"
         app:srcCompat="@drawable/email" />
 </androidx.constraintlayout.widget.ConstraintLayout>

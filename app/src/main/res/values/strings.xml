@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Analizarapp</string>
-    <string name="miCuenta">Mi Cuenta</string>
-    
+    <string name="miCuenta">MI CUENTA</string>
+
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
     <string name="alarmas_nombre">Alarma Casa</string>
@@ -18,21 +18,67 @@
     <string name="alarmas_ph_hora">HH MM</string>
     <string name="alarmas_btn_salir">Salir</string>
     <string name="alarmas_btn_guardar">Guardar</string>
+    <string name="alarmas_btn_eliminar">Eliminar</string>
+
+    <!-- Strings Main-->
+
+    <string name="titulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
+    <string name="texto_btn_ingresar">INGRESAR</string>
+    <string name="texto_btn_iniciar_tour">INICIAR TOUR</string>
+    <string name="descripcion_btn_ingresar">Presionar para iniciar sesión en la aplicación</string>
+    <string name="descripcion_btn_iniciar_tour">Presionar para iniciar el recorrido de características de la aplicación</string>
+    <string name="descripcion_logotipo">Logotipo de la aplicación AnalizAr App</string>
+
 
     <!-- Strings Onboarding-->
     <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>
-    <string name="tutulo_bienvenida_main">Bienvenidos a AnalizArApp</string>
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
-    <string name="titulo_activity_contacto">Contacto</string>
+    <string name="titulo_activity_contacto">CONTACTO</string>
+    <string name="titleOnboarding3">ACOMPAÑANOS A CUIDAR EL MEDIO AMBIENTE</string>
+    <string name="subtitleTextOnboarding3">Te brindamos los mejores consejos \npara cuidar tu bolsillo, ahorrar energía \ny cuidar el medio ambiente.</string>
+    <string name="back">ATRÁS</string>
+    <string name="continueButton">SEGUIR</string>
+    <string name="imgOnb3ContentDescription">Arte conceptual de una lámpara, de la cual salen dos cables: uno es una ficha eléctrica y otro es una planta</string>
+    <string name="imgOnb2ContentDescription">Dibujo de una mano presionando con el dedo en la pantalla de un teléfono celular</string>
+    <string name="titleOnboarding2">CONTROLAR TU CONSUMO ES FUNDAMENTAL</string>
+    <string name="subtitleTextOnboarding2">Te ayudamos a manejar tu consumo \nmediante gráficos, alertas, consejos \ny mucho más.</string>
+    <string name="skip">SALTEAR</string>
 
     <!-- Strings Contacto -->
     <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
     <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Por asistencia técnica pulsa en el botón "SOPORTE".</string>
     <string name="btn_contactanos">Contáctanos</string>
-    <string name="btn_soporte">Soporte</string>
-    <string name="link">
-        By <a href = "https://wordpress.analizar.tk/presentacion/">DevFullSolutions</a>.
-    </string>
-    <!-- <string name="copyright_contacto">By Dev Full Solutions</string> -->
+    <string name="btn_soporte">SOPORTE</string>
+    <string name="link">By <u><font color="#0000FF">DevFullSolutions</font></u></string>
+    <string name="email">Email</string>
+    <string name="datos_de_cuenta">Datos de cuenta</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="mi_plan">Mi plan</string>
+    <string name="mi_medidor">Mi medidor</string>
+    <string name="notificaciones">Notificaciones</string>
+
+    <!-- Strings Soporte -->
+    <string name="titulo_soporte">SOPORTE</string>
+    <string name="text_nombre_apellido">Nombre y Apellido</string>
+    <string name="campo_nombre_apellido">Ingrese su Nombre y Apellido</string>
+    <string name="text_correo_electronico">Correo Electronico</string>
+    <string name="campo_correo_electronico">Ingrese su Correo Electrónico</string>
+    <string name="text_mensaje">Mensaje</string>
+    <string name="campo_mensaje">Detalle su consulta para el área SOPORTE de AnalizArApp</string>
+    <string name="btn_enviar">ENVIAR</string>
+    <string name="titulo_video">INSTITUCIONAL</string>
+    <string name="texto_valores1">Ecológico</string>
+    <string name="texto_valores2">Sustentable</string>
+    <string name="texto_valores3">Inteligente</string>
+    <string name="titulo_mi_cuenta">Titulo Mi cuenta</string>
+    <string name="btn_volver">VOLVER</string>
+    <string name="btn_volver_a_contacto">Botón para volver a la sección de contacto</string>
+    <string name="btn_enviar_formulario">Botón para enviar el formulario</string>
+    <string name="campo_mensaje_accesibilidad">Campo del formulario para ingresar su mensaje al área de soporte</string>
+    <string name="campo_correo_electronico_accesibilidad">Campo del formulario para ingresar su correo electrónico</string>
+    <string name="campo_nombre_y_apellido_accesibilidad">Campo del formulario para ingresar su nombre y apellido</string>
+
 </resources>
