@@ -1,11 +1,15 @@
 package com.dpozzo68.analizarapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Button;
@@ -15,16 +19,21 @@ import com.dpozzo68.analizarapp.entidades.Alarma;
 import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
 import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 
 
 public class MisAlarmas1 extends AppCompatActivity {
 
     Switch switch01;
-    Switch switch02;
-    Switch switch03;
     Button button;
+    RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
     public ArrayList<Alarma> alarmas = new ArrayList<Alarma>();
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +71,13 @@ public class MisAlarmas1 extends AppCompatActivity {
 
 
         switch01 = (Switch) findViewById(R.id.switch1);
-        switch02 = (Switch) findViewById(R.id.switch2);
-        switch03 = (Switch) findViewById(R.id.switch3);
+
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(v -> irAlarmasConfiguracion());
-
     }
+
+
     public void irAlarmasConfiguracion(){
         Intent intent = new Intent(this, AlarmasConfiguracionActivity.class);
         startActivity(intent);
@@ -119,24 +128,71 @@ public class MisAlarmas1 extends AppCompatActivity {
         }
     }
 
-    public void onclick2(View view) {
-        if (view.getId() == R.id.switch2) ;
-        {
-            if (switch02.isChecked()) {
+        public class Alarma {
+            private String textView2;
+            private String textView3;
+            private boolean switchState;
 
-            } else {
+            public Alarma(String textView2, String textView3,boolean switchState) {
+                this.textView2 = textView2;
+                this.textView3 = textView3;
+                this.switchState = switchState;
+            }
+
+            public String getTextView2() {
+                return textView2;
+            }
+            public String getTextView3() {
+                return textView3;
+            }
+            public boolean isSwitchState() {
+                return switchState;
+            }
+       }
+
+
+    public class AlarmaAdapter extends RecyclerView.Adapter<AlarmaAdapter.AlarmaViewHolder> {
+
+        public ArrayList<Alarma> alarmas = new ArrayList<Alarma>();
+
+        public AlarmaAdapter(ArrayList<Alarma> alarmas) {
+            this.alarmas = alarmas;
+        }
+        // Implementa los métodos necesarios, como onCreateViewHolder, onBindViewHolder y getItemCount
+        public AlarmaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            // Aquí debes inflar la vista de la tarjeta y crear una instancia de AlarmaViewHolder
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_misalarmas1, parent, false);
+            return new AlarmaViewHolder(view);
+        }
+
+        public void onBindViewHolder(AlarmaViewHolder holder, int position) {
+            // Aquí debes realizar la asignación de datos a las vistas dentro de la tarjeta
+            Alarma alarma = alarmas.get(position);
+            // Por ejemplo:
+            holder.textView2.setText(alarma.getTextView2());
+            holder.textView3.setText(alarma.getTextView3());
+            // Aquí puedes manejar la lógica para mostrar u ocultar vistas según la alarma
+        }
+
+        @Override
+        public int getItemCount() {
+            return 0;
+        }
+
+        public class AlarmaViewHolder extends RecyclerView.ViewHolder{
+            public BreakIterator textView2;
+            public BreakIterator textView3;
+
+            public AlarmaViewHolder(View itemView) {
+                super(itemView);
             }
         }
     }
 
-    public void onclick3(View view) {
-        if (view.getId() == R.id.switch3) ;
-        {
-            if (switch03.isChecked()) {
 
-            } else {
-            }
-        }
-    }
+
+
+
 }
+
 

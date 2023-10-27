@@ -21,157 +21,97 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="380dp"
         android:layout_height="100dp"
-        android:layout_marginTop="56dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginStart="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="25sp"
-            android:text="Alarma Casa"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="25sp"
-            android:paddingTop="54sp"
-            android:text="Diaria 30 Kw"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="17sp" />
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="300dp"
-            android:paddingTop="43dp"
-            android:text=""
-            android:thumbTint="@null"
-            android:trackTint="#84A894"
-            android:onClick="onclick"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="Alarma Casa"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="Diaria 30 Kw"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="-36dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="onclick"
+                android:text=""
+                android:thumbTint="@null"
+                android:trackTint="@color/verde_oscuro" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="44dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="25sp"
-            android:text="Alarma Casa"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="20sp" />
+    </LinearLayout>
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/edit_nombre_alarma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="25sp"
-            android:paddingTop="54sp"
-            android:text="Semanal 210 Kw"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="17sp" />
-
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="300dp"
-            android:paddingTop="43dp"
-            android:text=""
-            android:thumbTint="@null"
-            android:trackTint="#84A894"
-            android:onClick="onclick2"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="44dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-        <TextView
-            android:id="@+id/resumen_alarma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="25sp"
-            android:text="Alarma Casa"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="25sp"
-            android:paddingTop="54sp"
-            android:text="Mensual 800 Kw"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
-            android:textSize="17sp" />
-
-        <Switch
-            android:id="@+id/switch3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="300dp"
-            android:paddingTop="43dp"
-            android:text=""
-            android:thumbTint="@null"
-            android:trackTint="#84A894"
-            android:onClick="onclick3"/>
-    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/button"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="90dp"
         android:backgroundTint="@color/verde_intermedio"
         android:text="+"
         android:textSize="30dp"
         android:onClick="onclick4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"
