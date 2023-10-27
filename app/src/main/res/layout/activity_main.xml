@@ -6,46 +6,69 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    tools:context=".MisConsumos">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/titulo_bienvenida_main"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/tutulo_bienvenida_main"
+        android:text="@string/titulo_bienvenida_main"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="@color/verde_oscuro"
+        android:layout_marginTop="112dp"
+        android:backgroundTint="@color/verde"
+        android:contentDescription="@string/descripcion_btn_ingresar"
         android:onClick="ingresar"
-        android:text="INGRESAR"
+        android:text="@string/texto_btn_ingresar"
         android:textColor="@color/white"
+        android:textSize="20sp"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="350dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="80dp"
+    <Button
+        android:id="@+id/button3.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/verde_alternativo"
+        android:contentDescription="@string/descripcion_btn_iniciar_tour"
+        android:onClick="iniciarTour"
+        android:text="@string/texto_btn_iniciar_tour"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/logo_app" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/descripcion_logotipo"
+        android:src="@drawable/logo_app"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
