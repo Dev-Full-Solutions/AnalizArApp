@@ -28,7 +28,7 @@ public class AlarmaServicio {
         alarma2.put("fecha_alta", "01/10/2023");
         alarma2.put("valor_alerta", 400);
         alarma2.put("activo", 1);
-        db.insert("Alarmas", null, alarma1);
+        db.insert("Alarmas", null, alarma2);
 
     }
 
@@ -36,7 +36,7 @@ public class AlarmaServicio {
     public ArrayList<Alarma> getAlarmasFromDB(SQLiteDatabase db) {
         ArrayList<Alarma> alarmas = new ArrayList<>();
 
-        String query = "SELECT id_alarma, id_medidor, nombre_alarma, tipo, fecha_alta, valor_alerta, activo FROM Usuarios WHERE activo = ?";
+        String query = "SELECT id_alarma, id_medidor, nombre_alarma, tipo, fecha_alta, valor_alerta, activo FROM Alarmas WHERE activo = ?";
         String[] selectionArgs = {"1"};
         Cursor cursor = db.rawQuery(query, selectionArgs);
 
