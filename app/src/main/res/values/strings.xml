@@ -29,6 +29,17 @@
     <string name="descripcion_btn_iniciar_tour">Presionar para iniciar el recorrido de características de la aplicación</string>
     <string name="descripcion_logotipo">Logotipo de la aplicación AnalizAr App</string>
 
+    <!-- Strings Onboarding1-->
+
+    <string name="seguir_btn_text">SEGUIR</string>
+    <string name="seguir_btn_content_description">Continuar a la siguiente pantalla de características de la aplicación</string>
+    <string name="textview_content">Con AnalizArApp\n podrás controlar tus consumos \n de una manera innovadora.</string>
+    <string name="textview_description">Información sobre el control de consumos en AnalizArApp.</string>
+    <string name="textview2_text">¡Te damos la bienvenida!</string>
+    <string name="textview2_description">Conocé nuestra aplicación</string>
+    <string name="image_description">Una mujer señala los gráficos de consumo de energía eléctrica domiciliario</string>
+
+
 
     <!-- Strings Onboarding-->
     <string name="app_name_onboarding">Analizador de Consumos Eléctricos</string>
