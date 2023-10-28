@@ -54,5 +54,10 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 (Enlace al apartado de Testing en la Wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki/Testing)
 
 ## Demo del producto
-Conoce la Demo de nuestra aplicación móvil en formato de video:
-https://www.youtube.com/watch?v=yKNvl9248SM
+Demo de nuestra aplicación móvil en formato de video:
+- https://www.youtube.com/watch?v=yKNvl9248SM
+
+Demo sobre Accesibilidad de nuestra aplicación móvil:
+- https://drive.google.com/file/d/1A76w7xzI6QNy-qVrROy4xLMg5lcINJYs/view?usp=drive_link
+
+
