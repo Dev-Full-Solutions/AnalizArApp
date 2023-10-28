@@ -20,21 +20,21 @@ public class UsuarioServicio {
         db.insert("Usuarios", null, usuario1);
 
         ContentValues usuario2 = new ContentValues();
-        usuario1.put("email", "carlos@gmail.com");
-        usuario1.put("nombre", "Carlos");
-        usuario1.put("apellido", "ISPC");
-        usuario1.put("celular", "3511231235");
-        usuario1.put("habilitado", 1);
-        usuario1.put("fechaAlta", "01-02-2022");
+        usuario2.put("email", "carlos@gmail.com");
+        usuario2.put("nombre", "Carlos");
+        usuario2.put("apellido", "ISPC");
+        usuario2.put("celular", "3511231235");
+        usuario2.put("habilitado", 1);
+        usuario2.put("fechaAlta", "01-02-2022");
         db.insert("Usuarios", null, usuario2);
 
         ContentValues usuario3 = new ContentValues();
-        usuario1.put("email", "christopher@gmail.com");
-        usuario1.put("nombre", "Christopher");
-        usuario1.put("apellido", "ISPC");
-        usuario1.put("celular", "3511231235");
-        usuario1.put("habilitado", 1);
-        usuario1.put("fechaAlta", "01-03-2022");
+        usuario3.put("email", "christopher@gmail.com");
+        usuario3.put("nombre", "Christopher");
+        usuario3.put("apellido", "ISPC");
+        usuario3.put("celular", "3511231235");
+        usuario3.put("habilitado", 1);
+        usuario3.put("fechaAlta", "01-03-2022");
         db.insert("Usuarios", null, usuario3);
     }
 

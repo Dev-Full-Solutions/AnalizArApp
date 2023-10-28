@@ -1,35 +1,73 @@
 package com.dpozzo68.analizarapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Button;
+import com.dpozzo68.analizarapp.entidades.Alarma;
+import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
+import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
+import com.dpozzo68.analizarapp.helpers.AlarmasAdapter;
+import java.util.ArrayList;
 
 
-public class MisAlarmas1 extends AppCompatActivity {
+public class MisAlarmas1 extends AppCompatActivity{
 
     Switch switch01;
-    Switch switch02;
-    Switch switch03;
     Button button;
+    private RecyclerView recyclerView;
+    private SQLiteDatabase alarmasDB;
+    private AlarmaServicio alarmaServicio;
+    private ArrayList<Alarma> alarmasArray;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misalarmas1);
 
-        switch01 = (Switch) findViewById(R.id.switch1);
-        switch02 = (Switch) findViewById(R.id.switch2);
-        switch03 = (Switch) findViewById(R.id.switch3);
+        alarmasDB = ((AplicacionSQLGlobal) getApplication()).getAlarmasDB();
+
+
+        alarmaServicio = new AlarmaServicio(alarmasDB);
+        //Log.d("alarmaServicio", "llenar db ");
+        //alarmaServicio.llenarAlarmasDB();
+        alarmasArray = alarmaServicio.getAlarmasFromDB();
+        Log.d("alarmaServicio", "recuperar alarmas ");
+
+        recyclerView = findViewById(R.id.recyclerView);
+        AlarmasAdapter adapter = new AlarmasAdapter(alarmasArray, alarmasDB, alarmaServicio);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(v -> irAlarmasConfiguracion());
-
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Fetch the latest data from the database
+        alarmasArray = alarmaServicio.getAlarmasFromDB();
+
+        // Update the RecyclerView adapter with the new data
+        AlarmasAdapter adapter = new AlarmasAdapter(alarmasArray, alarmasDB, alarmaServicio);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
     public void irAlarmasConfiguracion(){
         Intent intent = new Intent(this, AlarmasConfiguracionActivity.class);
         startActivity(intent);
@@ -70,33 +108,12 @@ public class MisAlarmas1 extends AppCompatActivity {
         finish();
     }
 
-    public void onclick(View view) {
-        if (view.getId() == R.id.switch1) ;
-        {
-            if (switch01.isChecked()) {
 
-            } else {
-            }
-        }
-    }
-
-    public void onclick2(View view) {
-        if (view.getId() == R.id.switch2) ;
-        {
-            if (switch02.isChecked()) {
-
-            } else {
-            }
-        }
-    }
-
-    public void onclick3(View view) {
-        if (view.getId() == R.id.switch3) ;
-        {
-            if (switch03.isChecked()) {
-
-            } else {
-            }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (alarmasDB != null) {
+            alarmasDB.close();
         }
     }
 }

@@ -77,13 +77,11 @@
                 android:textColorHint="@color/black"
                 android:textSize="18sp" />
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart3"
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="16dp">
+                android:layout_height="200dp" />
 
-            </com.github.mikephil.charting.charts.BarChart>
 
 
         </LinearLayout>
