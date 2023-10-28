@@ -58,7 +58,6 @@ Demo de nuestra aplicación móvil en formato de video:
 - https://www.youtube.com/watch?v=yKNvl9248SM
 
 Demo sobre Accesibilidad de nuestra aplicación móvil:
-- https://drive.google.com/drive/u/0/folders/16uz7i1Pr4N-vkY9sF_RpCffbY9vQUFE_
+- https://drive.google.com/file/d/1A76w7xzI6QNy-qVrROy4xLMg5lcINJYs/view?usp=drive_link
 
-Demo final del proyecto integrador II:
-- 
+
