@@ -4,8 +4,7 @@
 
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
-    <string name="alarmas_nombre">Alarma Casa</string>
-    <string name="alarmas_resumen">Diaria 30Kw</string>
+    <string name="alarmas_nombre">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
     <string name="alarmas_semanal">Semanal</string>
@@ -38,7 +37,6 @@
     <string name="textview2_text">¡Te damos la bienvenida!</string>
     <string name="textview2_description">Conocé nuestra aplicación</string>
     <string name="image_description">Una mujer señala los gráficos de consumo de energía eléctrica domiciliario</string>
-
 
 
     <!-- Strings Onboarding-->

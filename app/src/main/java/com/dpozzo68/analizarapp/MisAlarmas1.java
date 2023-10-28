@@ -3,33 +3,22 @@ package com.dpozzo68.analizarapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Button;
-import android.widget.Toast;
-
 import com.dpozzo68.analizarapp.entidades.Alarma;
 import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
-import com.dpozzo68.analizarapp.entidades.GlobalAlarma;
 import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
 import com.dpozzo68.analizarapp.helpers.AlarmasAdapter;
-import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
-import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
-import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
-
-import java.text.BreakIterator;
 import java.util.ArrayList;
 
 
-public class MisAlarmas1 extends AppCompatActivity {
+public class MisAlarmas1 extends AppCompatActivity{
 
     Switch switch01;
     Button button;
@@ -38,12 +27,16 @@ public class MisAlarmas1 extends AppCompatActivity {
     private AlarmaServicio alarmaServicio;
     private ArrayList<Alarma> alarmasArray;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misalarmas1);
 
-        //alarmasDB = ((AplicacionSQLGlobal) getApplication()).getAlarmasDB();
+        alarmasDB = ((AplicacionSQLGlobal) getApplication()).getAlarmasDB();
 
 
         alarmaServicio = new AlarmaServicio(alarmasDB);
@@ -58,9 +51,11 @@ public class MisAlarmas1 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(v -> irAlarmasConfiguracion());
 
+        button.setOnClickListener(v -> irAlarmasConfiguracion());
     }
+
+    @Override
     protected void onResume() {
         super.onResume();
 
@@ -72,6 +67,7 @@ public class MisAlarmas1 extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
     public void irAlarmasConfiguracion(){
         Intent intent = new Intent(this, AlarmasConfiguracionActivity.class);
         startActivity(intent);
@@ -111,6 +107,8 @@ public class MisAlarmas1 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
