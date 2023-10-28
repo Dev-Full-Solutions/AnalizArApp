@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -123,6 +124,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             nuevaAlarma = false;
             int alarmaID = getIntent().getIntExtra("AlarmaID", 0);
             alarma = alarmaServicio.getAlarmaConID(alarmaID);
+            Log.d("alarmaTipo", alarma.toString());
             etHora.setText(sacarHora(alarma.getFechaAlta()));
             etFecha.setText(sacarFecha(alarma.getFechaAlta()));
             etValorAlarma.setText(String.valueOf(alarma.getValorAlerta()));
@@ -134,6 +136,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             }else{
                 rdMensual.setChecked(true);
             }
+            int checkedRadioButtonId = rdTipo.getCheckedRadioButtonId();
+            RadioButton selectedRadioButton = findViewById(checkedRadioButtonId);
+            tipoAlarma = selectedRadioButton.getText().toString();
+
 
             if (alarma.getEstadoAlerta() == 0) {
                 // Set the Switch to be unchecked (false)
