@@ -10,65 +10,55 @@
 
     <Button
         android:id="@+id/seguir"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/verde_oscuro"
+        android:backgroundTint="@color/verde"
         android:fontFamily="@font/robotobold"
         android:onClick="seguir"
-        android:text="SEGUIR"
+        android:text="@string/seguir_btn_text"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:contentDescription="@string/seguir_btn_content_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.749"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/atras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/verde_intermedio"
-        android:fontFamily="@font/robotobold"
-        android:onClick="atras"
-        android:text="ATRÁS"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_max="200dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
+        android:maxWidth="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:gravity="center_horizontal"
         android:scaleX="1"
         android:scaleY="1"
-        android:text="Con AnalizArApp\n podrás controlar tus consumos \n de una manera innovadora."
+        android:text="@string/textview_content"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:contentDescription="@string/textview_description"
+        />
+
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/roboto"
-        android:text="¡Te damos la bienvenida!"
+        android:text="@string/textview2_text"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/verde"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -76,7 +66,10 @@
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:contentDescription="@string/textview2_description"
+        />
+
 
     <ImageView
         android:id="@+id/imageView4"
@@ -89,5 +82,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/_00" />
+        app:srcCompat="@drawable/_00"
+        android:contentDescription="@string/image_description"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
