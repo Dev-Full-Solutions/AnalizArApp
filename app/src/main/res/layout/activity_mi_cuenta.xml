@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -294,195 +294,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
-            <TextView
-                android:id="@+id/tituloDatosPersonales1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:contentDescription="Titulo Datos personales"
-                android:fontFamily="@font/roboto"
-                android:text="@string/datos_de_cuenta"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/cardView6"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
-
-            <LinearLayout
-                android:id="@+id/cardView6"
-                android:layout_width="335dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/card"
-                android:foregroundGravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tituloDatosPersonales1"
-                app:layout_constraintVertical_bias="0.0">
-
-                <TextView
-                    android:id="@+id/email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo email"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editEmail"
-                    android:text="@string/email"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="49dp" />
-
-                <EditText
-                    android:id="@+id/editEmail"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo email"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textEmailAddress"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    tools:layout_editor_absoluteX="47dp"
-                    tools:layout_editor_absoluteY="634dp" />
-
-                <TextView
-                    android:id="@+id/contrasena"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo contraseña"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editContrasena"
-                    android:text="Contraseña"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editEmail"
-                    app:layout_constraintTop_toBottomOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
-                <EditText
-                    android:id="@+id/editContrasena"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo contraseña"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editEmail"
-                    tools:layout_editor_absoluteX="47dp" />
-
-                <TextView
-                    android:id="@+id/cambiarContrasena"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo cambiar contraseña"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editCambiarContrasena"
-                    android:text="Cambiar contraseña"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    app:layout_constraintTop_toBottomOf="@+id/editCambiarContrasena"
-                    tools:layout_editor_absoluteX="47dp" />
-
-                <EditText
-                    android:id="@+id/editCambiarContrasena"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo cambiar contraseña"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
-            </LinearLayout>
-
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/verde_oscuro"
-                android:contentDescription="Boton Guardar"
-                android:fontFamily="@font/roboto"
-                android:text="GUARDAR"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView6" />
 
             /
 
-            <TextView
-                android:id="@+id/tituloConfiguracion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:contentDescription="Titulo Configuracion"
-                android:fontFamily="@font/roboto"
-                android:text="@string/configuracion"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/cardConfiguracion"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.145"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2"
-                app:layout_constraintVertical_bias="1.0" />
-
             <LinearLayout
                 android:id="@+id/cardConfiguracion"
-                android:layout_width="337dp"
-                android:layout_height="266dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="32dp"
+                android:layout_width="335dp"
+                android:layout_height="194dp"
                 android:background="@drawable/card"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2">
+                app:layout_constraintTop_toBottomOf="@+id/tituloConfiguracion"
+                app:layout_constraintVertical_bias="0.0">
 
                 <TextView
                     android:id="@+id/miPlanConfig"
@@ -546,37 +371,6 @@
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
                     tools:layout_editor_absoluteX="48dp" />
 
-                <TextView
-                    android:id="@+id/notificacionesConfig"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo notificaciones"
-                    android:fontFamily="@font/roboto"
-                    android:text="@string/notificaciones"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <EditText
-                    android:id="@+id/editNotificacionesConfig"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="Campo Notificaciones"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
 
             </LinearLayout>
 
@@ -584,7 +378,7 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1436dp"
+                android:layout_marginTop="264dp"
                 android:backgroundTint="@color/verde_oscuro"
                 android:contentDescription="Boton Guardar"
                 android:fontFamily="@font/roboto"
@@ -592,10 +386,26 @@
                 android:text="GUARDAR"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
+            <TextView
+                android:id="@+id/tituloConfiguracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:contentDescription="Titulo Configuracion"
+                android:fontFamily="@font/roboto"
+                android:text="@string/configuracion"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
