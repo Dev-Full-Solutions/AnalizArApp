@@ -14,15 +14,6 @@ public class Alarma implements Serializable {
     public Alarma() {
     }
 
-    public Alarma(int idAlarma, int idMedidor, String nombreAlarma, String tipo, String fechaAlta, int valorAlerta, int estadoAlerta) {
-        this.idAlarma = idAlarma;
-        this.idMedidor = idMedidor;
-        this.nombreAlarma = nombreAlarma;
-        this.tipo = tipo;
-        this.fechaAlta = fechaAlta;
-        this.valorAlerta = valorAlerta;
-        this.estadoAlerta = estadoAlerta;
-    }
 
     public int getIdalarma() {
         return idAlarma;
@@ -78,6 +69,19 @@ public class Alarma implements Serializable {
 
     public void setNombreAlarma(String nombreAlarma) {
         this.nombreAlarma = nombreAlarma;
+    }
+
+    @Override
+    public String toString() {
+        return "Alarma{" +
+                "idAlarma=" + idAlarma +
+                ", idMedidor=" + idMedidor +
+                ", nombreAlarma='" + nombreAlarma + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", fechaAlta='" + fechaAlta + '\'' +
+                ", valorAlerta=" + valorAlerta +
+                ", estadoAlerta=" + estadoAlerta +
+                '}';
     }
 }
 

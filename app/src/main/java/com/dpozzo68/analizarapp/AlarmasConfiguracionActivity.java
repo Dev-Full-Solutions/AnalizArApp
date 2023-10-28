@@ -19,23 +19,30 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TimePicker;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import android.widget.Toast;
 
 import com.dpozzo68.analizarapp.entidades.Alarma;
+import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
 import com.dpozzo68.analizarapp.entidades.GlobalAlarma;
 import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
 import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
 
 public class AlarmasConfiguracionActivity extends AppCompatActivity {
-    private boolean nuevaAlarma = false;
+    private boolean nuevaAlarma = true;
     private EditText etFecha;
     private EditText etHora;
     private EditText etValorAlarma;
     private EditText etNombreAlarma;
     private Switch swActivo;
     private RadioGroup rdTipo;
+    private RadioButton rdDiaria;
+    private RadioButton rdSemanal;
+    private RadioButton rdMensual;
     private String tipoAlarma;
     private Button salir;
     private Button guardar;
@@ -45,6 +52,8 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
     private int estadoAlerta = 1;
     private Alarma alarma;
     private int ultimoDiaDelMes, ultimoMes, ultimoAnio, ultimoHora, ultimoMinuto;
+    private SQLiteDatabase alarmasDB;
+    private AlarmaServicio alarmaServicio;
 
 
 
@@ -87,6 +96,9 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarmas_configuracion);
 
+        alarmasDB = ((AplicacionSQLGlobal) getApplication()).getAlarmasDB();
+        alarmaServicio = new AlarmaServicio(alarmasDB);
+
 
         etFecha = findViewById(R.id.editTextDate);
         etHora = findViewById(R.id.editTextTime);
@@ -94,6 +106,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         etNombreAlarma = findViewById(R.id.edit_nombre_alarma);
         swActivo = findViewById(R.id.swAlarmaActivo);
         rdTipo = findViewById(R.id.rdGroupAlarma);
+
         salir = findViewById(R.id.salir);
         guardar = findViewById(R.id.guardar);
         eliminar = findViewById(R.id.eliminar);
@@ -103,7 +116,28 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
             nuevaAlarma = true;
             eliminar.setVisibility(View.GONE);
         } else {
+            nuevaAlarma = false;
             alarma = (Alarma) getIntent().getSerializableExtra("Alarma");
+            etHora.setText(sacarHora(alarma.getFechaAlta()));
+            etFecha.setText(sacarFecha(alarma.getFechaAlta()));
+            etValorAlarma.setText(alarma.getValorAlerta());
+            etNombreAlarma.setText(alarma.getNombreAlarma());
+            if (alarma.getTipo().equals("Diaria")){
+                rdDiaria.setChecked(true);
+            } else if (alarma.getTipo().equals("Semanal")) {
+                rdSemanal.setChecked(true);
+            }else{
+                rdMensual.setChecked(true);
+            }
+
+            if (alarma.getEstadoAlerta() == 0) {
+                // Set the Switch to be unchecked (false)
+                swActivo.setChecked(false);
+            } else {
+                // Set the Switch to be checked (true)
+                swActivo.setChecked(true);
+            }
+
         }
 
 
@@ -158,28 +192,25 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
     }
 
     public void guardarAlarma(){
-        if(!etValorAlarma.getText().toString().isEmpty()){
-            construirAlarma();
+        construirAlarma();
+        if(alarma.getNombreAlarma() != null && !alarma.getNombreAlarma().isEmpty()){
             if(nuevaAlarma){
-                Intent intent = new Intent(this, MisAlarmas1.class);
-                intent.putExtra("acccion", "guardar");
-                startActivity(intent);
+                alarmaServicio.guardarAlarma(alarma);
+                irAlarmas();
             }else{
-                Intent intent = new Intent(this, MisAlarmas1.class);
-                intent.putExtra("acccion", "editar");
-                startActivity(intent);
+                alarmaServicio.editarAlarma(alarma);
+                irAlarmas();
             }
-        } else {
+        }else{
             Toast.makeText(this, "completar campo valor", Toast.LENGTH_SHORT).show();
         }
     }
     public void eliminarAlarma(){
         construirAlarma();
+        alarmaServicio.eliminarAlarma(alarma);
         Intent intent = new Intent(this, MisAlarmas1.class);
-        intent.putExtra("acccion", "eliminar");
         startActivity(intent);
     }
-
     public void construirAlarma(){
         alarma.setIdMedidor(1);
         alarma.setTipo(tipoAlarma);
@@ -187,8 +218,32 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         alarma.setFechaAlta(etFecha.getText().toString() + " " + etHora.getText().toString());
         alarma.setValorAlerta(Integer.parseInt(etValorAlarma.getText().toString()));
         alarma.setEstadoAlerta(estadoAlerta);
-        GlobalAlarma.getinstanciaAlarma().setAlarma(this.alarma);
     }
+
+    public String sacarHora(String dateTimeString)  {
+        // Define the format of your input string
+        SimpleDateFormat entrada = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        try {
+            Date date = entrada.parse(dateTimeString);
+            SimpleDateFormat salida = new SimpleDateFormat("HH:mm");
+            return salida.format(date);
+        } catch (ParseException e) {
+            return "00:00";
+        }
+    }
+
+    public String sacarFecha(String dateTimeString)  {
+        // Define the format of your input string
+        SimpleDateFormat entrada = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        try {
+            Date date = entrada.parse(dateTimeString);
+            SimpleDateFormat salida = new SimpleDateFormat("dd/MM/yyyy");
+            return salida.format(date);
+        } catch (ParseException e) {
+            return "01/01/2020";
+        }
+    }
+
     public void irConsumos(View view) {
         ImageView imagen = findViewById(R.id.imagen_home);
         imagen.setClickable(true);

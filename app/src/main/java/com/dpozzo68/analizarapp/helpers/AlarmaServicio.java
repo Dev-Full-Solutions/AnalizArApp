@@ -2,16 +2,25 @@ package com.dpozzo68.analizarapp.helpers;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.dpozzo68.analizarapp.entidades.Alarma;
+
+
 
 import java.util.ArrayList;
 
 public class AlarmaServicio {
 
-    public void llenarAlarmasDB(SQLiteDatabase db){
+    private SQLiteDatabase alarmasDB;
+    public AlarmaServicio(SQLiteDatabase alarmasDB) {
+        this.alarmasDB = alarmasDB;
+    }
+
+    public void llenarAlarmasDB(){
         ContentValues alarma1 = new ContentValues();
         alarma1.put("id_medidor", 1);
         alarma1.put("nombre_alarma", "Alarma Test 1");
@@ -19,7 +28,7 @@ public class AlarmaServicio {
         alarma1.put("fecha_alta", "01/10/2023");
         alarma1.put("valor_alerta", 900);
         alarma1.put("activo", 1);
-        db.insert("Alarmas", null, alarma1);
+        alarmasDB.insert("Alarmas", null, alarma1);
 
         ContentValues alarma2 = new ContentValues();
         alarma2.put("id_medidor", 1);
@@ -28,17 +37,16 @@ public class AlarmaServicio {
         alarma2.put("fecha_alta", "01/10/2023");
         alarma2.put("valor_alerta", 400);
         alarma2.put("activo", 1);
-        db.insert("Alarmas", null, alarma2);
+        alarmasDB.insert("Alarmas", null, alarma2);
 
     }
 
     @SuppressLint("Range")
-    public ArrayList<Alarma> getAlarmasFromDB(SQLiteDatabase db) {
+    public ArrayList<Alarma> getAlarmasFromDB() {
         ArrayList<Alarma> alarmas = new ArrayList<>();
 
-        String query = "SELECT id_alarma, id_medidor, nombre_alarma, tipo, fecha_alta, valor_alerta, activo FROM Alarmas WHERE activo = ?";
-        String[] selectionArgs = {"1"};
-        Cursor cursor = db.rawQuery(query, selectionArgs);
+        String query = "SELECT id_alarma, id_medidor, nombre_alarma, tipo, fecha_alta, valor_alerta, activo FROM Alarmas";
+        Cursor cursor = alarmasDB.rawQuery(query, null);
 
         if (cursor != null) {
             while (cursor.moveToNext()) {
@@ -57,29 +65,30 @@ public class AlarmaServicio {
 
             cursor.close();
         }
-        db.close();
         return alarmas;
     }
-    public void guardarAlarma(SQLiteDatabase db, Alarma alarma){
-
-        ContentValues alarmaAGuardar = new ContentValues();
-        alarmaAGuardar.put("id_medidor", alarma.getIdMedidor());
-        alarmaAGuardar.put("nombre_alarma", alarma.getNombreAlarma());
-        alarmaAGuardar.put("tipo", alarma.getTipo());
-        alarmaAGuardar.put("fecha_alta", alarma.getFechaAlta());
-        alarmaAGuardar.put("valor_alerta", alarma.getValorAlerta());
-        alarmaAGuardar.put("activo", alarma.getEstadoAlerta());
-        db.insert("Alarmas", null, alarmaAGuardar);
-        db.close();
+    public void guardarAlarma(Alarma alarma) {
+        if (alarmasDB != null) {
+            ContentValues alarmaAGuardar = new ContentValues();
+            alarmaAGuardar.put("id_medidor", alarma.getIdMedidor());
+            alarmaAGuardar.put("nombre_alarma", alarma.getNombreAlarma());
+            alarmaAGuardar.put("tipo", alarma.getTipo());
+            alarmaAGuardar.put("fecha_alta", alarma.getFechaAlta());
+            alarmaAGuardar.put("valor_alerta", alarma.getValorAlerta());
+            alarmaAGuardar.put("activo", alarma.getEstadoAlerta());
+            alarmasDB.insert("Alarmas", null, alarmaAGuardar);
+        } else {
+            Log.d("guardarAlarma", "guardarAlarma: db null");
+        }
     }
 
-    public void eliminarAlarma(SQLiteDatabase db, Alarma alarma){
 
-        db.delete("Alarmas", "id_alarma= " + alarma.getIdalarma(), null);
-        db.close();
+    public void eliminarAlarma(Alarma alarma){
+
+        alarmasDB.delete("Alarmas", "id_alarma= " + alarma.getIdalarma(), null);
     }
 
-    public void editarAlarma(SQLiteDatabase db, Alarma alarma){
+    public void editarAlarma(Alarma alarma){
 
         ContentValues alarmaAActualizar = new ContentValues();
         alarmaAActualizar.put("id_medidor", alarma.getIdMedidor());
@@ -88,15 +97,13 @@ public class AlarmaServicio {
         alarmaAActualizar.put("fecha_alta", alarma.getFechaAlta());
         alarmaAActualizar.put("valor_alerta", alarma.getValorAlerta());
         alarmaAActualizar.put("activo", alarma.getEstadoAlerta());
-        db.update("Alarmas", alarmaAActualizar, "id_alarma= " + alarma.getIdalarma(), null);
-        db.close();
+        alarmasDB.update("Alarmas", alarmaAActualizar, "id_alarma= " + alarma.getIdalarma(), null);
     }
 
-    public void cambiarEstadoAlarma(SQLiteDatabase db, Alarma alarma){
+    public void cambiarEstadoAlarma(Alarma alarma){
         ContentValues alarmaAActualizar = new ContentValues();
         alarmaAActualizar.put("activo", alarma.getEstadoAlerta());
-        db.update("Alarmas", alarmaAActualizar, "id_alarma =" + alarma.getIdalarma(), null);
-        db.close();
+        alarmasDB.update("Alarmas", alarmaAActualizar, "id_alarma =" + alarma.getIdalarma(), null);
     }
 
 

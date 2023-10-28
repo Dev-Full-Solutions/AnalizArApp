@@ -32,7 +32,7 @@ public class AlarmasSQLiteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int versionAnterior,
                           int versionNueva) {
 
-        db.execSQL("DROP TABLE IF EXISTS Alertas");
+        db.execSQL("DROP TABLE IF EXISTS Alarmas");
 
         db.execSQL(sqlCreate);
 
