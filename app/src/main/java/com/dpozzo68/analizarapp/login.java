@@ -97,9 +97,12 @@ public class login extends AppCompatActivity {
     }
 
     private void showHome(String email) {
-        Intent homeIntent = new Intent(this, Video.class);
-        homeIntent.putExtra("email",email);
-        startActivity(homeIntent);
+        //Intent homeIntent = new Intent(this, Video.class);
+        //homeIntent.putExtra("email",email);
+        //startActivity(homeIntent);
+        Intent intent = new Intent(this, MisConsumos.class);
+        intent.putExtra("email", email);
+        startActivity(intent);
     }
     public void olvideContrasena(View view){
         Intent intent = new Intent(this, olvidaste_contrasena.class);

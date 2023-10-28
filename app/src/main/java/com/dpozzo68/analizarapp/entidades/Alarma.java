@@ -1,6 +1,8 @@
 package com.dpozzo68.analizarapp.entidades;
 
-public class Alarma {
+import java.io.Serializable;
+
+public class Alarma implements Serializable {
     private int idAlarma;
     private int idMedidor;
     private String nombreAlarma;
@@ -12,15 +14,6 @@ public class Alarma {
     public Alarma() {
     }
 
-    public Alarma(int idAlarma, int idMedidor, String nombreAlarma, String tipo, String fechaAlta, int valorAlerta, int estadoAlerta) {
-        this.idAlarma = idAlarma;
-        this.idMedidor = idMedidor;
-        this.nombreAlarma = nombreAlarma;
-        this.tipo = tipo;
-        this.fechaAlta = fechaAlta;
-        this.valorAlerta = valorAlerta;
-        this.estadoAlerta = estadoAlerta;
-    }
 
     public int getIdalarma() {
         return idAlarma;
@@ -76,6 +69,19 @@ public class Alarma {
 
     public void setNombreAlarma(String nombreAlarma) {
         this.nombreAlarma = nombreAlarma;
+    }
+
+    @Override
+    public String toString() {
+        return "Alarma{" +
+                "idAlarma=" + idAlarma +
+                ", idMedidor=" + idMedidor +
+                ", nombreAlarma='" + nombreAlarma + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", fechaAlta='" + fechaAlta + '\'' +
+                ", valorAlerta=" + valorAlerta +
+                ", estadoAlerta=" + estadoAlerta +
+                '}';
     }
 }
 
