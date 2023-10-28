@@ -56,7 +56,9 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 ## Demo del producto
 Demo de nuestra aplicación móvil en formato de video:
 - https://www.youtube.com/watch?v=yKNvl9248SM
+
 Demo sobre Accesibilidad de nuestra aplicación móvil:
 - https://drive.google.com/drive/u/0/folders/16uz7i1Pr4N-vkY9sF_RpCffbY9vQUFE_
+
 Demo final del proyecto integrador II:
 - 
