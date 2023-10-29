@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -29,9 +28,7 @@ import android.widget.Toast;
 
 import com.dpozzo68.analizarapp.entidades.Alarma;
 import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
-import com.dpozzo68.analizarapp.entidades.GlobalAlarma;
 import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
-import com.dpozzo68.analizarapp.helpers.AlarmasSQLiteHelper;
 
 public class AlarmasConfiguracionActivity extends AppCompatActivity {
     private boolean nuevaAlarma;
@@ -48,9 +45,6 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
     private Button salir;
     private Button guardar;
     private Button eliminar;
-    private int idMedidor = 1;
-    private int alarmaID;
-
     private int estadoAlerta = 1;
     private Alarma alarma;
     private int ultimoDiaDelMes, ultimoMes, ultimoAnio, ultimoHora, ultimoMinuto;
@@ -142,10 +136,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
 
 
             if (alarma.getEstadoAlerta() == 0) {
-                // Set the Switch to be unchecked (false)
+                // set sw a falso
                 swActivo.setChecked(false);
             } else {
-                // Set the Switch to be checked (true)
+                // Set sw a verdadero
                 swActivo.setChecked(true);
             }
 
