@@ -33,7 +33,6 @@ public class Mi_Cuenta extends AppCompatActivity {
 
         usuarioDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
         usuarioServicio = new UsuarioServicio(usuarioDB);
-
         //construir un usuario usando los setters, por ejemplo:
         //usuario.setApellido("Gomez");
         //despues llamas al servicio en el onClick del boton guardar y terminas haciendo el update con
