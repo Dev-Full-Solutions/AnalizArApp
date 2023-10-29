@@ -3,7 +3,7 @@
     <string name="miCuenta">MI CUENTA</string>
 
     <!-- Strings Alarmas Configuracion-->
-    <string name="alarmas_titulo">Mis alarmas</string>
+    <string name="alarmas_titulo">MIS ALARMAS</string>
     <string name="alarmas_nombre">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
