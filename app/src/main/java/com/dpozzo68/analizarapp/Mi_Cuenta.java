@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
@@ -19,28 +22,59 @@ public class Mi_Cuenta extends AppCompatActivity {
     private SQLiteDatabase usuarioDB;
     private UsuarioServicio usuarioServicio;
 
+    public interface UsuarioCallback {
+        void onSuccess(Usuario usuario);
+        void onError(String mensaje);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mi_cuenta);
 
         usuario = GlobalUsuario.getInstanciaUsuario().getUsuario();
-        //modificar y asignar los datos de usuario Global a los textviews
+
         TextView email = findViewById(R.id.mailUsuario3);
         TextView nombreCompleto = findViewById(R.id.nombreUsuario);
-        email.setText(this.usuario.getEmail());
+        EditText editNombre = findViewById(R.id.editNombre);
+        EditText editApellido = findViewById(R.id.editApellido);
+        EditText editNumero = findViewById(R.id.editTelefono);
         nombreCompleto.setText(this.usuario.getNombre() + " " + this.usuario.getApellido());
 
         usuarioDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
         usuarioServicio = new UsuarioServicio(usuarioDB);
-        //construir un usuario usando los setters, por ejemplo:
-        //usuario.setApellido("Gomez");
-        //despues llamas al servicio en el onClick del boton guardar y terminas haciendo el update con
-        //usuarioServicio.updateUsuario(usuario);
-        //y lo seteas global despues para que este disponible en otras activities
-        //GlobalUsuario.getInstanciaUsuario().setUsuario(usuario);
+
+        Button buttonDatosPersonales = findViewById(R.id.buttonEditDatos);
+        buttonDatosPersonales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Usuario usuario = GlobalUsuario.getInstanciaUsuario().getUsuario();
+
+                EditText editNombre = findViewById(R.id.editNombre);
+                EditText editApellido = findViewById(R.id.editApellido);
+                EditText editNumero = findViewById(R.id.editTelefono);
+
+                usuario.setNombre(String.valueOf(editNombre.getText()));
+                usuario.setApellido(String.valueOf(editApellido.getText()));
+                usuario.setCelular(String.valueOf(editNumero.getText()));
+
+
+
+                try {
+                    usuarioServicio.updateUsuario(usuario);
+                    GlobalUsuario.getInstanciaUsuario().setUsuario(usuario);
+                    Toast.makeText(getApplicationContext(), "Datos actualizados de manera correcta", Toast.LENGTH_SHORT).show();
+
+
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "La actualización falló", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
     }
+
 
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
