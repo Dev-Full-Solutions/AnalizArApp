@@ -50,7 +50,7 @@ public class MisAlarmas1 extends AppCompatActivity{
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        button = (Button) findViewById(R.id.button);
+        button = (Button) findViewById(R.id.buttonDatosPersonales);
 
         button.setOnClickListener(v -> irAlarmasConfiguracion());
     }

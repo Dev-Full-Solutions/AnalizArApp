@@ -3,11 +3,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
 import com.dpozzo68.analizarapp.entidades.Usuario;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Mi_Cuenta extends AppCompatActivity {
@@ -23,7 +25,27 @@ public class Mi_Cuenta extends AppCompatActivity {
         TextView nombreCompleto = findViewById(R.id.nombreUsuario);
         email.setText(this.usuario.getEmail());
         nombreCompleto.setText(this.usuario.getNombre() + " " + this.usuario.getApellido());
+
+
+        //Esto lo puse a lo ultimo, porque no entendia de que manera llamar al servicio en la ultima parte
+        usuarioDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
+        usuarioServicio = new UsuarioServicio(usuarioDB);
+
+        // Esto lo hice, pero dudo que este bien, el atributo onClick no aparece en los Atributtes de la activity
+        Button buttonDatosPersonales = findViewById(R.id.buttonDatosPersonales);
+        buttonDatosPersonales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Usuario usuario = GlobalUsuario.getInstanciaUsuario().getUsuario();
+                usuario.setNombre("Anibal");
+                usuario.setApellido("Morales");
+                usuarioServicio.updateUsuario(usuario);// No entiendo como aplicarlo. :(
+
+            }
+        });
+
     }
+
 
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
