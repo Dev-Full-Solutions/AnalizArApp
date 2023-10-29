@@ -13,7 +13,6 @@ public class Video extends AppCompatActivity {
 
     private static final String VIDEO_SAMPLE = "myVideo";
     private VideoView mVideoView;
-    MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.videoapp);
 
 
     @Override

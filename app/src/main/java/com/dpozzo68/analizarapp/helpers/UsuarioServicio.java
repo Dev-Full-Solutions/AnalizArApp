@@ -8,8 +8,13 @@ import android.database.sqlite.SQLiteDatabase;
 import com.dpozzo68.analizarapp.entidades.Usuario;
 
 public class UsuarioServicio {
+    private SQLiteDatabase usuariosDB;
 
-    public void llenarTablaUsuarios(SQLiteDatabase db){
+    public UsuarioServicio(SQLiteDatabase usuariosDB) {
+        this.usuariosDB = usuariosDB;
+    }
+
+    public void llenarTablaUsuarios() {
         ContentValues usuario1 = new ContentValues();
         usuario1.put("email", "diego@gmail.com");
         usuario1.put("nombre", "Diego");
@@ -17,7 +22,7 @@ public class UsuarioServicio {
         usuario1.put("celular", "3511231234");
         usuario1.put("habilitado", 1);
         usuario1.put("fechaAlta", "01-01-2022");
-        db.insert("Usuarios", null, usuario1);
+        usuariosDB.insert("Usuarios", null, usuario1);
 
         ContentValues usuario2 = new ContentValues();
         usuario2.put("email", "carlos@gmail.com");
@@ -26,7 +31,7 @@ public class UsuarioServicio {
         usuario2.put("celular", "3511231235");
         usuario2.put("habilitado", 1);
         usuario2.put("fechaAlta", "01-02-2022");
-        db.insert("Usuarios", null, usuario2);
+        usuariosDB.insert("Usuarios", null, usuario2);
 
         ContentValues usuario3 = new ContentValues();
         usuario3.put("email", "christopher@gmail.com");
@@ -35,18 +40,18 @@ public class UsuarioServicio {
         usuario3.put("celular", "3511231235");
         usuario3.put("habilitado", 1);
         usuario3.put("fechaAlta", "01-03-2022");
-        db.insert("Usuarios", null, usuario3);
+        usuariosDB.insert("Usuarios", null, usuario3);
     }
 
     @SuppressLint("Range")
-    public Usuario getUsuariofromDB(SQLiteDatabase db, String email) {
+    public Usuario getUsuariofromDB(String email) {
         Usuario usuario = null;
 
         // Use a parameterized query with a placeholder for the email
         String query = "SELECT nombre, apellido, celular, habilitado, fechaAlta FROM Usuarios WHERE email = ?";
-        String[] selectionArgs = { email };
+        String[] selectionArgs = {email};
 
-        Cursor cursor = db.rawQuery(query, selectionArgs);
+        Cursor cursor = usuariosDB.rawQuery(query, selectionArgs);
 
         if (cursor != null) {
             if (cursor.moveToFirst()) {
@@ -67,4 +72,39 @@ public class UsuarioServicio {
         return usuario;
     }
 
+    public boolean hayRegistros() {
+        String query = "SELECT COUNT(*) FROM Usuarios";
+        Cursor cursor = usuariosDB.rawQuery(query, null);
+        int cuentaRegistros = 0;
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                cuentaRegistros = cursor.getInt(0);
+            }
+            cursor.close();
+        }
+
+        return cuentaRegistros > 0;
+    }
+
+    public void updateUsuario(Usuario usuario) {
+        ContentValues values = new ContentValues();
+        values.put("nombre", usuario.getNombre());
+        values.put("apellido", usuario.getApellido());
+        values.put("celular", usuario.getCelular());
+        values.put("habilitado", 1);
+        values.put("habilitado", 1);
+        values.put("fechaAlta", usuario.getFechaAlta());
+
+        // Define the WHERE clause to identify the user by email
+        String whereClause = "email=?";
+        String[] whereArgs = {usuario.getEmail()};
+
+        // Perform the update operation
+        usuariosDB.update("Usuarios", values, whereClause, whereArgs);
+    }
+
 }
+
+
+
