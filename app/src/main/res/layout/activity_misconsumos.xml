@@ -11,9 +11,14 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="80dp">
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,70 +26,94 @@
             android:layout_margin="16dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:fontFamily="@font/robotobold"
-                android:text="MIS CONSUMOS"
-                android:textAlignment="center"
-                android:textColor="@color/verde"
-                android:textSize="24sp" />
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:contentDescription="Titulo de la pantalla Mis Consumos"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Mis Consumos"
+                    android:textAlignment="center"
+                    android:textColor="@color/verde"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="34dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Boton Cerrar sesion"
+                    android:onClick="cerrarSesion"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/miCuenta"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.085"
+                    app:srcCompat="@drawable/cerrar_sesion" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Titulo del primer grafico"
                 android:fontFamily="@font/robotoregular"
                 android:freezesText="true"
                 android:text="Consumo Diario"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/negro"
-                android:textColorHint="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/barChart1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="16dp" />
+                android:layout_margin="16dp"
+                android:contentDescription="Grafico de barras que muestra los ultimos 12 consumos registrados" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Titulo del segundo grafico"
                 android:fontFamily="@font/robotoregular"
                 android:text="Consumo Semanal"
                 android:textColor="@color/negro"
-                android:textColorHint="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/barChart2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="16dp" />
+                android:layout_margin="16dp"
+                android:contentDescription="Grafico de barras que muestra los ultimos 7 dias sumarizando los consumos por dia" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="Titulo del segundo grafico"
                 android:fontFamily="@font/robotoregular"
                 android:text="Consumo Mensual"
                 android:textColor="@color/negro"
-                android:textColorHint="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
-
+                android:layout_height="200dp"
+                android:contentDescription="Grafico de lineas que muestra los ultimos 30 dias sumarizando los consumos por dia" />
 
 
         </LinearLayout>
@@ -131,6 +160,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Ir a la pantalla Mis consumos"
                 android:gravity="center"
                 android:text="Home"
                 android:textColor="@color/black"
@@ -163,6 +193,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Ir a la pantalla Alertas"
                 android:gravity="center"
                 android:text="Alertas"
                 android:textColor="@color/black"
@@ -195,6 +226,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Ir a la pantalla Mi perfil"
                 android:gravity="center"
                 android:text="Perfil"
                 android:textColor="@color/black"
@@ -227,6 +259,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="Ir a la pantalla Contacto"
                 android:gravity="center"
                 android:text="Contacto"
                 android:textColor="@color/black"
