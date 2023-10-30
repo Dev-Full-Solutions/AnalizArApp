@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -110,10 +110,10 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
-                        android:contentDescription="Mail de usuario"
+                        android:contentDescription="Mail del usuario"
                         android:fontFamily="@font/roboto"
                         android:gravity="bottom|center_horizontal|center_vertical"
-                        android:text="Jdoe@gmail.com"
+                        android:text="johndoe@gmail.com"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="13sp"
@@ -243,14 +243,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
                 <TextView
-                    android:id="@+id/celular"
+                    android:id="@+id/Telefono"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:contentDescription="Subtitulo Celular"
                     android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editNumero"
+                    android:labelFor="@id/editTelefono"
                     android:text="Celular"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
@@ -259,7 +259,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editApellido" />
 
                 <EditText
-                    android:id="@+id/editNumero"
+                    android:id="@+id/editTelefono"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
@@ -281,7 +281,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/buttonEditDatos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -392,7 +392,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonEditDatos" />
 
             <TextView
                 android:id="@+id/tituloConfiguracion"
@@ -409,7 +409,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.145"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonEditDatos" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
