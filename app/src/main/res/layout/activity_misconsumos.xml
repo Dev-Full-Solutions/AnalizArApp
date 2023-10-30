@@ -37,7 +37,7 @@
                     android:layout_margin="30dp"
                     android:contentDescription="Titulo de la pantalla Mis Consumos"
                     android:fontFamily="@font/robotobold"
-                    android:text="Mis Consumos"
+                    android:text="MIS CONSUMOS"
                     android:textAlignment="center"
                     android:textColor="@color/verde"
                     android:textSize="24sp"
