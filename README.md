@@ -52,6 +52,7 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 ## Testing
 Enlace a la carpeta de Testing en el Drive del proyecto: 
 - https://drive.google.com/drive/folders/1vkY30t91L3-yfaAnKMkedFlQ7h3FICS8?usp=sharing
+
 Enlace al video de automatización de Casos de Prueba con Selenium IDE:
 - https://drive.google.com/file/d/16QE2DgjC33PIBN9zi6GYbpomow_znleU/view?usp=sharing
 
