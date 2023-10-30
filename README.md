@@ -50,7 +50,10 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 (Enlace al documento: https://docs.google.com/document/d/1sZKVNIKE5dYe3QRtJX3Nwi3_sy9f2rOg/edit?usp=drive_link&ouid=111066166545247340736&rtpof=true&sd=true)
 
 ## Testing
+Prueba automatizada: [.side](https://drive.google.com/uc?export=download&id=1z-iyJuzsXUpbf6AD0x0-QTF3w5yT1Ll2)
+
 (Enlace a la carpeta de Testing en el Drive del proyecto: https://drive.google.com/drive/folders/1vkY30t91L3-yfaAnKMkedFlQ7h3FICS8?usp=sharing)
+
 (Enlace al apartado de Testing en la Wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki/Testing)
 
 ## Demo del producto
