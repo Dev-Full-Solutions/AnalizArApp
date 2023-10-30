@@ -39,6 +39,7 @@ public class Mi_Cuenta extends AppCompatActivity {
         EditText editNombre = findViewById(R.id.editNombre);
         EditText editApellido = findViewById(R.id.editApellido);
         EditText editNumero = findViewById(R.id.editTelefono);
+        email.setText(this.usuario.getEmail());
         nombreCompleto.setText(this.usuario.getNombre() + " " + this.usuario.getApellido());
 
         usuarioDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
@@ -78,7 +79,22 @@ public class Mi_Cuenta extends AppCompatActivity {
 
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, login.class);
+
+
+        AplicacionSQLGlobal aplicacionSQLGlobal = (AplicacionSQLGlobal) getApplication();
+        aplicacionSQLGlobal.cerrarDB();
+        //aplicacionSQLGlobal.updateVersion();
+
+        GlobalUsuario globalUsuario = GlobalUsuario.getInstanciaUsuario();
+        globalUsuario.resetUsuario();
+
+
+
+
+        finish();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
