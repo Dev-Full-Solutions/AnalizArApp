@@ -26,10 +26,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:fontFamily="@font/roboto"
-                android:text="Mis Consumos"
+                android:fontFamily="@font/robotobold"
+                android:text="MIS CONSUMOS"
                 android:textAlignment="center"
-                android:textColor="#4D8E40"
+                android:textColor="@color/verde"
                 android:textSize="24sp" />
 
 
@@ -37,13 +37,14 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotoregular"
                 android:freezesText="true"
                 android:text="Consumo Diario"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/black"
+                android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/barChart1"
@@ -55,11 +56,12 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotoregular"
                 android:text="Consumo Semanal"
-                android:textColor="@color/black"
+                android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/barChart2"
@@ -71,11 +73,12 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotoregular"
                 android:text="Consumo Mensual"
-                android:textColor="@color/black"
+                android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textSize="18sp" />
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart"
