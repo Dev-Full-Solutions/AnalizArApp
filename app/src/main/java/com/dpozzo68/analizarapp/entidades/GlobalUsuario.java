@@ -21,4 +21,8 @@ public class GlobalUsuario {
     public Usuario getUsuario() {
         return usuario;
     }
+
+    public void resetUsuario() {
+        usuario = null;
+    }
 }

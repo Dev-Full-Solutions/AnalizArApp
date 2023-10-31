@@ -25,22 +25,85 @@ public class UsuarioServicio {
         usuariosDB.insert("Usuarios", null, usuario1);
 
         ContentValues usuario2 = new ContentValues();
-        usuario2.put("email", "carlos@gmail.com");
-        usuario2.put("nombre", "Carlos");
-        usuario2.put("apellido", "ISPC");
-        usuario2.put("celular", "3511231235");
+        usuario2.put("email", "danielpozzo@ispc.com");
+        usuario2.put("nombre", "Daniel");
+        usuario2.put("apellido", "Pozzo");
+        usuario2.put("celular", "3546404883");
         usuario2.put("habilitado", 1);
-        usuario2.put("fechaAlta", "01-02-2022");
+        usuario2.put("fechaAlta", "01-06-2023");
         usuariosDB.insert("Usuarios", null, usuario2);
 
         ContentValues usuario3 = new ContentValues();
-        usuario3.put("email", "christopher@gmail.com");
+        usuario3.put("email", "christopherm@gmail.com");
         usuario3.put("nombre", "Christopher");
         usuario3.put("apellido", "ISPC");
         usuario3.put("celular", "3511231235");
         usuario3.put("habilitado", 1);
         usuario3.put("fechaAlta", "01-03-2022");
         usuariosDB.insert("Usuarios", null, usuario3);
+
+        ContentValues usuario4 = new ContentValues();
+        usuario4.put("email", "juliandm@ispc.com");
+        usuario4.put("nombre", "Julian");
+        usuario4.put("apellido", "Donamaría");
+        usuario4.put("celular", "3511231235");
+        usuario4.put("habilitado", 1);
+        usuario4.put("fechaAlta", "15-02-2020");
+        usuariosDB.insert("Usuarios", null, usuario4);
+
+        ContentValues usuario5 = new ContentValues();
+        usuario5.put("email", "katy23@gmail.com");
+        usuario5.put("nombre", "Katerinne");
+        usuario5.put("apellido", "Peralta");
+        usuario5.put("celular", "3511231235");
+        usuario5.put("habilitado", 1);
+        usuario5.put("fechaAlta", "05-11-2023");
+        usuariosDB.insert("Usuarios", null, usuario5);
+
+        ContentValues usuario6 = new ContentValues();
+        usuario6.put("email", "noemiz@ispc.com");
+        usuario6.put("nombre", "Noemí");
+        usuario6.put("apellido", "Zalazar");
+        usuario6.put("celular", "3511231235");
+        usuario6.put("habilitado", 1);
+        usuario6.put("fechaAlta", "01-08-2021");
+        usuariosDB.insert("Usuarios", null, usuario6);
+
+        ContentValues usuario7 = new ContentValues();
+        usuario7.put("email", "noemiv@yahoo.com");
+        usuario7.put("nombre", "Noemí");
+        usuario7.put("apellido", "Velazquez");
+        usuario7.put("celular", "3511231235");
+        usuario7.put("habilitado", 1);
+        usuario7.put("fechaAlta", "17-12-2020");
+        usuariosDB.insert("Usuarios", null, usuario7);
+
+        ContentValues usuario8 = new ContentValues();
+        usuario8.put("email", "laurar@outlook.com");
+        usuario8.put("nombre", "Laura");
+        usuario8.put("apellido", "Rodriguez");
+        usuario8.put("celular", "3511231235");
+        usuario8.put("habilitado", 1);
+        usuario8.put("fechaAlta", "05-05-2022");
+        usuariosDB.insert("Usuarios", null, usuario8);
+
+        ContentValues usuario9 = new ContentValues();
+        usuario9.put("email", "anibalm@gmail.com");
+        usuario9.put("nombre", "Anibal");
+        usuario9.put("apellido", "Morales");
+        usuario9.put("celular", "3511231235");
+        usuario9.put("habilitado", 1);
+        usuario9.put("fechaAlta", "18-11-2022");
+        usuariosDB.insert("Usuarios", null, usuario9);
+
+        ContentValues usuario10 = new ContentValues();
+        usuario10.put("email", "ispc.proyectointegradorweb@gmail.com");
+        usuario10.put("nombre", "Profesores");
+        usuario10.put("apellido", "ISPC");
+        usuario10.put("celular", "3511231235");
+        usuario10.put("habilitado", 1);
+        usuario10.put("fechaAlta", "01-09-2023");
+        usuariosDB.insert("Usuarios", null, usuario10);
     }
 
     @SuppressLint("Range")

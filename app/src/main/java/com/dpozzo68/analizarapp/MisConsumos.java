@@ -195,7 +195,7 @@ public class MisConsumos extends AppCompatActivity {
         ConsumosSQLiteHelper udb = new ConsumosSQLiteHelper(this, "DBconsumos", null, 1);
         SQLiteDatabase db = udb.getWritableDatabase();
         // Define la fecha inicial
-        String fecha = "27/09/2023";
+        String fecha = "29/09/2023";
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date;
