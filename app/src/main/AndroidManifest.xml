@@ -41,6 +41,9 @@
             android:name=".Onboarding3"
             android:exported="false" />
         <activity
+            android:name=".iluminacion"
+            android:exported="false" />
+        <activity
             android:name=".olvidaste_contrasena"
             android:parentActivityName=".login">
             <meta-data
