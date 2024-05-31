@@ -30,7 +30,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            tools:context=".Mi_Cuenta">
+            tools:context=".Mi_Cuenta"
+            tools:ignore="ExtraText">
 
 
             <TextView
@@ -148,8 +149,8 @@
                 android:text="Datos Personales"
                 android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textStyle="bold"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/cardView5"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
@@ -205,7 +206,8 @@
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre" />
+                    app:layout_constraintTop_toBottomOf="@+id/nombre"
+                    tools:ignore="EditableContentDescCheck" />
 
                 <TextView
                     android:id="@+id/apellido"
@@ -240,7 +242,8 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/apellido" />
+                    app:layout_constraintTop_toBottomOf="@+id/apellido"
+                    tools:ignore="EditableContentDescCheck" />
 
                 <TextView
                     android:id="@+id/Telefono"
@@ -275,7 +278,8 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/celular" />
+                    app:layout_constraintTop_toBottomOf="@+id/celular"
+                    tools:ignore="EditableContentDescCheck" />
 
 
             </LinearLayout>
@@ -290,8 +294,8 @@
                 android:fontFamily="@font/robotobold"
                 android:text="GUARDAR"
                 android:textColor="@color/blanco"
-                android:textSize="20sp"
                 android:textColorHint="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5" />
@@ -340,6 +344,7 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
+                    tools:ignore="EditableContentDescCheck"
                     tools:layout_editor_absoluteX="48dp" />
 
                 <TextView
@@ -371,6 +376,7 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
+                    tools:ignore="EditableContentDescCheck"
                     tools:layout_editor_absoluteX="48dp" />
 
 
@@ -387,8 +393,8 @@
                 android:onClick="cerrarSesion"
                 android:text="GUARDAR"
                 android:textColor="@color/blanco"
-                android:textSize="20sp"
                 android:textColorHint="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -404,8 +410,8 @@
                 android:text="@string/configuracion"
                 android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textStyle="bold"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.145"
                 app:layout_constraintStart_toStartOf="parent"
@@ -426,7 +432,8 @@
         android:padding="10dp"
         app:itemActiveIndicatorStyle="@style/MyBottomNavigation"
         app:labelVisibilityMode="selected"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
         <!--        app:menu="@menu/bottom_nav_menu" -->
 
         <LinearLayout
@@ -482,16 +489,16 @@
             <ImageView
                 android:id="@+id/imagen_alerta"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Boton Alarmas"
-                app:srcCompat="@drawable/alerta" />
+                app:srcCompat="@drawable/config_foreground" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Alarmas"
+                android:text="Servicios"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
