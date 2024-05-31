@@ -90,4 +90,7 @@
     <string name="campo_correo_electronico_accesibilidad">Campo del formulario para ingresar su correo electrónico</string>
     <string name="campo_nombre_y_apellido_accesibilidad">Campo del formulario para ingresar su nombre y apellido</string>
 
+    <!-- Notifications -->
+    <string name="channel_name">analizar</string>
+    <string name="channel_description">canal de analizar</string>
 </resources>
