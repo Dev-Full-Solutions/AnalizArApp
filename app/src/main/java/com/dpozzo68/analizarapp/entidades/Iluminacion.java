@@ -44,9 +44,7 @@ public class Iluminacion implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+    public String getDescripcion() { return descripcion; }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
