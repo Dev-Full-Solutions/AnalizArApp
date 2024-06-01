@@ -8,7 +8,7 @@
     tools:context=".Servicios">
 
     <TextView
-        android:id="@+id/edit_nombre_alarma"
+        android:id="@+id/tituloServicios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -36,7 +36,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nombre_alarma" />
+        app:layout_constraintTop_toBottomOf="@+id/tituloServicios" />
 
     <Button
         android:id="@+id/btn_iluminacion"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/verde"
-        android:contentDescription="Botón para ir a Aires Acondicionados"
+        android:contentDescription="Botón para ir a Aire Acondicionado"
         android:fontFamily="@font/robotobold"
         android:text="AIRE ACONDICIONADO"
         android:textColor="@color/blanco"
@@ -123,7 +123,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
-            android:onClick="irAlarmas"
+            android:onClick="irServicios"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
@@ -132,7 +132,7 @@
             app:layout_constraintVertical_bias="0.5">
 
             <ImageView
-                android:id="@+id/imagen_alerta"
+                android:id="@+id/imagen_servicios"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"

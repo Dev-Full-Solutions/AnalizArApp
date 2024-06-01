@@ -201,10 +201,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         if(alarma.getNombreAlarma() != null && !alarma.getNombreAlarma().isEmpty()){
             if(nuevaAlarma){
                 alarmaServicio.guardarAlarma(alarma);
-                irAlarmas();
+                irServicios();
             }else{
                 alarmaServicio.editarAlarma(alarma);
-                irAlarmas();
+                irServicios();
             }
         }else{
             Toast.makeText(this, "completar campo valor", Toast.LENGTH_SHORT).show();
@@ -249,18 +249,26 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         }
     }
 
+    public void irAlarmas() {
+        Intent intent = new Intent(this, MisAlarmas1.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void irConsumos(View view) {
         ImageView imagen = findViewById(R.id.imagen_home);
         imagen.setClickable(true);
         Intent intent = new Intent(this, MisConsumos.class);
         startActivity(intent);
+        finish();
     }
 
-    public void irAlarmas() {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
+    public void irServicios() {
+        ImageView imagen = findViewById(R.id.imagen_servicios);
         imagen.setClickable(true);
-        Intent intent = new Intent(this, MisAlarmas1.class);
+        Intent intent = new Intent(this, Servicios.class);
         startActivity(intent);
+        finish();
     }
 
     public void irPerfil(View view) {
@@ -268,6 +276,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, Mi_Cuenta.class);
         startActivity(intent);
+        finish();
     }
 
     public void irContacto(View view) {
@@ -275,6 +284,7 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
+        finish();
     }
 
 
