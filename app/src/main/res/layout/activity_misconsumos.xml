@@ -160,7 +160,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
-            android:onClick="irAlarmas"
+            android:onClick="irServicios"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
@@ -169,18 +169,18 @@
             app:layout_constraintVertical_bias="0.5">
 
             <ImageView
-                android:id="@+id/imagen_alerta"
+                android:id="@+id/imagen_servicios"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/alerta" />
+                app:srcCompat="@drawable/config_foreground" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Ir a la pantalla Alertas"
+                android:contentDescription="Ir a la pantalla Servicios"
                 android:gravity="center"
-                android:text="Alertas"
+                android:text="Servicios"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
