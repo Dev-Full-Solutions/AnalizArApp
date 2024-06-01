@@ -201,10 +201,10 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         if(alarma.getNombreAlarma() != null && !alarma.getNombreAlarma().isEmpty()){
             if(nuevaAlarma){
                 alarmaServicio.guardarAlarma(alarma);
-                irServicios();
+                irAlarmas();
             }else{
                 alarmaServicio.editarAlarma(alarma);
-                irServicios();
+                irAlarmas();
             }
         }else{
             Toast.makeText(this, "completar campo valor", Toast.LENGTH_SHORT).show();
@@ -255,37 +255,37 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         finish();
     }
 
-    public void irConsumos(View view) {
-        ImageView imagen = findViewById(R.id.imagen_home);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, MisConsumos.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void irServicios() {
-        ImageView imagen = findViewById(R.id.imagen_servicios);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, Servicios.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void irPerfil(View view) {
-        ImageView imagen = findViewById(R.id.imagen_perfil);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, Mi_Cuenta.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void irContacto(View view) {
-        ImageView imagen = findViewById(R.id.imagen_contacto);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, ContactoActivity.class);
-        startActivity(intent);
-        finish();
-    }
+//    public void irConsumos(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_home);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, MisConsumos.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irServicios() {
+//        ImageView imagen = findViewById(R.id.imagen_servicios);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, Servicios.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irPerfil(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_perfil);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, Mi_Cuenta.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irContacto(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_contacto);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, ContactoActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 
 
     @Override
