@@ -44,7 +44,7 @@ Este recurso fue desestimado a partir del Sprint 1 porque no nos brindaba la fun
 
 ## Wiki
 Visite nuestra Wiki para acceder a la información detallada y actualizada.
-(Enlace a la wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki)
+(Enlace a la Wiki: https://github.com/Dev-Full-Solutions/AnalizArApp/wiki)
 
 ## IEEE830
 (Enlace al documento: https://docs.google.com/document/d/1sZKVNIKE5dYe3QRtJX3Nwi3_sy9f2rOg/edit?usp=drive_link&ouid=111066166545247340736&rtpof=true&sd=true)
@@ -53,17 +53,16 @@ Visite nuestra Wiki para acceder a la información detallada y actualizada.
 Enlace a la carpeta de Testing en el Drive del proyecto: 
 - https://drive.google.com/drive/folders/1vkY30t91L3-yfaAnKMkedFlQ7h3FICS8?usp=sharing
 
-Enlace al video de automatización de Casos de Prueba con Selenium IDE:
-- https://drive.google.com/file/d/16QE2DgjC33PIBN9zi6GYbpomow_znleU/view?usp=sharing
-
 ## Demo del producto Sprint 1
 Demo de nuestra aplicación móvil en formato de video:
 - https://www.youtube.com/watch?v=yKNvl9248SM
 
 ## Demo del producto Sprint 2
+Demo final de nuestra aplicación móvil en formato de video:
 - https://drive.google.com/file/d/1y2zDJR__9D8oPj0pt2V-do8pmukTmZr5/view?usp=sharing
 
 Demo sobre Accesibilidad de nuestra aplicación móvil:
 - https://drive.google.com/file/d/1A76w7xzI6QNy-qVrROy4xLMg5lcINJYs/view?usp=sharing
 
-
+Enlace al video de automatización de Casos de Prueba con Selenium IDE:
+- https://drive.google.com/file/d/16QE2DgjC33PIBN9zi6GYbpomow_znleU/view?usp=sharing
