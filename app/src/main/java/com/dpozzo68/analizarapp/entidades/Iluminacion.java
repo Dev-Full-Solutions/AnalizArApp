@@ -1,5 +1,7 @@
 package com.dpozzo68.analizarapp.entidades;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 
@@ -21,6 +23,7 @@ public class Iluminacion implements Serializable {
         return usuarioEmail;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Iluminacion{" +
@@ -30,10 +33,6 @@ public class Iluminacion implements Serializable {
                 ", intensidad=" + intensidad +
                 ", encendido=" + encendido +
                 '}';
-    }
-
-    public void setUsuario(String usuarioEmail) {
-        this.usuarioEmail = usuarioEmail;
     }
 
     public String getNombre() {

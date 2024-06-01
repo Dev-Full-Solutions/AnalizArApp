@@ -4,7 +4,8 @@
 
     <!-- Strings Alarmas Configuracion-->
     <string name="alarmas_titulo">Mis alarmas</string>
-    <string name="alarmas_nombre">Nueva Alarma</string>
+    <string name="alarmas_nombre">Nombre de la alarma</string>
+    <string name="alarmas_nombre_placeholder">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
     <string name="alarmas_semanal">Semanal</string>
@@ -18,6 +19,15 @@
     <string name="alarmas_btn_salir">Salir</string>
     <string name="alarmas_btn_guardar">Guardar</string>
     <string name="alarmas_btn_eliminar">Eliminar</string>
+
+    <!-- Strings Iluminacion Configuracion-->
+    <string name="iluminacion_titulo">Iluminación</string>
+    <string name="iluminacion_nombre">Nombre del sistema</string>
+    <string name="iluminacion_nombre_placeholder">Nombre Sistema</string>
+    <string name="iluminacion_encendido">Encendido</string>
+    <string name="iluminacion_intensidad">Intensidad</string>
+    <string name="iluminacion_descripcion">Descripción</string>
+    <string name="iluminacion_descripcion_placeholder">Ingrese descripción</string>
 
     <!-- Strings Main-->
 

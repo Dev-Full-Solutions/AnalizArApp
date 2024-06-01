@@ -23,12 +23,12 @@ import java.util.ArrayList;
 public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.IluminacionViewHolder> {
 
     private ArrayList<Iluminacion> iluminacion;
-    private IluminacionServicio IluminacionServicio;
+    private IluminacionServicio iluminacionServicio;
     private SQLiteDatabase iluminacionDB;
 
     public IluminacionAdapter(ArrayList<Iluminacion> iluminacion, SQLiteDatabase iluminacionDB, IluminacionServicio iluminacionServicio) {
         this.iluminacion = iluminacion;
-        this.IluminacionServicio = iluminacionServicio;
+        this.iluminacionServicio = iluminacionServicio;
         this.iluminacionDB = iluminacionDB;
     }
 
@@ -67,8 +67,9 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
 
         holder.checkbox_on_off.setOnCheckedChangeListener((buttonView, isChecked) -> {
             // Actualizar el estado en la base de datos
-            iluminacion.setEstadoIluminacion(isChecked ? 1 : 0);
-            IluminacionServicio.actualizarEstadoIluminacion(iluminacion);
+            iluminacion.setEncendido(isChecked ? true : false);
+            iluminacionServicio.editarEncendido(iluminacion);
+
         });
 
         holder.seekBar_intensity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -76,8 +77,8 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser) {
                     // Actualizar el valor en la base de datos
-                    iluminacion.setValorIluminacion(progress);
-                    IluminacionServicio.actualizarValorIluminacion(iluminacion);
+                    iluminacion.setIntensidad(progress);
+                    iluminacionServicio.editarIntensidad(iluminacion);
                 }
             }
 
