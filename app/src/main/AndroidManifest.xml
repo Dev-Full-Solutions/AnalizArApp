@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Analizarapp"
         tools:targetApi="31">
         <activity
+            android:name=".WebAccessActivity"
+            android:exported="false" />
+        <activity
             android:name=".Servicios"
             android:exported="false" />
         <activity
@@ -68,7 +71,9 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".helpers.aNotificationBroadcastReceiver" android:enabled="true"></receiver>
+        <receiver
+            android:name=".helpers.aNotificationBroadcastReceiver"
+            android:enabled="true" />
 
         <meta-data
             android:name="preloaded_fonts"
