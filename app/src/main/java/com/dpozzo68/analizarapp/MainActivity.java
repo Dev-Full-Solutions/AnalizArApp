@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void seccionWeb(View view) {
+        Intent intent = new Intent(this, WebAccessActivity.class);
+        startActivity(intent);
+    }
+
+
+
     @Override
     public void onBackPressed() {
 
