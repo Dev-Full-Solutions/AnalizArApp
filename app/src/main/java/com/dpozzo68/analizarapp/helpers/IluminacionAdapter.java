@@ -50,6 +50,9 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
         holder.checkbox_on_off.setChecked(iluminacion.isEncendido());
         holder.seekBar_intensity.setProgress(iluminacion.getIntensidad());
 
+        String text = "Intensidad: " + String.valueOf(iluminacion.getIntensidad());
+        holder.textViewTracker.setText(text);
+
         holder.textViewNombreAlarmaIluminacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +80,8 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser) {
                     // Actualizar el valor en la base de datos
+                    String text = "Intensidad: " + String.valueOf(progress);
+                    holder.textViewTracker.setText(text);
                     iluminacion.setIntensidad(progress);
                     iluminacionServicio.editarIntensidad(iluminacion);
                 }
@@ -102,6 +107,7 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
     public static class IluminacionViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewNombreAlarmaIluminacion;
         public TextView textViewDescripcionAlarma;
+        public TextView textViewTracker;
         public SeekBar seekBar_intensity;
         public CheckBox checkbox_on_off;
 
@@ -109,8 +115,10 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
             super(itemView);
             textViewNombreAlarmaIluminacion = itemView.findViewById(R.id.textViewNombreAlarmaIluminacion);
             textViewDescripcionAlarma = itemView.findViewById(R.id.textViewDescripcionAlarma);
+            textViewTracker = itemView.findViewById(R.id.tv_intensity_value);
             seekBar_intensity = itemView.findViewById(R.id.seekBar_intensity);
             checkbox_on_off = itemView.findViewById(R.id.checkbox_on_off);
+
         }
     }
 }
