@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,12 +12,26 @@ public class Onboarding3 extends AppCompatActivity {
 
     Button btnAtras;
     Button btnSeguir;
+    TextView linkToMedioambiente;
+
     // Declaro las variables btnAtras y btnSeguir indicando que es de tipo Button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding3);
+
+        //Codigo para ir a la activity Medioambiente.
+
+        linkToMedioambiente=(TextView)findViewById(R.id.linkToMedioambiente);
+
+        linkToMedioambiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Onboarding3.this, MedioAmbiente.class);
+                startActivity(i);
+            }
+        });
 
 //        btnAtras = findViewById(R.id.button6);
 //        btnAtras.setOnClickListener(new View.OnClickListener() {
