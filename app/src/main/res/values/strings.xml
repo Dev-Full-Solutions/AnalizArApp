@@ -3,8 +3,9 @@
     <string name="miCuenta">MI CUENTA</string>
 
     <!-- Strings Alarmas Configuracion-->
-    <string name="alarmas_titulo">MIS ALARMAS</string>
-    <string name="alarmas_nombre">Nueva Alarma</string>
+    <string name="alarmas_titulo">Mis alarmas</string>
+    <string name="alarmas_nombre">Nombre de la alarma</string>
+    <string name="alarmas_nombre_placeholder">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
     <string name="alarmas_semanal">Semanal</string>
@@ -18,6 +19,15 @@
     <string name="alarmas_btn_salir">SALIR</string>
     <string name="alarmas_btn_guardar">GUARDAR</string>
     <string name="alarmas_btn_eliminar">Eliminar</string>
+
+    <!-- Strings Iluminacion Configuracion-->
+    <string name="iluminacion_titulo">Iluminación</string>
+    <string name="iluminacion_nombre">Nombre del sistema</string>
+    <string name="iluminacion_nombre_placeholder">Nombre Sistema</string>
+    <string name="iluminacion_encendido">Encendido</string>
+    <string name="iluminacion_intensidad">Intensidad</string>
+    <string name="iluminacion_descripcion">Descripción</string>
+    <string name="iluminacion_descripcion_placeholder">Ingrese descripción</string>
 
     <!-- Strings Main-->
 
@@ -57,8 +67,8 @@
     <string name="skip">SALTEAR</string>
 
     <!-- Strings Contacto -->
-    <string name="titulo_publicitario_contacto">¡Juntos, creamos soluciones digitales!</string>
-    <string name="texto_publicitario_contacto">Nuestro compromiso va más allá de lo tecnológico. Por asistencia técnica pulsa en el botón "SOPORTE".</string>
+    <string name="titulo_publicitario_contacto">¡Soluciones digitales!</string>
+    <string name="texto_publicitario_contacto">Asistencia pulse 👇</string>
     <string name="btn_contactanos">Contáctanos</string>
     <string name="btn_soporte">SOPORTE</string>
     <string name="link">By <u><font color="#0000FF">DevFullSolutions</font></u></string>

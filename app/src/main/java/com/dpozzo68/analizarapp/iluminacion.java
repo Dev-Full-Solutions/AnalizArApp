@@ -9,50 +9,48 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Button;
-import com.dpozzo68.analizarapp.entidades.Alarma;
+
+
+import com.dpozzo68.analizarapp.entidades.Iluminacion;
 import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
-import com.dpozzo68.analizarapp.helpers.AlarmaServicio;
+
 import com.dpozzo68.analizarapp.helpers.AlarmasAdapter;
+import com.dpozzo68.analizarapp.helpers.IluminacionAdapter;
+import com.dpozzo68.analizarapp.helpers.IluminacionServicio;
 import java.util.ArrayList;
 
+public class iluminacion extends AppCompatActivity{
 
-public class MisAlarmas1 extends AppCompatActivity{
-
-    Switch switch01;
     Button button;
     private RecyclerView recyclerView;
-    private SQLiteDatabase alarmasDB;
-    private AlarmaServicio alarmaServicio;
-    private ArrayList<Alarma> alarmasArray;
-
-
-
+    private SQLiteDatabase iluminacionDB;
+    private IluminacionServicio iluminacionServicio;
+    private ArrayList<Iluminacion> iluminacionArray;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_misalarmas1);
+        setContentView(R.layout.activity_iluminacion);
 
-        alarmasDB = ((AplicacionSQLGlobal) getApplication()).getAlarmasDB();
+        iluminacionDB = ((AplicacionSQLGlobal) getApplication()).getIluminacionDB();
 
 
-        alarmaServicio = new AlarmaServicio(alarmasDB);
-        //Log.d("alarmaServicio", "llenar db ");
-        //alarmaServicio.llenarAlarmasDB();
-        alarmasArray = alarmaServicio.getAlarmasFromDB();
-        Log.d("alarmaServicio", "recuperar alarmas ");
+        iluminacionServicio = new IluminacionServicio(iluminacionDB);
+        //Log.d("iluminacionServicio", "llenar db ");
+        //iluminacionServicio.llenarIluminacionDB();
+        iluminacionArray = iluminacionServicio.getIluminacionFromDB();
+        Log.d("iluminacionServicio", "recuperar alarmas ");
 
         recyclerView = findViewById(R.id.recyclerView);
-        AlarmasAdapter adapter = new AlarmasAdapter(alarmasArray, alarmasDB, alarmaServicio);
+        IluminacionAdapter adapter = new IluminacionAdapter(iluminacionArray, iluminacionDB, iluminacionServicio);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         button = (Button) findViewById(R.id.button);
 
-        button.setOnClickListener(v -> irAlarmasConfiguracion());
+        button.setOnClickListener(v -> irIluminacionConfiguracion());
     }
 
     @Override
@@ -60,34 +58,30 @@ public class MisAlarmas1 extends AppCompatActivity{
         super.onResume();
 
         // Fetch the latest data from the database
-        alarmasArray = alarmaServicio.getAlarmasFromDB();
+        iluminacionArray = iluminacionServicio.getIluminacionFromDB();
 
         // Update the RecyclerView adapter with the new data
-        AlarmasAdapter adapter = new AlarmasAdapter(alarmasArray, alarmasDB, alarmaServicio);
+        IluminacionAdapter adapter = new IluminacionAdapter(iluminacionArray, iluminacionDB, iluminacionServicio);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void irAlarmasConfiguracion(){
-        Intent intent = new Intent(this, AlarmasConfiguracionActivity.class);
+    public void irIluminacionConfiguracion(){
+        Intent intent = new Intent(this, IluminacionConfiguracion_Activity.class);
         startActivity(intent);
-        finish();
     }
-
 //    public void irConsumos(View view) {
 //        ImageView imagen = findViewById(R.id.imagen_home);
 //        imagen.setClickable(true);
 //        Intent intent = new Intent(this, MisConsumos.class);
 //        startActivity(intent);
-//        finish();
 //    }
 //
-//    public void irServicios(View view) {
-//        ImageView imagen = findViewById(R.id.imagen_servicios);
+//    public void irAlarmas(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_alerta);
 //        imagen.setClickable(true);
-//        Intent intent = new Intent(this, Servicios.class);
+//        Intent intent = new Intent(this, MisAlarmas1.class);
 //        startActivity(intent);
-//        finish();
 //    }
 //
 //    public void irPerfil(View view) {
@@ -95,7 +89,6 @@ public class MisAlarmas1 extends AppCompatActivity{
 //        imagen.setClickable(true);
 //        Intent intent = new Intent(this, Mi_Cuenta.class);
 //        startActivity(intent);
-//        finish();
 //    }
 //
 //    public void irContacto(View view) {
@@ -103,7 +96,14 @@ public class MisAlarmas1 extends AppCompatActivity{
 //        imagen.setClickable(true);
 //        Intent intent = new Intent(this, ContactoActivity.class);
 //        startActivity(intent);
-//        finish();
+//    }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (iluminacionDB != null) {
+//            iluminacionDB.close();
+//        }
 //    }
 
     @Override
@@ -111,14 +111,4 @@ public class MisAlarmas1 extends AppCompatActivity{
         Intent intent = new Intent(this, Servicios.class);
         startActivity(intent);
     }
-
-
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        if (alarmasDB != null) {
-//            alarmasDB.close();
-//        }
-//    }
-  }
-
+}

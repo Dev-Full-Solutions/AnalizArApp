@@ -31,7 +31,7 @@ public class Servicios extends AppCompatActivity {
         btnIluminacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Servicios.this, MisAlarmas1.class);
+                Intent intent = new Intent(Servicios.this, iluminacion.class);
                 startActivity(intent);
                 finish();
             }
