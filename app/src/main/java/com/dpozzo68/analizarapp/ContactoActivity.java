@@ -17,10 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class ContactoActivity extends AppCompatActivity {
-
-
     Button btnSoporte;
 
     @Override
@@ -29,14 +26,25 @@ public class ContactoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contacto);
 
         btnSoporte = findViewById(R.id.btn_soporte);
+
+        // Nos aseguramos que el botón sea enfocable
+        btnSoporte.setFocusable(true);
+        btnSoporte.setFocusableInTouchMode(true);
+
         btnSoporte.setOnClickListener(view -> {
             Intent intent = new Intent(ContactoActivity.this, SoporteActivity.class);
             startActivity(intent);
+
         });
 
         TextView textView = findViewById(R.id.textView10);
+        // Configuramos el texto con enlace cliccable
+        textView.setFocusable(true);
+        textView.setFocusableInTouchMode(true);
+
         String linkText = getResources().getString(R.string.link);
         SpannableString spannableString = new SpannableString(linkText);
+
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View view) {
