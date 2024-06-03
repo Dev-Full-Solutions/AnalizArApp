@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,106 +6,63 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/robotobold"
+        android:text="ILUMINACION"
+        android:textColor="@color/verde"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:paddingBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="35dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:orientation="vertical">
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
-                    android:contentDescription="Titulo de la pantalla Mis Consumos"
-                    android:fontFamily="@font/robotobold"
-                    android:text="MIS CONSUMOS"
-                    android:textAlignment="center"
-                    android:textColor="@color/verde"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="Titulo del primer grafico"
-                android:fontFamily="@font/robotoregular"
-                android:freezesText="true"
-                android:text="Consumo Diario"
-                android:textColor="@color/negro"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="16dp"
-                android:contentDescription="Grafico de barras que muestra los ultimos 12 consumos registrados" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="Titulo del segundo grafico"
-                android:fontFamily="@font/robotoregular"
-                android:text="Consumo Semanal"
-                android:textColor="@color/negro"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="16dp"
-                android:contentDescription="Grafico de barras que muestra los ultimos 7 dias sumarizando los consumos por dia" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="Titulo del segundo grafico"
-                android:fontFamily="@font/robotoregular"
-                android:text="Consumo Mensual"
-                android:textColor="@color/negro"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/chart"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:contentDescription="Grafico de lineas que muestra los ultimos 30 dias sumarizando los consumos por dia" />
-
+                android:layout_height="match_parent" />
 
         </LinearLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="@color/verde"
+        android:onClick="onclick4"
+        android:text="+"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"
         style="@style/MyBottomNavigation"
         android:layout_width="0dp"
@@ -119,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
-        <!--        app:menu="@menu/bottom_nav_menu" -->
+        &lt;!&ndash;        app:menu="@menu/bottom_nav_menu" &ndash;&gt;
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -147,7 +103,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Ir a la pantalla Mis consumos"
                 android:gravity="center"
                 android:text="Home"
                 android:textColor="@color/black"
@@ -162,7 +117,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
-            android:onClick="irServicios"
+            android:onClick="irAlarmas"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
@@ -171,18 +126,17 @@
             app:layout_constraintVertical_bias="0.5">
 
             <ImageView
-                android:id="@+id/imagen_servicios"
+                android:id="@+id/imagen_alerta"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/config_foreground" />
+                app:srcCompat="@drawable/alerta" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Ir a la pantalla Servicios"
                 android:gravity="center"
-                android:text="Servicios"
+                android:text="Alertas"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -213,7 +167,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Ir a la pantalla Mi perfil"
                 android:gravity="center"
                 android:text="Perfil"
                 android:textColor="@color/black"
@@ -246,13 +199,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Ir a la pantalla Contacto"
                 android:gravity="center"
                 android:text="Contacto"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

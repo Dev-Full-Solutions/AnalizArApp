@@ -1,131 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanco"
-    tools:context=".ContactoActivity">
-
-    <!-- Nos aseguramos que los textos usen sp como unidad de medida para ser escalables -->
-    <!-- Nos aseguramos que las imágenes tengan contentDescription y dp como unidad de medida -->
-    <!-- Hacer focusable los TextView e ImageView para navegación por teclado -->
-    <!-- Utilizamos importantForAccesibility="no" para excluir elementos interactivos de la navegación por teclado y lectores de pantalla -->
-    <!-- Aplicar atributos de navegación nextFocusForward -->
+    tools:context=".Servicios">
 
     <TextView
-        android:id="@+id/edit_nombre_alarma"
+        android:id="@+id/tituloServicios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/robotobold"
-        android:text="@string/titulo_activity_contacto"
+        android:text="SERVICIOS"
         android:textColor="@color/verde"
         android:textSize="24sp"
         android:contentDescription="Titulo de la Activity"
-
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="370dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/imagen_contacto_1"
-        android:contentDescription="Imagen del Equipo de Desarrollo que brinda Soporte a los Usuarios de AnalizArApp"
-
-        android:importantForAccessibility="no"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nombre_alarma" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="@string/titulo_publicitario_contacto"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/negro"
-
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="@string/texto_publicitario_contacto"
-        android:textAlignment="center"
-        android:textColor="@color/negro"
-        android:textSize="17sp"
-
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btn_soporte"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_alarmas"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="128dp"
         android:backgroundTint="@color/verde"
-        android:contentDescription="Botón para contactar al area de Soporte de AnalizArApp"
+        android:contentDescription="Botón para ir a Alarmas"
         android:fontFamily="@font/robotobold"
-        android:text="@string/btn_soporte"
+        android:text="ALARMAS"
         android:textColor="@color/blanco"
         android:textSize="20sp"
-
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:nextFocusForward="@id/textView10"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tituloServicios" />
 
-    <!-- android:text="@string/copyright_contacto" -->
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_iluminacion"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:contentDescription="Enlace a la página Presentación de DevFullSolutions en su sitio web de WordPress"
-        android:fontFamily="@font/robotoregular"
-        android:text="@string/link"
-        android:textSize="14sp"
-
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:nextFocusForward="@id/linearLayout"
-
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/verde"
+        android:contentDescription="Botón para ir a Iluminación"
+        android:fontFamily="@font/robotobold"
+        android:text="ILUMINACION"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_soporte" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_alarmas" />
+
+    <Button
+        android:id="@+id/btn_aacondicionado"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/verde"
+        android:contentDescription="Botón para ir a Aire Acondicionado"
+        android:fontFamily="@font/robotobold"
+        android:text="AIRE ACONDICIONADO"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iluminacion" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"
@@ -151,11 +93,6 @@
             android:layout_marginBottom="20dp"
             android:onClick="irConsumos"
             android:orientation="vertical"
-
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:nextFocusForward="@id/linearLayout2"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
             app:layout_constraintStart_toStartOf="parent"
@@ -167,11 +104,6 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-
-                android:contentDescription="Icono para volver a Home"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-
                 app:srcCompat="@drawable/home" />
 
             <TextView
@@ -180,11 +112,7 @@
                 android:gravity="center"
                 android:text="Home"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:nextFocusForward="@id/imagen_alerta"  />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -197,11 +125,6 @@
             android:layout_marginBottom="20dp"
             android:onClick="irServicios"
             android:orientation="vertical"
-
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:nextFocusForward="@id/linearLayout3"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
@@ -213,13 +136,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-
-                android:contentDescription="Icono de acceso a la activity Alertas"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-
                 app:srcCompat="@drawable/config_foreground" />
-
 
             <TextView
                 android:layout_width="match_parent"
@@ -227,11 +144,7 @@
                 android:gravity="center"
                 android:text="Servicios"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:nextFocusForward="@id/imagen_perfil"  />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -244,11 +157,6 @@
             android:layout_marginBottom="20dp"
             android:onClick="irPerfil"
             android:orientation="vertical"
-
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:nextFocusForward="@id/linearLayout4"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
             app:layout_constraintStart_toEndOf="@+id/linearLayout2"
@@ -260,11 +168,6 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-
-                android:contentDescription="Icono de acceso a la activity Mi Perfil"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-
                 app:srcCompat="@drawable/perfil" />
 
             <TextView
@@ -273,11 +176,7 @@
                 android:gravity="center"
                 android:text="Perfil"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:nextFocusForward="@id/imagen_home"/>
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -290,10 +189,6 @@
             android:layout_marginBottom="20dp"
             android:onClick="irContacto"
             android:orientation="vertical"
-
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout3"
@@ -305,11 +200,6 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
-
-                android:contentDescription="Icono de acceso a la activity Contacto"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-
                 app:srcCompat="@drawable/contacto" />
 
             <TextView
@@ -318,10 +208,7 @@
                 android:gravity="center"
                 android:text="Contacto"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-
-                android:focusable="true"
-                android:focusableInTouchMode="true"  />
+                android:textSize="12sp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
