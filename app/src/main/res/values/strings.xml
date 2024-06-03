@@ -44,7 +44,7 @@
     <string name="btn_siguiente">Siguiente</string>
     <string name="btn_volver_inicio">Inicio</string>
     <string name="titulo_activity_contacto">CONTACTO</string>
-    <string name="titleOnboarding3">Acompañamos a Cuidar el Medio Ambiente</string>
+    <string name="titleOnboarding3">Acompañamos a Cuidar el Medioambiente</string>
     <string name="subtitleTextOnboarding3">Te brindamos los mejores consejos \npara cuidar tu bolsillo, ahorrar energía \ny cuidar el medioambiente.</string>
     <string name="link_medioambiente">¿Queres aprender como cuidar el medioambiente \ncon nuestra App?</string>
     <string name="click_medioambiente">CLICK AQUI</string>
@@ -104,8 +104,9 @@
     <string name="cuidado_consumo1">Un menor consumo energético reduce la quema de combustibles fósiles, disminuyendo las emisiones de dióxido de carbono y gases de efecto invernadero combatiendo así el cambio climático.</string>
     <string name="cuidado_consumo2">Generar menor cantidad de energía eléctrica significa también menos contaminación en el aire, mejorando así la salud pública y reduciendo las enfermedades respiratorias.</string>
     <string name="cuidado_consumo3">Reducir nuestro consumo energética conserva recursos naturales como el agua y los combustibles fósiles, protegiendo nuestros ecosistemas y biodiversidad.</string>
-    <string name="Descargar_app">Descargar y utilizar nuestra aplicación es un paso sencillo y poderoso hacia un consumo eléctrico más consciente y responsable. No solo reducirás tus costos energéticos, sino que también contribuirás activamente a la protección del medioambiente. Juntos, haremos la diferencia.</string>
-    <string name="Descargar_app1">¡Descarga AnalizAr App ahora y comenza tu camino hacia el ahorro energético y un futuro más sostenible!</string>
+    <string name="Descargar_app">Usar nuestra aplicación es un paso sencillo y poderoso hacia un consumo eléctrico más consciente y responsable. No solo reducirás tus costos energéticos, sino que también contribuirás activamente a la protección del medioambiente. Juntos, podemos hacer la diferencia.</string>
+    <string name="Descargar_app1">¡Empeza a usar AnalizAr App ahora y comenza tu camino hacia el ahorro energético y un futuro más sostenible!</string>
+    <string name="volver_tour">VOLVER AL TOUR</string>
     <string name="titulo_medioambiente">MEDIOAMBIENTE</string>
 
     <!-- Strings para WebAccessActivity -->
