@@ -1,22 +1,22 @@
 package com.dpozzo68.analizarapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.database.Cursor;
 import android.content.ContentValues;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.preference.DialogPreference;
+import android.view.KeyEvent;
+import com.google.firebase.auth.FirebaseAuth;
 
-import com.dpozzo68.analizarapp.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dpozzo68.analizarapp.helpers.ConsumosSQLiteHelper;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -26,25 +26,16 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
 public class MisConsumos extends AppCompatActivity {
@@ -286,13 +277,15 @@ public class MisConsumos extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, MisConsumos.class);
         startActivity(intent);
+        finish();
     }
 
-    public void irAlarmas(View view) {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
+    public void irServicios(View view) {
+        ImageView imagen = findViewById(R.id.imagen_servicios);
         imagen.setClickable(true);
-        Intent intent = new Intent(this, MisAlarmas1.class);
+        Intent intent = new Intent(this, Servicios.class);
         startActivity(intent);
+        finish();
     }
 
     public void irPerfil(View view) {
@@ -300,6 +293,7 @@ public class MisConsumos extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, Mi_Cuenta.class);
         startActivity(intent);
+        finish();
     }
 
     public void irContacto(View view) {
@@ -307,5 +301,39 @@ public class MisConsumos extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
+        finish();
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == event.KEYCODE_BACK){
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setMessage("¿Desea salir de AnalizArApp?")
+//                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialogInterface, int i) {
+//                            FirebaseAuth.getInstance().signOut();
+//                            Intent intent = new Intent(Intent.ACTION_MAIN);
+//                            intent.addCategory(Intent.CATEGORY_HOME);
+//                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                            startActivity(intent);
+//                            finishAffinity();  // Cierra todas las actividades en la tarea actual
+//                            System.exit(0);  // La aplicación se cierra completamente
+//                        }
+//                    })
+//                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialogInterface, int i) {
+//                            dialogInterface.dismiss();
+//                        }
+//                    });
+//            builder.show();
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }

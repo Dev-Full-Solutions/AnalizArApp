@@ -39,6 +39,7 @@ public class Mi_Cuenta extends AppCompatActivity {
         EditText editNombre = findViewById(R.id.editNombre);
         EditText editApellido = findViewById(R.id.editApellido);
         EditText editNumero = findViewById(R.id.editTelefono);
+        email.setText(this.usuario.getEmail());
         nombreCompleto.setText(this.usuario.getNombre() + " " + this.usuario.getApellido());
 
         usuarioDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
@@ -78,7 +79,22 @@ public class Mi_Cuenta extends AppCompatActivity {
 
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, login.class);
+
+
+        AplicacionSQLGlobal aplicacionSQLGlobal = (AplicacionSQLGlobal) getApplication();
+        aplicacionSQLGlobal.cerrarDB();
+        //aplicacionSQLGlobal.updateVersion();
+
+        GlobalUsuario globalUsuario = GlobalUsuario.getInstanciaUsuario();
+        globalUsuario.resetUsuario();
+
+
+
+
+        finish();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
@@ -87,13 +103,15 @@ public class Mi_Cuenta extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, MisConsumos.class);
         startActivity(intent);
+        finish();
     }
 
-    public void irAlarmas(View view) {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
+    public void irServicios(View view) {
+        ImageView imagen = findViewById(R.id.imagen_servicios);
         imagen.setClickable(true);
-        Intent intent = new Intent(this, MisAlarmas1.class);
+        Intent intent = new Intent(this, Servicios.class);
         startActivity(intent);
+        finish();
     }
 
     public void irPerfil(View view) {
@@ -101,6 +119,7 @@ public class Mi_Cuenta extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, Mi_Cuenta.class);
         startActivity(intent);
+        finish();
     }
 
     public void irContacto(View view) {
@@ -108,6 +127,7 @@ public class Mi_Cuenta extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override

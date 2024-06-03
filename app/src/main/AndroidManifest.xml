@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
-        android:name="com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal"
+        android:name=".entidades.AplicacionSQLGlobal"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Analizarapp"
         tools:targetApi="31">
+        <activity
+            android:name=".WebAccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Servicios"
+            android:exported="false" />
         <activity
             android:name=".Video"
             android:exported="false" />
@@ -41,6 +49,12 @@
             android:name=".Onboarding3"
             android:exported="false" />
         <activity
+            android:name=".iluminacion"
+            android:exported="false" />
+        <activity
+            android:name=".IluminacionConfiguracion_Activity"
+            android:exported="false" />
+        <activity
             android:name=".olvidaste_contrasena"
             android:parentActivityName=".login">
             <meta-data
@@ -62,6 +76,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".helpers.aNotificationBroadcastReceiver"
+            android:enabled="true" />
 
         <meta-data
             android:name="preloaded_fonts"

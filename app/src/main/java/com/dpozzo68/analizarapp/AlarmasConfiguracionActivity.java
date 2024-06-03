@@ -249,33 +249,43 @@ public class AlarmasConfiguracionActivity extends AppCompatActivity {
         }
     }
 
-    public void irConsumos(View view) {
-        ImageView imagen = findViewById(R.id.imagen_home);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, MisConsumos.class);
-        startActivity(intent);
-    }
-
     public void irAlarmas() {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
-        imagen.setClickable(true);
         Intent intent = new Intent(this, MisAlarmas1.class);
         startActivity(intent);
+        finish();
     }
 
-    public void irPerfil(View view) {
-        ImageView imagen = findViewById(R.id.imagen_perfil);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, Mi_Cuenta.class);
-        startActivity(intent);
-    }
-
-    public void irContacto(View view) {
-        ImageView imagen = findViewById(R.id.imagen_contacto);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, ContactoActivity.class);
-        startActivity(intent);
-    }
+//    public void irConsumos(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_home);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, MisConsumos.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irServicios() {
+//        ImageView imagen = findViewById(R.id.imagen_servicios);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, Servicios.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irPerfil(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_perfil);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, Mi_Cuenta.class);
+//        startActivity(intent);
+//        finish();
+//    }
+//
+//    public void irContacto(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_contacto);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, ContactoActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 
 
     @Override

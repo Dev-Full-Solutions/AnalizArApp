@@ -3,8 +3,9 @@
     <string name="miCuenta">MI CUENTA</string>
 
     <!-- Strings Alarmas Configuracion-->
-    <string name="alarmas_titulo">MIS ALARMAS</string>
-    <string name="alarmas_nombre">Nueva Alarma</string>
+    <string name="alarmas_titulo">Mis alarmas</string>
+    <string name="alarmas_nombre">Nombre de la alarma</string>
+    <string name="alarmas_nombre_placeholder">Nueva Alarma</string>
     <string name="alarmas_frecuencia">Frecuencia</string>
     <string name="alarmas_diaria">Diaria</string>
     <string name="alarmas_semanal">Semanal</string>
@@ -18,6 +19,15 @@
     <string name="alarmas_btn_salir">SALIR</string>
     <string name="alarmas_btn_guardar">GUARDAR</string>
     <string name="alarmas_btn_eliminar">Eliminar</string>
+
+    <!-- Strings Iluminacion Configuracion-->
+    <string name="iluminacion_titulo">Iluminación</string>
+    <string name="iluminacion_nombre">Nombre del sistema</string>
+    <string name="iluminacion_nombre_placeholder">Nombre Sistema</string>
+    <string name="iluminacion_encendido">Encendido</string>
+    <string name="iluminacion_intensidad">Intensidad</string>
+    <string name="iluminacion_descripcion">Descripción</string>
+    <string name="iluminacion_descripcion_placeholder">Ingrese descripción</string>
 
     <!-- Strings Main-->
 
@@ -89,5 +99,32 @@
     <string name="campo_mensaje_accesibilidad">Campo del formulario para ingresar su mensaje al área de soporte</string>
     <string name="campo_correo_electronico_accesibilidad">Campo del formulario para ingresar su correo electrónico</string>
     <string name="campo_nombre_y_apellido_accesibilidad">Campo del formulario para ingresar su nombre y apellido</string>
+
+    <!-- Notifications -->
+    <string name="channel_name">analizar</string>
+    <string name="channel_description">canal de analizar</string>
+
+    <!-- Strings para WebAccessActivity -->
+    <string name="title_web_access">INGRESÁ A NUESTRA WEB</string>
+    <string name="description_web_access">¡Explorá nuestra plataforma online para acceder a ofertas exclusivas. ¡No te pierdas nuestras promos vigentes y encontrá el plan perfecto para vos!</string>
+    <string name="button_open_web">ACCEDER AHORA</string>
+    <string name="note_web_access">¡Tocá el botón para descubrir nuestras promociones!</string>
+    <string name="description_promo_image">Imagen promocional de una persona ingresando al sitio web para conocer los planes y promociones actuales.</string>
+
+    <!-- Descripciones de contenido para accesibilidad -->
+    <string name="title_web_access_description">Título: Ingresá a nuestra web</string>
+    <string name="description_web_access_description">Descripción:¡Explorá nuestra plataforma online para acceder a ofertas exclusivas y descubrir cómo podés ahorrar en tus servicios eléctricos. ¡No te pierdas nuestras ofertas vigentes y encontrá el plan perfecto para vos!</string>
+    <string name="promo_image_description">Imagen promocional: Una mujer observa en su computadora los planes, productos y gráficos de consumo de energía eléctrica domiciliario</string>
+    <string name="button_open_web_description">Botón: Acceder ahora para conocer nuestras promociones</string>
+    <string name="note_web_access_description">Nota: ¡Tocá el botón para descubrir nuestras promos!</string>
+
+    <!-- Strings Nuevo botón en Main -->
+    <string name="title_seccion_web">IR A SECCIÓN WEB</string>
+    <string name="descripcion_btn_seccion_web">SECCIÓN WEB</string>
+
+    <!-- Descripciones de contenido para accesibilidad -->
+    <string name="title_seccion_web_description">Título: Ir a la sección web dentro de nuestra aplicación</string>
+    <string name="descripcion_btn_seccion_web_description">Descripción: Explorá nuestra sección web para acceder a contenido exclusivo y descubrí más sobre nuestros servicios.</string>
+
 
 </resources>
