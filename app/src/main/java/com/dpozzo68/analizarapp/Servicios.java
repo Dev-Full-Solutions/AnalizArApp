@@ -1,64 +1,70 @@
 package com.dpozzo68.analizarapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+public class Servicios extends AppCompatActivity {
 
-public class ContactoActivity extends AppCompatActivity {
-
-
-    Button btnSoporte;
-
+    Button btnAlarmas;
+    Button btnIluminacion;
+    Button btnAAcondicionado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacto);
-
-        btnSoporte = findViewById(R.id.btn_soporte);
-        btnSoporte.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_servicios);
+        btnAlarmas = findViewById(R.id.btn_alarmas);
+        btnAlarmas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ContactoActivity.this, SoporteActivity.class);
+                Intent intent = new Intent(Servicios.this, MisAlarmas1.class);
                 startActivity(intent);
+                finish();
             }
         });
 
-        TextView textView = findViewById(R.id.textView10);
-        String linkText = getResources().getString(R.string.link);
-        SpannableString spannableString = new SpannableString(linkText);
-        ClickableSpan clickableSpan = new ClickableSpan() {
+        btnIluminacion = findViewById(R.id.btn_iluminacion);
+        btnIluminacion.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(@NonNull View view) {
-                String url = "https://github.com/Dev-Full-Solutions";
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            public void onClick(View view) {
+                Intent intent = new Intent(Servicios.this, MisAlarmas1.class);
                 startActivity(intent);
+                finish();
             }
-        };
+        });
 
-        int startIndex = linkText.indexOf("DevFullSolutions");
-        int endIndex = startIndex + 16;
-
-        spannableString.setSpan(new ForegroundColorSpan(Color.BLUE), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        textView.setText(spannableString);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        btnAAcondicionado = findViewById(R.id.btn_aacondicionado);
+        btnAAcondicionado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Servicios.this, MisAlarmas1.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
+//    public void irAlarmas(View view) {
+//        Intent intent = new Intent(this, MisAlarmas1.class);
+//        startActivity(intent);
+//        finish();
+//    }
+
+//    public void irIluminacion(View view) {
+//        Intent intent = new Intent(this, MisAlarmas1.class);
+//        startActivity(intent);
+//        finish();
+//    }
+
+//    public void irAAcondicionado(View view) {
+//        Intent intent = new Intent(this, MisAlarmas1.class);
+//        startActivity(intent);
+//        finish();
+//    }
     public void irConsumos(View view) {
         ImageView imagen = findViewById(R.id.imagen_home);
         imagen.setClickable(true);

@@ -19,6 +19,12 @@
             android:name=".MedioAmbiente"
             android:exported="false" />
         <activity
+            android:name=".WebAccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Servicios"
+            android:exported="false" />
+        <activity
             android:name=".Video"
             android:exported="false" />
         <activity
