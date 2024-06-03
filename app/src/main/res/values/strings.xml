@@ -93,4 +93,16 @@
     <!-- Notifications -->
     <string name="channel_name">analizar</string>
     <string name="channel_description">canal de analizar</string>
+
+    <!--Medio Ambiente-->
+    <string name="Monitoreo_y_Gestion">Nuestra aplicación Android está diseñada para ayudarte a monitorizar y gestionar tu consumo eléctrico de manera eficiente. Acá te contamos cómo puede beneficiarte y cómo podés contribuir al cuidado del medioambiente.</string>
+    <string name="RegistroDetallado">A través de un registro detallado de tu consumo eléctrico podes configurar alertas y notificaciones para mantenerte informado sobre tus consumos . Así podrás tener una visión clara de cuanta electricidad utilizas. De esta manera podrás aprender sobre tus hábitos de consumo y como pequeñas acciones pueden generar grandes ahorros, no solo económicos sino enérgicos.</string>
+    <string name="beneficios">Beneficios Medioambientales</string>
+    <string name="subtitulo_medioambiente">¿Sabías también que el uso de nuestra aplicación influye directamente en el cuidado del medioambiente?</string>
+    <string name="cuidado_consumo1">Un menor consumo energético reduce la quema de combustibles fósiles, disminuyendo las emisiones de dióxido de carbono y gases de efecto invernadero combatiendo así el cambio climático.</string>
+    <string name="cuidado_consumo2">Generar menor cantidad de energía eléctrica significa también menos contaminación en el aire, mejorando así la salud pública y reduciendo las enfermedades respiratorias.</string>
+    <string name="cuidado_consumo3">Reducir nuestro consumo energética conserva recursos naturales como el agua y los combustibles fósiles, protegiendo nuestros ecosistemas y biodiversidad.</string>
+    <string name="Descargar_app">Descargar y utilizar nuestra aplicación es un paso sencillo y poderoso hacia un consumo eléctrico más consciente y responsable. No solo reducirás tus costos energéticos, sino que también contribuirás activamente a la protección del medioambiente. Juntos, haremos la diferencia.</string>
+    <string name="Descargar_app1">¡Descarga AnalizAr App ahora y comenza tu camino hacia el ahorro energético y un futuro más sostenible!</string>
+    <string name="titulo_medioambiente">MEDIOAMBIENTE</string>
 </resources>
