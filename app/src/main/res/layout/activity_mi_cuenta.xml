@@ -30,7 +30,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            tools:context=".Mi_Cuenta">
+            tools:context=".Mi_Cuenta"
+            tools:ignore="ExtraText">
 
 
             <TextView
@@ -41,11 +42,12 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="141dp"
                 android:contentDescription="@string/titulo_mi_cuenta"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/robotobold"
                 android:text="@string/miCuenta"
-                android:textColor="@color/verde_oscuro"
-                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,10 +111,10 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
-                        android:contentDescription="Mail de usuario"
+                        android:contentDescription="Mail del usuario"
                         android:fontFamily="@font/roboto"
                         android:gravity="bottom|center_horizontal|center_vertical"
-                        android:text="Jdoe@gmail.com"
+                        android:text="johndoe@gmail.com"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:textSize="13sp"
@@ -143,11 +145,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:contentDescription="Titulo datos Personales"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotoregular"
                 android:text="Datos Personales"
-                android:textColor="@color/black"
+                android:textColor="@color/negro"
                 android:textColorHint="@color/black"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/cardView5"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
@@ -203,7 +206,8 @@
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre" />
+                    app:layout_constraintTop_toBottomOf="@+id/nombre"
+                    tools:ignore="EditableContentDescCheck" />
 
                 <TextView
                     android:id="@+id/apellido"
@@ -238,17 +242,18 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/apellido" />
+                    app:layout_constraintTop_toBottomOf="@+id/apellido"
+                    tools:ignore="EditableContentDescCheck" />
 
                 <TextView
-                    android:id="@+id/celular"
+                    android:id="@+id/Telefono"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:contentDescription="Subtitulo Celular"
                     android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editNumero"
+                    android:labelFor="@id/editTelefono"
                     android:text="Celular"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
@@ -257,7 +262,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editApellido" />
 
                 <EditText
-                    android:id="@+id/editNumero"
+                    android:id="@+id/editTelefono"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
@@ -273,215 +278,42 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/celular" />
+                    app:layout_constraintTop_toBottomOf="@+id/celular"
+                    tools:ignore="EditableContentDescCheck" />
 
 
             </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/buttonEditDatos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/verde_oscuro"
+                android:backgroundTint="@color/verde"
                 android:contentDescription="Boton Guardar"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotobold"
                 android:text="GUARDAR"
-                android:textColor="@color/white"
+                android:textColor="@color/blanco"
                 android:textColorHint="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
-            <TextView
-                android:id="@+id/tituloDatosPersonales1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:contentDescription="Titulo Datos personales"
-                android:fontFamily="@font/roboto"
-                android:text="@string/datos_de_cuenta"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/cardView6"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
-
-            <LinearLayout
-                android:id="@+id/cardView6"
-                android:layout_width="335dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/card"
-                android:foregroundGravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tituloDatosPersonales1"
-                app:layout_constraintVertical_bias="0.0">
-
-                <TextView
-                    android:id="@+id/email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo email"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editEmail"
-                    android:text="@string/email"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="49dp" />
-
-                <EditText
-                    android:id="@+id/editEmail"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo email"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textEmailAddress"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    tools:layout_editor_absoluteX="47dp"
-                    tools:layout_editor_absoluteY="634dp" />
-
-                <TextView
-                    android:id="@+id/contrasena"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo contraseña"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editContrasena"
-                    android:text="Contraseña"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editEmail"
-                    app:layout_constraintTop_toBottomOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
-                <EditText
-                    android:id="@+id/editContrasena"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo contraseña"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editEmail"
-                    tools:layout_editor_absoluteX="47dp" />
-
-                <TextView
-                    android:id="@+id/cambiarContrasena"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo cambiar contraseña"
-                    android:fontFamily="@font/roboto"
-                    android:labelFor="@id/editCambiarContrasena"
-                    android:text="Cambiar contraseña"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    app:layout_constraintTop_toBottomOf="@+id/editCambiarContrasena"
-                    tools:layout_editor_absoluteX="47dp" />
-
-                <EditText
-                    android:id="@+id/editCambiarContrasena"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="campo cambiar contraseña"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
-            </LinearLayout>
-
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/verde_oscuro"
-                android:contentDescription="Boton Guardar"
-                android:fontFamily="@font/roboto"
-                android:text="GUARDAR"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView6" />
 
             /
 
-            <TextView
-                android:id="@+id/tituloConfiguracion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:contentDescription="Titulo Configuracion"
-                android:fontFamily="@font/roboto"
-                android:text="@string/configuracion"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/cardConfiguracion"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.145"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2"
-                app:layout_constraintVertical_bias="1.0" />
-
             <LinearLayout
                 android:id="@+id/cardConfiguracion"
-                android:layout_width="337dp"
-                android:layout_height="266dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="32dp"
+                android:layout_width="335dp"
+                android:layout_height="194dp"
                 android:background="@drawable/card"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2">
+                app:layout_constraintTop_toBottomOf="@+id/tituloConfiguracion"
+                app:layout_constraintVertical_bias="0.0">
 
                 <TextView
                     android:id="@+id/miPlanConfig"
@@ -512,6 +344,7 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
+                    tools:ignore="EditableContentDescCheck"
                     tools:layout_editor_absoluteX="48dp" />
 
                 <TextView
@@ -543,37 +376,7 @@
                     android:textColorHint="@color/gris_claro"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/editContrasena"
-                    tools:layout_editor_absoluteX="48dp" />
-
-                <TextView
-                    android:id="@+id/notificacionesConfig"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="subtitulo notificaciones"
-                    android:fontFamily="@font/roboto"
-                    android:text="@string/notificaciones"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <EditText
-                    android:id="@+id/editNotificacionesConfig"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:contentDescription="Campo Notificaciones"
-                    android:ems="10"
-                    android:fontFamily="@font/roboto"
-                    android:inputType="text|textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/verde_intermedio"
-                    android:textColorHint="@color/gris_claro"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editContrasena"
+                    tools:ignore="EditableContentDescCheck"
                     tools:layout_editor_absoluteX="48dp" />
 
 
@@ -583,18 +386,36 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1436dp"
-                android:backgroundTint="@color/verde_oscuro"
+                android:layout_marginTop="264dp"
+                android:backgroundTint="@color/verde"
                 android:contentDescription="Boton Guardar"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/robotobold"
                 android:onClick="cerrarSesion"
                 android:text="GUARDAR"
-                android:textColor="@color/white"
+                android:textColor="@color/blanco"
                 android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonEditDatos" />
+
+            <TextView
+                android:id="@+id/tituloConfiguracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:contentDescription="Titulo Configuracion"
+                android:fontFamily="@font/robotoregular"
+                android:text="@string/configuracion"
+                android:textColor="@color/negro"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonEditDatos" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -611,7 +432,8 @@
         android:padding="10dp"
         app:itemActiveIndicatorStyle="@style/MyBottomNavigation"
         app:labelVisibilityMode="selected"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
         <!--        app:menu="@menu/bottom_nav_menu" -->
 
         <LinearLayout
@@ -656,7 +478,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
-            android:onClick="irAlarmas"
+            android:onClick="irServicios"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
@@ -665,18 +487,18 @@
             app:layout_constraintVertical_bias="0.5">
 
             <ImageView
-                android:id="@+id/imagen_alerta"
+                android:id="@+id/imagen_servicios"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Boton Alarmas"
-                app:srcCompat="@drawable/alerta" />
+                app:srcCompat="@drawable/config_foreground" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Alarmas"
+                android:text="Servicios"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>

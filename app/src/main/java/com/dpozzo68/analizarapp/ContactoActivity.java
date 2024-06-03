@@ -61,14 +61,15 @@ public class ContactoActivity extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, MisConsumos.class);
         startActivity(intent);
+        finish();
     }
 
-    public void irAlarmas(View view) {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
+    public void irServicios(View view) {
+        ImageView imagen = findViewById(R.id.imagen_servicios);
         imagen.setClickable(true);
-
-        Intent intent = new Intent(this, MisAlarmas1.class);
+        Intent intent = new Intent(this, Servicios.class);
         startActivity(intent);
+        finish();
     }
 
     public void irPerfil(View view) {
@@ -76,6 +77,7 @@ public class ContactoActivity extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, Mi_Cuenta.class);
         startActivity(intent);
+        finish();
     }
 
     public void irContacto(View view) {
@@ -83,6 +85,7 @@ public class ContactoActivity extends AppCompatActivity {
         imagen.setClickable(true);
         Intent intent = new Intent(this, ContactoActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override

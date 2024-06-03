@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dpozzo68.analizarapp.entidades.AplicacionSQLGlobal;
 import com.dpozzo68.analizarapp.entidades.GlobalUsuario;
 import com.dpozzo68.analizarapp.helpers.UsuarioServicio;
 import com.dpozzo68.analizarapp.helpers.UsuariosSQLiteHelper;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
     private static final String TAG = "EmailPassword";
+    private SQLiteDatabase usuariosDB;
     EditText usuarioText;
     EditText passwordText;
     private FirebaseAuth mAuth;
@@ -49,11 +51,12 @@ public class login extends AppCompatActivity {
     public void singIn(){
         String email = usuarioText.getText().toString();
         String password = passwordText.getText().toString();
-        UsuariosSQLiteHelper us = new UsuariosSQLiteHelper(this, "Usuarios", null, 1);
-        SQLiteDatabase db = us.getWritableDatabase();
-        UsuarioServicio uServ = new UsuarioServicio();
-        uServ.llenarTablaUsuarios(db);
-        GlobalUsuario.getInstanciaUsuario().setUsuario(uServ.getUsuariofromDB(db, email));
+        usuariosDB = ((AplicacionSQLGlobal) getApplication()).getUsuariosDB();
+        UsuarioServicio uServ = new UsuarioServicio(usuariosDB);
+        if (!uServ.hayRegistros()){
+            uServ.llenarTablaUsuarios();
+        }
+        GlobalUsuario.getInstanciaUsuario().setUsuario(uServ.getUsuariofromDB(email));
         if(!email.isEmpty() && !password.isEmpty()){
             if(email.contains("@") && email.contains(".") && password.length() > 5){
                 mAuth.signInWithEmailAndPassword(email, password)
@@ -97,12 +100,10 @@ public class login extends AppCompatActivity {
     }
 
     private void showHome(String email) {
-        //Intent homeIntent = new Intent(this, Video.class);
-        //homeIntent.putExtra("email",email);
-        //startActivity(homeIntent);
-        Intent intent = new Intent(this, MisConsumos.class);
-        intent.putExtra("email", email);
-        startActivity(intent);
+        Intent homeIntent = new Intent(this, Video.class);
+        homeIntent.putExtra("email",email);
+        startActivity(homeIntent);
+
     }
     public void olvideContrasena(View view){
         Intent intent = new Intent(this, olvidaste_contrasena.class);
@@ -111,7 +112,7 @@ public class login extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, Onboarding3.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
