@@ -29,12 +29,9 @@ public class ContactoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contacto);
 
         btnSoporte = findViewById(R.id.btn_soporte);
-        btnSoporte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ContactoActivity.this, SoporteActivity.class);
-                startActivity(intent);
-            }
+        btnSoporte.setOnClickListener(view -> {
+            Intent intent = new Intent(ContactoActivity.this, SoporteActivity.class);
+            startActivity(intent);
         });
 
         TextView textView = findViewById(R.id.textView10);
@@ -69,6 +66,7 @@ public class ContactoActivity extends AppCompatActivity {
     public void irAlarmas(View view) {
         ImageView imagen = findViewById(R.id.imagen_alerta);
         imagen.setClickable(true);
+
         Intent intent = new Intent(this, MisAlarmas1.class);
         startActivity(intent);
     }

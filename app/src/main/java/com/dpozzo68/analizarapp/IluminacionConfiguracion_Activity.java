@@ -55,9 +55,9 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
 
 
-        salir = findViewById(R.id.salir);
-        guardar = findViewById(R.id.guardar);
-        eliminar = findViewById(R.id.eliminar);
+        salir = findViewById(R.id.salir_iluminacion);
+        guardar = findViewById(R.id.guardar_iluminacion);
+        eliminar = findViewById(R.id.eliminar_iluminacion);
 
         //verifica si es una nueva iluminacion o edita una nueva
         if (!getIntent().hasExtra("IluminacionID")){
@@ -97,11 +97,12 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
             etDescripcion.setText(iluminacion.getDescripcion());
 
-            salir.setOnClickListener(v -> irIluminacion());
-            guardar.setOnClickListener(v -> guardarIluminacion());
-            eliminar.setOnClickListener(v -> eliminarIluminacion());
+
 
         }
+        salir.setOnClickListener(v -> irIluminacion());
+        guardar.setOnClickListener(v -> guardarIluminacion());
+        eliminar.setOnClickListener(v -> eliminarIluminacion());
 
 
     }
@@ -116,6 +117,7 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
     public void guardarIluminacion(){
         contruirIluminacion();
+        Toast.makeText(this, "guardarIluminacion", Toast.LENGTH_SHORT).show();
         if(iluminacion.getNombre() != null && !iluminacion.getNombre().isEmpty()){
             if(nuevaIluminacion){
                 iluminacionServicio.guardarIluminacion(iluminacion);
@@ -137,6 +139,11 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
     public void irIluminacion() {
         Intent intent = new Intent(this, iluminacion.class);
+        startActivity(intent);
+    }
+
+    public void olvideContrasena(View view){
+        Intent intent = new Intent(this, olvidaste_contrasena.class);
         startActivity(intent);
     }
 

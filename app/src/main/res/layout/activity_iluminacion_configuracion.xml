@@ -75,38 +75,40 @@
         android:id="@+id/iluminacion_descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginTop="88dp"
         android:fontFamily="@font/roboto"
         android:text="@string/iluminacion_descripcion"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/salir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.226"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iluminacion_intensidad_tracker" />
 
     <CheckBox
         android:id="@+id/checkbox_on_off_iluminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:button="@drawable/custom_checkbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.878"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="78dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/text_checkbox_iluminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="@string/iluminacion_encendido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="133dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_on_off_iluminacion"
         tools:ignore="MissingConstraints" />
-
 
     <EditText
         android:id="@+id/edit_descripcion_iluminacion"
@@ -118,14 +120,13 @@
         android:ems="12"
         android:fontFamily="@font/roboto"
         android:hint="@string/iluminacion_descripcion_placeholder"
-        android:inputType="number"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iluminacion_descripcion" />
 
     <Button
-        android:id="@+id/salir"
+        android:id="@+id/salir_iluminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="448dp"
@@ -138,14 +139,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/eliminar"
+        android:id="@+id/eliminar_iluminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
         android:text="@string/alarmas_btn_eliminar"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_descripcion_iluminacion"
+        app:layout_constraintVertical_bias="0.838" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation"
@@ -292,13 +295,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/guardar"
+        android:id="@+id/guardar_iluminacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="44dp"
         android:backgroundTint="@color/verde"
         android:text="@string/alarmas_btn_guardar"
-        tools:layout_editor_absoluteX="257dp"
-        tools:layout_editor_absoluteY="446dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/salir_iluminacion"
+        app:layout_constraintTop_toBottomOf="@+id/edit_descripcion_iluminacion"
         tools:ignore="MissingConstraints" />
 
     <TextView
