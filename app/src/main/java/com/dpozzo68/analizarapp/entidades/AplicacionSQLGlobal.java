@@ -14,8 +14,10 @@ public class AplicacionSQLGlobal extends Application {
 
     private SQLiteDatabase alarmasDB;
     private SQLiteDatabase iluminacionDB;
+    private SQLiteDatabase usuariosDB;
     private AlarmasSQLiteHelper alarmasSQLiteHelper;
     private IluminacionSQLiteHelper iluminacionSQLiteHelper;
+    private UsuariosSQLiteHelper usuariosSQLiteHelper;
 
 
     @Override

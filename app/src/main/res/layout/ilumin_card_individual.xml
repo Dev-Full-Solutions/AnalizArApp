@@ -33,10 +33,10 @@
 
         <SeekBar
             android:id="@+id/seekBar_intensity"
-            android:layout_width="150dp"
-            android:layout_height="12dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="258dp"
+            android:layout_height="16dp"
             android:layout_marginLeft="-25dp"
+            android:layout_marginTop="8dp"
             android:max="100"
             android:progress="100"
             android:progressDrawable="@drawable/progress_seekbar"
@@ -61,10 +61,10 @@
             android:text="Encendido"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.848"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.597" />
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_on_off"
+            app:layout_constraintVertical_bias="0.238" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout5"
@@ -86,41 +86,16 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/btn_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="88dp"
-            android:text="EDITAR"
-            android:backgroundTint="@color/verde"
-            android:fontFamily="@font/robotobold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.880"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/rojo"
-            android:text="ELIMINAR"
-            android:fontFamily="@font/robotobold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.946"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <CheckBox
             android:id="@+id/checkbox_on_off"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="156dp"
+            android:layout_marginEnd="52dp"
             android:button="@drawable/custom_checkbox"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.408" />
+            app:layout_constraintVertical_bias="0.493" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

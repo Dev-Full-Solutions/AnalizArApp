@@ -113,12 +113,12 @@ public class MisAlarmas1 extends AppCompatActivity{
     }
 
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (alarmasDB != null) {
-            alarmasDB.close();
-        }
-    }
-}
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (alarmasDB != null) {
+//            alarmasDB.close();
+//        }
+//    }
+  }
 

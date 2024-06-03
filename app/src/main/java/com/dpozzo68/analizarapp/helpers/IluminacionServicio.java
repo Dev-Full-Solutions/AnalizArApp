@@ -105,7 +105,7 @@ public class IluminacionServicio {
     public Iluminacion getIluminacionConID(int id) {
         Iluminacion iluminacion = null;
 
-        String query = "SELECT id_iluminacion, usuario_email, nombre_iluminacion, descripcion, intensidad, encendido FROM Iluminacion WHERE id_alarma = ?";
+        String query = "SELECT id_iluminacion, usuario_email, nombre_iluminacion, descripcion, intensidad, encendido FROM Iluminacion WHERE id_iluminacion = ?";
         String[] args = {Integer.toString(id)};
         Cursor cursor = null;
 

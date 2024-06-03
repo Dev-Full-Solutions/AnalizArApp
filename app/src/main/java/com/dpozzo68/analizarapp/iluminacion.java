@@ -70,39 +70,45 @@ public class iluminacion extends AppCompatActivity{
         Intent intent = new Intent(this, IluminacionConfiguracion_Activity.class);
         startActivity(intent);
     }
-    public void irConsumos(View view) {
-        ImageView imagen = findViewById(R.id.imagen_home);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, MisConsumos.class);
-        startActivity(intent);
-    }
+//    public void irConsumos(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_home);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, MisConsumos.class);
+//        startActivity(intent);
+//    }
+//
+//    public void irAlarmas(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_alerta);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, MisAlarmas1.class);
+//        startActivity(intent);
+//    }
+//
+//    public void irPerfil(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_perfil);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, Mi_Cuenta.class);
+//        startActivity(intent);
+//    }
+//
+//    public void irContacto(View view) {
+//        ImageView imagen = findViewById(R.id.imagen_contacto);
+//        imagen.setClickable(true);
+//        Intent intent = new Intent(this, ContactoActivity.class);
+//        startActivity(intent);
+//    }
 
-    public void irAlarmas(View view) {
-        ImageView imagen = findViewById(R.id.imagen_alerta);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, MisAlarmas1.class);
-        startActivity(intent);
-    }
-
-    public void irPerfil(View view) {
-        ImageView imagen = findViewById(R.id.imagen_perfil);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, Mi_Cuenta.class);
-        startActivity(intent);
-    }
-
-    public void irContacto(View view) {
-        ImageView imagen = findViewById(R.id.imagen_contacto);
-        imagen.setClickable(true);
-        Intent intent = new Intent(this, ContactoActivity.class);
-        startActivity(intent);
-    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (iluminacionDB != null) {
+//            iluminacionDB.close();
+//        }
+//    }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (iluminacionDB != null) {
-            iluminacionDB.close();
-        }
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Servicios.class);
+        startActivity(intent);
     }
 }
