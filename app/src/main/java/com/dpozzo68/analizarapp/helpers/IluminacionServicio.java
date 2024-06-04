@@ -49,7 +49,6 @@ public class IluminacionServicio {
     public void guardarIluminacion(Iluminacion iluminacion) {
         if (iluminacionDB != null) {
             ContentValues iluminacionAGuardar = new ContentValues();
-            iluminacionAGuardar.put("id_iluminacion", iluminacion.getIdIluminacion());
             iluminacionAGuardar.put("usuario_email", iluminacion.getUsuarioEmail());
             iluminacionAGuardar.put("nombre_iluminacion", iluminacion.getNombre());
             iluminacionAGuardar.put("descripcion", iluminacion.getDescripcion());

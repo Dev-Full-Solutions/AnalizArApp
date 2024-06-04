@@ -50,7 +50,7 @@ public class IluminacionAdapter extends RecyclerView.Adapter<IluminacionAdapter.
         holder.checkbox_on_off.setChecked(iluminacion.isEncendido());
         holder.seekBar_intensity.setProgress(iluminacion.getIntensidad());
 
-        String text = "Intensidad: " + String.valueOf(iluminacion.getIntensidad());
+        String text = "Intensidad: " + iluminacion.getIntensidad();
         holder.textViewTracker.setText(text);
 
         holder.textViewNombreAlarmaIluminacion.setOnClickListener(new View.OnClickListener() {

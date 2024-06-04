@@ -80,13 +80,17 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
             //setear intensidad inicial
             skIntensidad.setProgress(iluminacion.getIntensidad());
+            valorIntensidad = iluminacion.getIntensidad();
+            txtIntensidad = txtIntensidad + valorIntensidad;
+            tvTracker.setText(txtIntensidad);
 
             //
             skIntensidad.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                     valorIntensidad = i;
-                    tvTracker.setText(txtIntensidad + String.valueOf(valorIntensidad));
+                    txtIntensidad = txtIntensidad + valorIntensidad;
+                    tvTracker.setText(txtIntensidad);
                     iluminacion.setIntensidad(valorIntensidad);
                 }
                 @Override
@@ -109,7 +113,7 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
     public void contruirIluminacion(){
         iluminacion.setIntensidad(valorIntensidad);
-        iluminacion.setEncendido(cbEncendido.isActivated());
+        iluminacion.setEncendido(cbEncendido.isChecked());
         iluminacion.setNombre(String.valueOf(etNombre.getText()));
         iluminacion.setDescripcion(String.valueOf(etDescripcion.getText()));
         iluminacion.setUsuarioEmail(usuario.getEmail());
@@ -133,7 +137,7 @@ public class IluminacionConfiguracion_Activity extends AppCompatActivity {
 
     public void eliminarIluminacion(){
         contruirIluminacion();
-        iluminacionServicio.editarIluminacion(iluminacion);
+        iluminacionServicio.eliminarIluminacion(iluminacion);
         irIluminacion();
     }
 
